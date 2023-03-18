@@ -1,6 +1,6 @@
   header {
     display: flex;
-    height: 21.5rem;
+    height: 18rem; 
     background-color: #9B9393;
     justify-content: center;
   }
@@ -25,19 +25,29 @@
     margin: 0;
   }
 
-@media (max-width: 820px){
+/* X-Small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
     .logo-img {
       height: 4rem;
-    } 
+    }
+    header {
+      height: 13rem; 
+    }
 }
 
-@media (max-width: 605px){
+/* X-Small devices (portrait phones, less than 434.98px) */
+@media (max-width: 434.98px) {
   .logo-img {
     height: 3rem;
   } 
+
+  header {
+    height: 10rem; 
+  }
 }
 
-@media (max-width: 415px){
+/* X-Small devices (portrait phones, less than 359.98px) */
+@media (max-width: 359.98px) {
   .logo-img {
     height: 2rem;
   } 

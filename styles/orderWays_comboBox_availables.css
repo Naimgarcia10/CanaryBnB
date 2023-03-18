@@ -1,3 +1,9 @@
+#orderWays_combo-box{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
 #orderWays_combo-box select {
   display: block;
   background-color: #cccccc;
@@ -7,9 +13,9 @@
   font-size: 1rem;
   margin: auto;
   cursor: pointer;
-  position: relative;
   text-align: center;
-  bottom: 1.5rem;
+  position: absolute;
+  top: 16.5rem;
   height: 2.8rem;
 }
 #orderWays_combo-box select option:first-of-type {
@@ -24,4 +30,31 @@
   border: 5px solid transparent;
   border-top-color: #999;
   z-index: 0;
+}
+
+/* X-Small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  #orderWays_combo-box select {
+    height: 2rem;
+    font-size: 0.7rem;
+    top: 11.5rem;
+  }
+}
+
+/* X-Small devices (portrait phones, less than 434.98px) */
+@media (max-width: 434.98px) {
+  #orderWays_combo-box select {
+    height: 1.4rem;
+    font-size: 0.5rem;
+    top: 9rem;
+  }
+}
+
+/* X-Small devices (portrait phones, less than 359.98px) */
+@media (max-width: 359.98px) {
+  #orderWays_combo-box select {
+    height: 0.8rem;
+    font-size: 0.3rem;
+    top: 9.5rem;
+  }
 }
