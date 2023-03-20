@@ -20,36 +20,85 @@
             
     </header>
 
-    <h1 class="titulo">Registrarse</h1>
+    <form id="register_form">
+        <h1 class="titulo">Registrarse</h1>
+        <div class="form_container">
 
-    <div class="form__group field">
-        <input required="" placeholder="Name" class="form__field" type="input">
-        <label class="form__label" for="name">Nombre y Apellidos</label>
-    </div>
+            <div class="form__group field">
+                <input type="text" id="full_name" class="form__field" placeholder=" " required>
+                <label for="full_name" class="form__label">Nombre y Apellidos</label>
+                <span class="form__line"></span>
+            </div>
 
-    <div class="form__group field">
-        <input required="" placeholder="Name" class="form__field" type="input">
-        <label class="form__label" for="name">Correo Electrónico</label>
-    </div>
+            <div class="form__group field">
+                <input type="text" id="mail" class="form__field" placeholder=" " required>
+                <label for="mail" class="form__label">Correo Electrónico</label>
+                <span class="form__line"></span>
+            </div>
 
-    <div class="form__group field">
-        <input required="" placeholder="Name" class="form__field" type="input">
-        <label class="form__label" for="name">Fecha de nacimiento</label>
-    </div>
+            <div class="form__group field">
+                <input type="date" id="birthdate" class="form__field" placeholder=" " required>
+                <label for="birthdate" class="form__label">Fecha de nacimiento</label>
+                <span class="form__line"></span>
+            </div>
 
-    <div class="form__group field">
-        <input required="" placeholder="Name" class="form__field" type="password">
-        <label class="form__label" for="name">Contraseña</label>
-    </div>
+            <div class="form__group field">
+                <input type="password" id="password" class="form__field" placeholder=" " required>
+                <label for="password" class="form__label">Contraseña</label>
+                <span class="form__line"></span>
+            </div>
 
-    <div class="form__group field">
-        <input required="" placeholder="Name" class="form__field" type="password">
-        <label class="form__label" for="name">Repetir contraseña</label>
-    </div>
+            <div class="form__group field">
+                <input type="password" id="repeat_password" class="form__field" placeholder=" " required>
+                <label for="password" class="form__label">Repetir contraseña</label>
+                <span class="form__line"></span>
+            </div>
 
-    <!–temporal–>
-        <p></p>
+            <p class="form_paragraph">¿Estás registrado? <a href="#" class="form_link">Inicia sesión aquí</a></p>
 
-        <button id="button"><strong>Confirmar</strong> </button>
+            <input type="submit" class="form_submit" value="Entrar">
+
+        </div>
+    </form>
+
 </body>
+
+<script>
+    const formulario = document.querySelector('#register_form');
+
+    const validateForm = (event) => {
+        var cont = 0;
+        var x = document.forms["register_form"]["full_name"].value;
+        if (x == "") {
+            alert("full_name must be filled out");
+            cont++;
+        }
+        x = document.forms["register_form"]["mail"].value;
+        if (x == "") {
+            alert("mail must be filled out");
+            cont++;
+        }
+        x = document.forms["register_form"]["birthdate"].value;
+        if (x == "") {
+            alert("birthdate must be filled out");
+            cont++;
+        }
+        x = document.forms["register_form"]["password"].value;
+        if (x == "") {
+            alert("password must be filled out");
+            cont++;
+        }
+        x = document.forms["register_form"]["repeat_password"].value;
+        if (x == "") {
+            alert("repeat_password must be filled out");
+            cont++;
+        }
+        if cont >= 1 {
+            return false;
+        }
+    }
+
+    formulario.addEventListener('submit', validateForm);
+</script>
+
 <html>
