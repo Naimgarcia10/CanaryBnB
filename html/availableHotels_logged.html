@@ -1,100 +1,41 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
 
-<head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../styles/orderWays_comboBox_availables.css">
-    <link rel="stylesheet" type="text/css" href="../styles/big_header.css">
-    <link rel="stylesheet" type="text/css" href="../styles/filtersBox_availables.css">
-    <link rel="stylesheet" type="text/css" href="../styles/hotels_details_availables.css">
-    <link rel="stylesheet" type="text/css" href="../styles/userLogged_button.css">
+    <link rel="stylesheet" type="text/css" href="../styles/available_hotels_logged.css">
     <title>CanaryBnB</title>
-</head>
+  </head>
+  <body>
 
-<body>
-
-    <!-- cabecera -->
     <header>
-        <a href="#" class="logo">
-            <img src="../images/logo.png" alt="logo" class="logo-img">
-        </a>
-        <p>FOTO</p>
-        <button id="button_log"> USUARIO </button>
+      <a href="homePage_logged.html" class="logo">
+          <img src="../images/logo_blanco5.png" alt="logo" class="logo-img">
+      </a>
+      <p></p>
+      <div id="button_user">
+          <select onchange="redirect(this)">
+              <option id="userName" value="Usuario">Mi perfil</option>
+              <option value="datos">Modificar datos personales</option>
+              <option value="historial">Historial de reservas</option>
+          </select>
+      </div>
     </header>
 
-    <!--cuerpo-->
-    <div id="orderWays_combo-box">
-        <select>
-            <option value="precio">Ordenar por: Precio</option>
-            <option value="valoracion">Ordenar por: Valoración</option>
-        </select>
+
+    <div class ="container">
+      <label for="sort">Ordenar por:</label>
+      <select id="sort">
+        <option value="defect">Por defecto</option>
+        <option value="price">Precio</option>
+        <option value="rating">Valoración</option>
+      </select>
     </div>
+
     
-
-    <div class="hotels_section">
-        <div class="rectangulo_hotel">
-            <div href="#" class="foto_hotel">
-                <img src="../images/foto_dummy.png" alt="logo" class="logo-img">
-            </div>
-
-            <div class="hotels_details_left">
-                <label id="nombre_alojamiento">Nombre Alojamiento</label>
-                <label>Número de camas: num</label>
-                <label>Número de habitaciones: num</label>
-                <label>Número de baños: num</label>
-                <label>Cancelacion gratuita: si/no</label>
-            </div>
-
-            <div class="hotels_details_right">
-                <label>Valoración</label>
-                <label>Precio</label>
-                <button id="disponibility_button"> Ver Disponibilidad </button>
-            </div>
-            <div id="linea_vertical"></div>
-        </div>
-
-        <div class="rectangulo_hotel">
-            <div href="#" class="foto_hotel">
-                <img src="../images/foto_dummy.png" alt="logo" class="logo-img">
-            </div>
-
-            <div class="hotels_details_left">
-                <label id="nombre_alojamiento">Nombre Alojamiento</label>
-                <label>Número de camas: num</label>
-                <label>Número de habitaciones: num</label>
-                <label>Número de baños: num</label>
-                <label>Cancelacion gratuita: si/no</label>
-            </div>
-
-            <div class="hotels_details_right">
-                <label>Valoración</label>
-                <label>Precio</label>
-                <button id="disponibility_button"> Ver Disponibilidad </button>
-            </div>
-            <div id="linea_vertical"></div>
-        </div>
-
-        <div class="rectangulo_hotel">
-            <div href="#" class="foto_hotel">
-                <img src="../images/foto_dummy.png" alt="logo" class="logo-img">
-            </div>
-
-            <div class="hotels_details_left">
-                <label id="nombre_alojamiento">Nombre Alojamiento</label>
-                <label>Número de camas: num</label>
-                <label>Número de habitaciones: num</label>
-                <label>Número de baños: num</label>
-                <label>Cancelacion gratuita: si/no</label>
-            </div>
-
-            <div class="hotels_details_right">
-                <label>Valoración</label>
-                <label>Precio</label>
-                <button id="disponibility_button"> Ver Disponibilidad </button>
-            </div>
-            <div id="linea_vertical"></div>
-        </div>
-    </div>
+    <div id="hotelList"></div>
+    <p id="hotelName"></p>
 
     <div id="rectangulo_filtros">
         <form>
@@ -102,10 +43,8 @@
             <div id="linea_horizontal"></div>
             <h1 id="precio_label">Precio</h1>
             <div class="price_option">
-                <input type="radio" id="lower_option" name="price_option" value="lower"><label for="lower_option">Más
-                    bajo primero</label><br>
-                <input type="radio" id="higher_option" name="price_option" value="higher"><label for="higher_option">Más
-                    alto primero</label>
+                <input type="radio" id="lower_option" name="price_option" value="lower"><label for="lower_option">Más bajo primero</label><br>
+                <input type="radio" id="higher_option" name="price_option" value="higher"><label for="higher_option">Más alto primero</label>
             </div>
             <div id="linea_horizontal2"></div>
             <h1 id="valoracion_label">Valoración</h1>
@@ -120,18 +59,23 @@
             <div id="linea_horizontal3"></div>
             <h1 id="alojamiento_label">Tipo de Alojamiento</h1>
             <div class="alojamientos">
-                <input type="checkbox" id="hoteles" name="alojamientos" value="hotel"><label
-                    for="hoteles">Hoteles</label><br>
-                <input type="checkbox" id="apartamentos" name="alojamientos" value="apartamento"><label
-                    for="apartamentos">Apartamentos</label><br>
-                <input type="checkbox" id="villas" name="alojamientos" value="villa"><label
-                    for="villas">Villas</label><br>
+                <input type="checkbox" id="hoteles" name="alojamientos" value="hotel"><label for="hoteles">Hoteles</label><br>
+                <input type="checkbox" id="apartamentos" name="alojamientos" value="apartamento"><label for="apartamentos">Apartamentos</label><br>
+                <input type="checkbox" id="villas" name="alojamientos" value="villa"><label for="villas">Villas</label><br>
                 <input type="checkbox" id="casas" name="alojamientos" value="casa"><label for="casas">Casas</label>
-            </div>
+            </div> 
             <div id="linea_horizontal4"></div>
             <button id="filters_button"> Aplicar Filtros </button>
-        </form>
+        </form>        
 
-    </div>
-</body>
-<html>
+        </div>
+
+
+    <script src="../scripts/availableHotels_logged.js"></script>
+    <script>
+      // Ejecuta displayHotels() cuando se carga la página availableHotels2.html
+      window.addEventListener("DOMContentLoaded", displayHotels);
+    </script>
+
+  </body>
+</html>

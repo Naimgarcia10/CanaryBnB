@@ -3,80 +3,87 @@
 
 <head>
   <title>HOMEPAGE</title>
-  <link rel="stylesheet" href="../styles/big_header.css">
-  <link rel="stylesheet" href="../styles/searchBar.css">
-  <link rel="stylesheet" href="../styles/userLogged_button.css">
+  <link rel="stylesheet" href="../styles/homePage.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 </head>
 
 <body>
 
-  <!-- cabecera -->
-  <!-- <div class="rectangulo_header">
-      <div class = "cuadrado_logo">
-          <p>LOGO</p>
-      </div>
-      <p>FOTO</p>
-      <button id="button_log"> USUARIO </button>
-    </div> -->
-
-  <!-- cabecera -->
   <header>
     <a href="#" class="logo">
-      <img src="../images/logo.png" alt="logo" class="logo-img">
+      <img src="../images/logo_blanco5.png" alt="logo" class="logo-img">
     </a>
-    <p>FOTO</p>
-    <button id="button_log"> USUARIO </button>
+
+    <div id="button_user">
+      <select onchange="redirect(this)">
+        <option id="userName" value="Usuario">Mi perfil</option>
+        <option value="datos">Modificar datos personales</option>
+        <option value="historial">Historial de reservas</option>
+      </select>
+    </div>
   </header>
 
-  <div class="bar_search">
-    <form>
-      <div class="search-bar">
-        <div class="search-item">
-          <label for="destination">Destino</label>
-          <input type="text" id="destination" name="destination" placeholder="Ingrese su destino">
-        </div>
-        <div class="search-item">
-          <label for="checkin">Fecha de entrada</label>
-          <input type="date" id="checkin" name="checkin">
-        </div>
-        <div class="search-item">
-          <label for="checkout">Fecha de salida</label>
-          <input type="date" id="checkout" name="checkout">
-        </div>
-        <div class="search-item">
-          <label for="people">Personas</label>
-          <input type="number" id="people" name="people" placeholder="Personas">
-        </div>
-        <button type="submit">Buscar</button>
-      </div>
-    </form>
-  </div>
+  <!--cuerpo-->
 
 
-  <div class="cuadrado_hotel_logged">
-    <div class="Recomendations">
-      <p1 class="titulo">
-        Alojamientos mejor valorados
-      </p1>
-
-
-      <div class="cuadrado_hotel">
-        <p>FOTO HOTEL</p>
+  <form onsubmit="event.preventDefault(); searchHotels();">
+    <div class="search-bar">
+      <div class="search-item-destination">
+        <label for="destination">Destino</label>
+        <input type="text" id="destination" name="destination" placeholder="Ingrese su destino">
       </div>
 
-      <div class="cuadrado_hotel">
-        <p>FOTO HOTEL</p>
+      <hr id="line_1">
+
+      <div class="search-item-checkin">
+        <label for="checkin">Fecha de entrada</label>
+        <input type="date" id="checkin" name="checkin">
       </div>
 
-      <div class="cuadrado_hotel">
-        <p>FOTO HOTEL</p>
+      <div class="search-item-checkout">
+        <label for="checkout">Fecha de salida</label>
+        <input type="date" id="checkout" name="checkout">
       </div>
+
+      <div class="search-item-persons">
+        <label for="people">Personas</label>
+        <input type="number" id="people" name="people" placeholder="Personas">
+      </div>
+
+      <hr id="line_2">
+      <hr id="line_3">
+      <hr id="line_4">
+
+
+      <button type="submit" id="searchBtn">Buscar</button>
+
 
     </div>
+  </form>
+
+  <h1 class="title">Alojamientos mejor valorados</h1>
+  <!-- Reemplaza las imágenes estáticas con un contenedor donde se mostrarán las imágenes -->
+  <div class="recomendations" id="topRatedHotels">
   </div>
 
+
+  <script src="../scripts/homePage_logged.js"></script>
+
+
+
+  <script>
+    const select = document.querySelector("#button_user select");
+    select.addEventListener("change", function() {
+      redirect(this);
+    });
+  </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      displayTopRatedHotels();
+    });
+
+  </script>
 
 </body>
 

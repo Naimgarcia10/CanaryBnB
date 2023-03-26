@@ -89,6 +89,10 @@
   transform: scale(0.90);
 }
 
+#num_camas {
+  position: absolute;
+}
+
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 991.98px) {
   .hotels_section {

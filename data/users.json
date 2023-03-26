@@ -1,0 +1,10 @@
+{
+    "users": [
+        {
+            "full_name": "sulli",
+            "email": "sulli@k.com",
+            "birthdate": "2023-03-03",
+            "password": "pepe"
+        }
+    ]
+}

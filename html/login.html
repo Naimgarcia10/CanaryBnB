@@ -3,13 +3,10 @@
 
 <head>
     <title>Login</title>
-    <link rel="stylesheet" href="../styles/confirm_button.css">
-    <link rel="stylesheet" href="../styles/textField.css">
-    <link rel="stylesheet" type="text/css" href="../styles/small_header.css">
-    <link rel="stylesheet" type="text/css" href="../styles/headers.css">
-    <link rel="" href="../styles/textField.css">
+    <link rel="stylesheet" href="../styles/forms.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <script src="../scripts/forms.js"></script>
 </head>
 
 <body>
@@ -17,60 +14,36 @@
 
     <!-- cabecera -->
     <header>
-        <div class="logo">
-            <img src="../images/logo.png" alt="logo" class="logo-img">
-        </div>
-        <p>FOTO</p>
-            
+        <a href="homePage_unLogged.html" class="logo">
+            <img src="../images/logo_blanco5.png" alt="logo" class="logo-img">
+        </a>
+        <p></p>
     </header>
 
     <!-- Cuerpo del Login -->
 
-    <form id="login_form">
+    <form id="login_form" method="dialog">
         <h1 class="titulo">Iniciar Sesión</h1>
-        <p class="form_paragraph">¿Aún no tienes cuenta? <a href="#" class="form_link">Entra aquí</a></p>
         <div class="form_container">
 
             <div class="form__group field">
-                <input type="text" id="mail" class="form__field" placeholder=" " required>
-                <label for="mail" class="form__label">Mail</label>
+                <input type="email" name='email' id="email" class="form__field" placeholder="">
+                <label for="email" class="form__label">Mail</label>
                 <span class="form__line"></span>
             </div>
 
 
             <div class="form__group field">
-                <input type="password" id="pasword" class="form__field" placeholder=" " required>
-                <label for="password" class="form__label">password</label>
+                <input type="password" name='password' id="password" class="form__field">
+                <label for="password" class="form__label">Password</label>
                 <span class="form__line"></span>
             </div>
-
-            <input type="submit" class="form_submit" value="Entrar">
+            <div class="bottom_form">
+                <p class="form_paragraph">¿Aún no tienes cuenta? <a href="register.html" class="form_link">Registrate ya</a></p>
+                <button class="form_submit" onclick="loginAction('#login_form', ['.form__field']);">Entrar</button>
+            </div>
 
         </div>
     </form>
 </body>
-
-<script>
-    const formulario = document.querySelector('#login_form');
-
-    const validateForm = (event) => {
-        var cont = 0;
-        var x = document.forms["login_form"]["mail"].value;
-        if (x == "") {
-            alert("Mail must be filled out");
-            cont++;
-        }
-        x = document.forms["login_form"]["password"].value;
-        if (x == "") {
-            alert("Password must be filled out");
-            cont++;
-        }
-        if cont >= 1 {
-            return false;
-        }
-    }
-
-    formulario.addEventListener('submit', validateForm);
-</script>
-
 </html>
