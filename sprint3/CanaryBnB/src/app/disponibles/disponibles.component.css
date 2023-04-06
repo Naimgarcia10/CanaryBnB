@@ -1,12 +1,57 @@
-.hotel-card {
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+  }
+  
+  .hotel-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .hotel-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     border: 1px solid #ccc;
     border-radius: 5px;
     padding: 10px;
     margin-bottom: 20px;
-    background-color: #ccc;
-    
+    width: 100%;
+    max-width: 600px;
+    background-color: #dcdcdc;
+  }
+  
+  .hotel-card-img {
+    margin-right: 20px;
+    width: 200px;
+  }
+  
+  .hotel-card-img img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .hotel-card-info {
+    flex: 1;
+  }
+  
+  .hotel-card-rating {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  
+  .hotel-card-rating p {
+    margin: 5px 0;
+  }
+  
+  .no-results {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 1.5rem;
   }
   
