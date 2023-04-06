@@ -1,0 +1,30 @@
+
+nav{
+    background-color: skyblue;
+    height: 5.5rem;
+    width: 100%;
+    
+}
+
+nav img{
+    width: 8rem;
+    
+    object-fit: cover;
+    object-position: center;
+}
+
+nav ul{
+    float: right;
+    list-style-type: none;
+}
+
+nav li{
+    display: inline-block;
+    margin: 0 10px;
+}
+
+li a {
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 1.5rem;
+}

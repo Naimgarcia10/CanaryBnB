@@ -1,0 +1,20 @@
+<div *ngIf="hotels.length > 0">
+    <h2>Hoteles en {{location}}:</h2>
+    <div *ngFor="let hotel of hotels">
+      <div class="hotel-card">
+        <h3>{{hotel.name}}</h3>
+        <img [src]="hotel.image" alt="Foto del hotel" />
+        <p>Precio: {{hotel.price}}€</p>
+        <p>Rating: {{hotel.rating}}</p>
+        <p>Camas: {{hotel.numBeds}}</p>
+        <p>Habitaciones: {{hotel.numRooms}}</p>
+        <p>Baños: {{hotel.numBathrooms}}</p>
+        <p>Cancelación gratuita: {{hotel.freeCancellation ? 'Sí' : 'No'}}</p>
+        <p>{{hotel.description}}</p>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="hotels.length === 0">
+    <h2>No se encontraron hoteles en {{location}}.</h2>
+  </div>
+  

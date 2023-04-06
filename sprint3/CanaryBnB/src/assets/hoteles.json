@@ -1,0 +1,72 @@
+{
+    "Gran Canaria": [
+        {
+            "name": "Hotel A",
+            "price": 100,
+            "rating": 4.5,
+            "numBeds": 2,
+            "numRooms": 1,
+            "numBathrooms": 1,
+            "freeCancellation": true,
+            "image": "../images/foto_1.jpg",
+            "description":"Descripción del hotel A"
+        },
+        {
+            "name": "Hotel B",
+            "price": 150,
+            "rating": 4.2,
+            "numBeds": 3,
+            "numRooms": 1,
+            "numBathrooms": 1,
+            "freeCancellation": true,
+            "image": "../images/foto_2.jpg",
+            "description":"Descripción del hotel B"
+        },
+        {
+            "name": "Hotel C",
+            "price": 200,
+            "rating": 3.9,
+            "numBeds": 2,
+            "numRooms": 1,
+            "numBathrooms": 1,
+            "freeCancellation": false,
+            "image": "../images/foto_3.jpg",
+            "description":"Descripción del hotel C"
+        }
+    ],
+    "Tenerife": [
+        {
+            "name": "Hotel D",
+            "price": 300,
+            "rating": 4.0,
+            "numBeds": 2,
+            "numRooms": 1,
+            "numBathrooms": 1,
+            "freeCancellation": false,
+            "image": "../images/foto_4.jpg",
+            "description":"Descripción del hotel D"
+        },
+        {
+            "name": "Hotel E",
+            "price": 250,
+            "rating": 4.3,
+            "numBeds": 3,
+            "numRooms": 2,
+            "numBathrooms": 1,
+            "freeCancellation": true,
+            "image": "../images/foto_5.jpg",
+            "description":"Descripción del hotel E"
+        },
+        {
+            "name": "Hotel F",
+            "price": 180,
+            "rating": 3.8,
+            "numBeds": 2,
+            "numRooms": 1,
+            "numBathrooms": 1,
+            "freeCancellation": true,
+            "image": "../images/foto_6.jpg",
+            "description":"Descripción del hotel F"
+        }
+    ]
+}
