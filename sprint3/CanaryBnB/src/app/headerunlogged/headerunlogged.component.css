@@ -1,30 +1,71 @@
-
-nav{
-    background-color: skyblue;
-    height: 5.5rem;
-    width: 100%;
-    
+header {
+  display: flex;
+  height: 25rem;
+  background-image: url('../../assets/images/foto_5.jpg');
+  background-size: cover;
+  background-position: center;
+  justify-content: center;
 }
 
-nav img{
-    width: 8rem;
-    
-    object-fit: cover;
-    object-position: center;
-}
-
-nav ul{
-    float: right;
-    list-style-type: none;
-}
-
-nav li{
-    display: inline-block;
-    margin: 0 10px;
-}
-
-li a {
-    color: aliceblue;
-    text-decoration: none;
-    font-size: 1.5rem;
-}
+  
+  
+  header p {
+    display: flex;
+    align-items: center;
+    font-size: 3rem;
+    position: absolute;
+  }
+  
+  .logo {
+    position: absolute;
+    left: 3rem;
+    top: 3rem;
+  }
+  
+  .logo-img {
+    height: 5rem;
+  } 
+  
+  
+  /* sign in sign up buttons */
+  #button_signIn {
+    font-size: 0.8rem;
+    width: 6rem;
+    height: 2.5rem;
+    cursor: pointer;
+    background: #ffffff;
+    border: none;
+    transition: 0.4s;
+    margin: 0 auto;
+    position: absolute;
+    top: 3rem;
+    right: 8.5rem;
+    border-radius: 1rem;
+  }
+  
+  
+  #button_signIn:active {
+    transform: scale(0.90);
+  }
+  
+  #button_signUp {
+    font-size: 0.8rem;
+    width: 6rem;
+    height: 2.5rem;
+    cursor: pointer;
+    background: #ffffff;
+    border: none;
+    transition: 0.4s;
+    margin: 0 auto;
+    position: absolute;
+    top: 3rem;
+    right: 1.5rem;
+    border-radius: 1rem;
+  }
+  
+  #button_signUp:active {
+    transform: scale(0.90);
+  }
+  
+  
+  
