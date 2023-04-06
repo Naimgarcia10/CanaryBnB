@@ -10,7 +10,8 @@ import { HomeComponent } from './home/home.component';
 
 import { FormsModule } from '@angular/forms'; // Asegúrate de importar FormsModule aquí
 import { HttpClientModule } from '@angular/common/http';
-import { DisponiblesComponent } from './disponibles/disponibles.component'; // Importa HttpClientModule
+import { DisponiblesComponent } from './disponibles/disponibles.component';
+
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { DisponiblesComponent } from './disponibles/disponibles.component'; // I
     HeaderunloggedComponent,
     HomeComponent,
     DisponiblesComponent,
+   
     //DisponiblesComponent // Añade DisponiblesComponent aquí
   ],
   imports: [

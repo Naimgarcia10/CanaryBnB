@@ -8,7 +8,7 @@
             "numRooms": 1,
             "numBathrooms": 1,
             "freeCancellation": true,
-            "image": "../images/foto_1.jpg",
+            "image": "/assets/images/foto_1.jpg",
             "description":"Descripción del hotel A"
         },
         {
@@ -19,7 +19,7 @@
             "numRooms": 1,
             "numBathrooms": 1,
             "freeCancellation": true,
-            "image": "../images/foto_2.jpg",
+            "image": "/assets/images/foto_2.jpg",
             "description":"Descripción del hotel B"
         },
         {
@@ -30,7 +30,7 @@
             "numRooms": 1,
             "numBathrooms": 1,
             "freeCancellation": false,
-            "image": "../images/foto_3.jpg",
+            "image": "/assets/images/foto_3.jpg",
             "description":"Descripción del hotel C"
         }
     ],
@@ -43,7 +43,7 @@
             "numRooms": 1,
             "numBathrooms": 1,
             "freeCancellation": false,
-            "image": "../images/foto_4.jpg",
+            "image": "/assets/images/foto_4.jpg",
             "description":"Descripción del hotel D"
         },
         {
@@ -54,7 +54,7 @@
             "numRooms": 2,
             "numBathrooms": 1,
             "freeCancellation": true,
-            "image": "../images/foto_5.jpg",
+            "image": "/assets/images/foto_5.jpg",
             "description":"Descripción del hotel E"
         },
         {
@@ -65,7 +65,7 @@
             "numRooms": 1,
             "numBathrooms": 1,
             "freeCancellation": true,
-            "image": "../images/foto_6.jpg",
+            "image": "/assets/images/foto_6.jpg",
             "description":"Descripción del hotel F"
         }
     ]
