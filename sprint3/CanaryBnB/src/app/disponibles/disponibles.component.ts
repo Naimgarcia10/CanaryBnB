@@ -10,6 +10,8 @@ import { HotelService } from '../hotel.service';
 export class DisponiblesComponent implements OnInit {
   location = '';
   hotels: any[] = [];
+  alojamientoSeleccionado: string[] = [];
+  filtroPrecio: string = ''; // Nueva propiedad para el filtro de precio
 
   constructor(private route: ActivatedRoute, private hotelService: HotelService) { }
 
@@ -29,4 +31,22 @@ export class DisponiblesComponent implements OnInit {
       }
     });
   }
+
+  applyFilter(): void {
+    let hotelsFiltrados = [...this.hotels];
+
+    if (this.alojamientoSeleccionado.length > 0) {
+      hotelsFiltrados = hotelsFiltrados.filter(hotel => this.alojamientoSeleccionado.includes(hotel.tipo));
+    }
+
+    if (this.filtroPrecio === 'menor') {
+      hotelsFiltrados = hotelsFiltrados.sort((a, b) => a.precio - b.precio);
+    } else if (this.filtroPrecio === 'mayor') {
+      hotelsFiltrados = hotelsFiltrados.sort((a, b) => b.precio - a.precio);
+    }
+
+    this.hotels = hotelsFiltrados;
+  }
+
+  
 }

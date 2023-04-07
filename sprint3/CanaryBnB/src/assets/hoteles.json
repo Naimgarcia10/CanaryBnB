@@ -1,42 +1,82 @@
 {
     "Gran Canaria": [
         {
-            "name": "Hotel A",
-            "price": 100,
-            "rating": 4.5,
-            "numBeds": 2,
-            "numRooms": 1,
-            "numBathrooms": 1,
-            "freeCancellation": true,
-            "image": "/assets/images/foto_1.jpg",
-            "description":"Descripción del hotel A"
+          "name": "Hotel A",
+          "price": 100,
+          "rating": 4.5,
+          "numBeds": 2,
+          "numRooms": 1,
+          "numBathrooms": 1,
+          "freeCancellation": true,
+          "image": "/assets/images/foto_1.jpg",
+          "description": "Descripción del hotel A",
+          "type": "hotel"
         },
         {
-            "name": "Hotel B",
-            "price": 150,
-            "rating": 4.2,
-            "numBeds": 3,
-            "numRooms": 1,
-            "numBathrooms": 1,
-            "freeCancellation": true,
-            "image": "/assets/images/foto_2.jpg",
-            "description":"Descripción del hotel B"
+          "name": "Hotel B",
+          "price": 150,
+          "rating": 4.2,
+          "numBeds": 3,
+          "numRooms": 1,
+          "numBathrooms": 1,
+          "freeCancellation": true,
+          "image": "/assets/images/foto_2.jpg",
+          "description": "Descripción del hotel B",
+          "type": "villa"
         },
         {
-            "name": "Hotel C",
-            "price": 200,
-            "rating": 3.9,
-            "numBeds": 2,
-            "numRooms": 1,
-            "numBathrooms": 1,
-            "freeCancellation": false,
-            "image": "/assets/images/foto_3.jpg",
-            "description":"Descripción del hotel C"
+          "name": "Hotel C",
+          "price": 200,
+          "rating": 3.9,
+          "numBeds": 2,
+          "numRooms": 1,
+          "numBathrooms": 1,
+          "freeCancellation": false,
+          "image": "/assets/images/foto_3.jpg",
+          "description": "Descripción del hotel C",
+          "type": "casa"
+        },
+        {
+          "name": "Hotel D",
+          "price": 120,
+          "rating": 4.0,
+          "numBeds": 1,
+          "numRooms": 1,
+          "numBathrooms": 1,
+          "freeCancellation": true,
+          "image": "/assets/images/foto_4.jpg",
+          "description": "Descripción del hotel D",
+          "type": "apartamento"
+        },
+        {
+          "name": "Hotel E",
+          "price": 180,
+          "rating": 3.8,
+          "numBeds": 2,
+          "numRooms": 1,
+          "numBathrooms": 1,
+          "freeCancellation": true,
+          "image": "/assets/images/foto_5.jpg",
+          "description": "Descripción del hotel E",
+          "type": "hotel"
+        },
+        {
+          "name": "Hotel F",
+          "price": 250,
+          "rating": 4.1,
+          "numBeds": 3,
+          "numRooms": 2,
+          "numBathrooms": 1,
+          "freeCancellation": true,
+          "image": "/assets/images/foto_6.jpg",
+          "description": "Descripción del hotel F",
+          "type": "villa"
         }
-    ],
+      ]
+      ,
     "Tenerife": [
         {
-            "name": "Hotel D",
+            "name": "Hotel G",
             "price": 300,
             "rating": 4.0,
             "numBeds": 2,
@@ -44,10 +84,11 @@
             "numBathrooms": 1,
             "freeCancellation": false,
             "image": "/assets/images/foto_4.jpg",
-            "description":"Descripción del hotel D"
+            "description": "Descripción del hotel D",
+            "type": "hotel"
         },
         {
-            "name": "Hotel E",
+            "name": "Hotel H",
             "price": 250,
             "rating": 4.3,
             "numBeds": 3,
@@ -55,18 +96,45 @@
             "numBathrooms": 1,
             "freeCancellation": true,
             "image": "/assets/images/foto_5.jpg",
-            "description":"Descripción del hotel E"
+            "description": "Descripción del hotel E",
+            "type": "villa"
         },
         {
-            "name": "Hotel F",
+            "name": "Hotel I",
             "price": 180,
             "rating": 3.8,
             "numBeds": 2,
             "numRooms": 1,
             "numBathrooms": 1,
             "freeCancellation": true,
-            "image": "/assets/images/foto_6.jpg",
-            "description":"Descripción del hotel F"
+            "image": "/assets/images/foto_2.jpg",
+            "description": "Descripción del hotel F",
+            "type": "casa"
+        },
+        {
+            "name": "Hotel J",
+            "price": 280,
+            "rating": 4.5,
+            "numBeds": 4,
+            "numRooms": 2,
+            "numBathrooms": 2,
+            "freeCancellation": true,
+            "image": "/assets/images/foto_3.jpg",
+            "description": "Descripción del hotel G",
+            "type": "apartamento"
+        },
+        {
+            "name": "Hotel K",
+            "price": 350,
+            "rating": 4.7,
+            "numBeds": 4,
+            "numRooms": 2,
+            "numBathrooms": 2,
+            "freeCancellation": false,
+            "image": "/assets/images/foto_4.jpg",
+            "description": "Descripción del hotel H",
+            "type": "villa"
         }
     ]
+    
 }

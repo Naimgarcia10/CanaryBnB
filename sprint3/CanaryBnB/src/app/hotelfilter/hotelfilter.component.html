@@ -1,0 +1,32 @@
+<div id="rectangulo_filtros">
+    <form>
+      <h1 id="filtrar_label">Filtrar por:</h1>
+      <div id="linea_horizontal"></div>
+      <h1 id="precio_label">Precio</h1>
+      <div class="price_option">
+        <input type="radio" id="lower_option" name="price_option" value="lower" (change)="applyFilter()"><label for="lower_option">Más bajo primero</label><br>
+        <input type="radio" id="higher_option" name="price_option" value="higher" (change)="applyFilter()"><label for="higher_option">Más alto primero</label>
+      </div>
+      <div id="linea_horizontal2"></div>
+      <h1 id="valoracion_label">Valoración</h1>
+      <!-- estrellas -->
+      <div class="estrellas">
+        <label for="estrellas">★</label>
+        <label for="estrellas">★</label>
+        <label for="estrellas">★</label>
+        <label for="estrellas">★</label>
+        <label for="estrellas">★</label>
+      </div>
+      <div id="linea_horizontal3"></div>
+      <h1 id="alojamiento_label">Tipo de Alojamiento</h1>
+      <div class="alojamientos">
+        <input type="checkbox" id="hoteles" name="alojamientos" value="hotel" (change)="applyFilter()"><label for="hoteles">Hoteles</label><br>
+        <input type="checkbox" id="apartamentos" name="alojamientos" value="apartamento" (change)="applyFilter()"><label for="apartamentos">Apartamentos</label><br>
+        <input type="checkbox" id="villas" name="alojamientos" value="villa" (change)="applyFilter()"><label for="villas">Villas</label><br>
+        <input type="checkbox" id="casas" name="alojamientos" value="casa" (change)="applyFilter()"><label for="casas">Casas</label>
+      </div> 
+      <div id="linea_horizontal4"></div>
+      <button id="filters_button" type="button" (click)="applyFilter()">Aplicar Filtros</button>
+    </form>
+  </div>
+  

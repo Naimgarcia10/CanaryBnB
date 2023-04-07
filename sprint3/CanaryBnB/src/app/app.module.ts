@@ -11,6 +11,7 @@ import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms'; // Asegúrate de importar FormsModule aquí
 import { HttpClientModule } from '@angular/common/http';
 import { DisponiblesComponent } from './disponibles/disponibles.component';
+import { HotelfilterComponent } from './hotelfilter/hotelfilter.component';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { DisponiblesComponent } from './disponibles/disponibles.component';
     HeaderunloggedComponent,
     HomeComponent,
     DisponiblesComponent,
+    HotelfilterComponent,
    
     //DisponiblesComponent // Añade DisponiblesComponent aquí
   ],
