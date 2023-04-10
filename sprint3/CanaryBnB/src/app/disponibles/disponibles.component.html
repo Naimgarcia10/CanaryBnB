@@ -1,7 +1,8 @@
 
 <div class ="container">
   <label for="sort">Ordenar por:</label>
-  <select id="sort">
+  <select id="sort" (change)="onSortChange($event)">
+
     <option value="defect">Por defecto</option>
     <option value="price">Precio</option>
     <option value="rating">Valoración</option>
@@ -22,7 +23,6 @@
         <p>Habitaciones: {{hotel.numRooms}}</p>
         <p>Baños: {{hotel.numBathrooms}}</p>
         <p>Cancelación gratuita: {{hotel.freeCancellation ? 'Sí' : 'No'}}</p>
-        <p>{{hotel.description}}</p>
       </div>
       <div class="hotel-card-rating">
         <p>Rating: {{hotel.rating}}</p>
