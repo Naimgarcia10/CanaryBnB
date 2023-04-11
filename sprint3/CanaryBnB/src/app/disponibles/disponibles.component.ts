@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Subscription } from 'rxjs';
 import { HotelService } from '../hotel.service';
 
 @Component({
@@ -12,6 +13,7 @@ export class DisponiblesComponent implements OnInit {
   hotels: any[] = [];
   selectedSortOption: string = '';
   filters: any = {};
+  filterSubscription: Subscription | null = null; // inicializa la propiedad con null
 
   constructor(private route: ActivatedRoute, private hotelService: HotelService) { }
 
@@ -20,7 +22,20 @@ export class DisponiblesComponent implements OnInit {
       this.location = params['location'];
       this.loadHotels();
     });
+
+    this.filterSubscription = this.hotelService.hotelFilter$.subscribe((filters: any) => {
+      this.filters = filters;
+      this.applyFiltersAndSorting();
+    });
+
   }
+
+  ngOnDestroy() {
+    if (this.filterSubscription) {
+      this.filterSubscription.unsubscribe();
+    }
+  }
+  
 
   loadHotels(): void {
     this.hotelService.getHotelsData().subscribe(data => {
@@ -42,7 +57,7 @@ export class DisponiblesComponent implements OnInit {
     let hotelsFiltrados = [...this.hotels];
 
     if (this.filters.alojamiento && this.filters.alojamiento.length > 0) {
-      hotelsFiltrados = hotelsFiltrados.filter(hotel => this.filters.alojamiento.includes(hotel.tipo));
+      hotelsFiltrados = hotelsFiltrados.filter(hotel => this.filters.alojamiento.includes(hotel.type));
     }
 
     if (this.filters.precio === 'menor') {
@@ -59,10 +74,5 @@ export class DisponiblesComponent implements OnInit {
     }
 
     this.hotels = hotelsFiltrados;
-  }
-
-  onFiltersApplied(filters: any): void {
-    this.filters = filters;
-    this.applyFiltersAndSorting();
   }
 }

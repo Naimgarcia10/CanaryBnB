@@ -7,6 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class HotelService {
   private hotelsDataUrl = 'assets/hoteles.json';
+  hotelFilter$: any;
 
   constructor(private http: HttpClient) { }
 

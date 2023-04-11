@@ -1,7 +1,8 @@
+<!-- app.component.html -->
 <app-headerunlogged></app-headerunlogged>
 <app-home></app-home>
-<app-disponibles></app-disponibles>
-<app-hotelfilter (applyFilters)="onFiltersApplied($event)"></app-hotelfilter>
+<div class="disponibles-container">
+  <app-hotelfilter (applyFilters)="onFiltersApplied($event)"></app-hotelfilter>
 
-
-
+  <app-disponibles></app-disponibles>
+</div>

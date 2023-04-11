@@ -8,7 +8,7 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 export class HotelfilterComponent implements OnInit {
   alojamientoSeleccionado: string[] = [];
 
-  @Output() applyFilters: EventEmitter<any> = new EventEmitter();
+  @Output() applyFilters = new EventEmitter<any>();
 
   constructor() { }
 
@@ -26,12 +26,11 @@ export class HotelfilterComponent implements OnInit {
     }
   }
 
-  applyFilter(): void {
+  emitFilters(): void {
     const filters = {
       alojamiento: this.alojamientoSeleccionado,
     };
-
+  
     this.applyFilters.emit(filters);
   }
-
 }
