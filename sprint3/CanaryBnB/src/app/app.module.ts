@@ -12,6 +12,7 @@ import { FormsModule } from '@angular/forms'; // Asegúrate de importar FormsMod
 import { HttpClientModule } from '@angular/common/http';
 import { DisponiblesComponent } from './disponibles/disponibles.component';
 import { HotelfilterComponent } from './hotelfilter/hotelfilter.component';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { HotelfilterComponent } from './hotelfilter/hotelfilter.component';
     HomeComponent,
     DisponiblesComponent,
     HotelfilterComponent,
+    LoginComponent,
    
     //DisponiblesComponent // Añade DisponiblesComponent aquí
   ],
