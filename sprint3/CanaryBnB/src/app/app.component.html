@@ -1,13 +1,3 @@
 <!-- app.component.html -->
 <app-headerunlogged></app-headerunlogged>
-<app-home></app-home>
-<div class="disponibles-container">
-  <app-hotelfilter (applyFilters)="onFiltersApplied($event)"></app-hotelfilter>
-
-  <app-disponibles></app-disponibles>
-</div>
-<<<<<<< HEAD
-<app-register></app-register>
-=======
-<app-login></app-login>
->>>>>>> e24427dae636e9600cd653456fa59ba284a87986
+<router-outlet></router-outlet>

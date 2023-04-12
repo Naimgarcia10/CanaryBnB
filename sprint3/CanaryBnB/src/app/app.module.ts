@@ -12,11 +12,8 @@ import { FormsModule } from '@angular/forms'; // Asegúrate de importar FormsMod
 import { HttpClientModule } from '@angular/common/http';
 import { DisponiblesComponent } from './disponibles/disponibles.component';
 import { HotelfilterComponent } from './hotelfilter/hotelfilter.component';
-<<<<<<< HEAD
 import { RegisterComponent } from './register/register.component';
-=======
 import { LoginComponent } from './login/login.component';
->>>>>>> e24427dae636e9600cd653456fa59ba284a87986
 
 
 @NgModule({
@@ -27,11 +24,8 @@ import { LoginComponent } from './login/login.component';
     HomeComponent,
     DisponiblesComponent,
     HotelfilterComponent,
-<<<<<<< HEAD
     RegisterComponent,
-=======
     LoginComponent,
->>>>>>> e24427dae636e9600cd653456fa59ba284a87986
    
     //DisponiblesComponent // Añade DisponiblesComponent aquí
   ],

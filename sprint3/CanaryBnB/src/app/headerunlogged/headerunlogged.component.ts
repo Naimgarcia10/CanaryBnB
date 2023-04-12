@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-headerunlogged',
@@ -6,5 +7,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./headerunlogged.component.css']
 })
 export class HeaderunloggedComponent {
+  constructor(private router: Router ) { }
+
+  goToRegister() {
+    this.router.navigate(['/register']);
+  }
+
+  goToLogin() {
+    this.router.navigate(['/login']);
+  }
 
 }

@@ -3,11 +3,11 @@
       <img src="assets/images/logo_blanco5.png" alt="logo" class="logo-img">
     </div>
 
-    <a href="login.html" class="form_link">
-        <button id="button_signIn"> SIGN IN </button>
-      </a>
-      <a href="register.html" class="form_link">
-        <button id="button_signUp"> SIGN UP </button>
-      </a>
+    <a [routerLink] = "['/login']">
+      <button id="button_signIn"> SIGN IN </button>
+    </a>
+    <a [routerLink] = "['/register']">
+      <button id="button_signUp"> SIGN UP </button>
+    </a>
 
 </header>
