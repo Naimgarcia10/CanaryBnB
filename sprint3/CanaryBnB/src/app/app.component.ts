@@ -21,4 +21,5 @@ export class AppComponent implements OnInit {
   onFiltersApplied(filters: any): void {
     console.log('Filtros aplicados:', filters);
   }
+  
 }
