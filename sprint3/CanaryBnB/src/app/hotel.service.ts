@@ -14,4 +14,6 @@ export class HotelService {
   getHotelsData(): Observable<any> {
     return this.http.get<any>(this.hotelsDataUrl);
   }
+
+
 }

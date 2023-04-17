@@ -14,6 +14,7 @@ import { DisponiblesComponent } from './disponibles/disponibles.component';
 import { HotelfilterComponent } from './hotelfilter/hotelfilter.component';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import { LoginComponent } from './login/login.component';
     HotelfilterComponent,
     RegisterComponent,
     LoginComponent,
+    FooterComponent,
    
     //DisponiblesComponent // Añade DisponiblesComponent aquí
   ],
