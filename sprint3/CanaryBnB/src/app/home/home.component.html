@@ -1,7 +1,3 @@
-<!--div class="search-container">
-    <input [(ngModel)]="location" type="text" placeholder="Introduzca una ubicación" />
-    <button (click)="search()">Buscar</button>
-  </div -->
 
   <form onsubmit="event.preventDefault(); searchHotels();">
     <div class="search-bar">
@@ -40,8 +36,11 @@
   <h1 class="title">Alojamientos mejor valorados</h1>
   <!-- Reemplaza las imágenes estáticas con un contenedor donde se mostrarán las imágenes -->
   <div class="recomendations" id="topRatedHotels">
-    <img src="../assets/images/hotel_foto.png" alt="hotel">
-    <img src="../assets/images/hotel_foto.png" alt="hotel">
-    <img src="../assets/images/hotel_foto.png" alt="hotel">
-
+    <div *ngFor="let hotel of topHoteles">
+      <h3>{{ hotel.nombre }}</h3>
+      <img [src]="hotel.image" alt="Imagen del hotel {{ hotel.nombre }}">
+    </div>
   </div>
+
+  
+  
