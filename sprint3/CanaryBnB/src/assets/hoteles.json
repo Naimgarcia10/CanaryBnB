@@ -1,0 +1,140 @@
+{
+    "Gran Canaria": [
+        {
+          "name": "Hotel Costa Canaria",
+          "price": 100,
+          "rating": 4.5,
+          "numBeds": 2,
+          "numRooms": 1,
+          "numBathrooms": 1,
+          "freeCancellation": true,
+          "image": "/assets/images/foto_1.jpg",
+          "description": " Ubicado en la playa de San Agustín, este hotel de 4 estrellas ofrece una experiencia de lujo con sus habitaciones elegantes y espaciosas, piscinas al aire libre, restaurantes de alta calidad y un spa relajante.",
+          "type": "hotel"
+        },
+        {
+          "name": "Bohemia Suites & Spa",
+          "price": 150,
+          "rating": 4.2,
+          "numBeds": 3,
+          "numRooms": 1,
+          "numBathrooms": 1,
+          "freeCancellation": true,
+          "image": "/assets/images/foto_2.jpg",
+          "description": " Situado en el corazón de Playa del Inglés, este hotel de diseño boutique es un verdadero refugio para los huéspedes adultos que buscan una experiencia exclusiva. Ofrece una terraza en la azotea con vistas impresionantes al mar, un restaurante de alta cocina y un spa de lujo.",
+          "type": "villa"
+        },
+        {
+          "name": "Hotel Cordial Mogán Playa",
+          "price": 200,
+          "rating": 3.9,
+          "numBeds": 2,
+          "numRooms": 1,
+          "numBathrooms": 1,
+          "freeCancellation": false,
+          "image": "/assets/images/foto_3.jpg",
+          "description": "Inspirado en una villa canaria, este hotel cuenta con una arquitectura tradicional y un ambiente tranquilo. Dispone de amplias habitaciones, varias piscinas rodeadas de exuberante vegetación y restaurantes de primera categoría.",
+          "type": "casa"
+        },
+        {
+          "name": "Hotel Santa Catalina",
+          "price": 120,
+          "rating": 4.0,
+          "numBeds": 1,
+          "numRooms": 1,
+          "numBathrooms": 1,
+          "freeCancellation": true,
+          "image": "/assets/images/foto_4.jpg",
+          "description": "Este hotel histórico de 5 estrellas se encuentra en el centro de Las Palmas de Gran Canaria. Ofrece elegantes habitaciones, un exuberante jardín tropical, una piscina climatizada y un restaurante que sirve cocina local e internacional.",
+          "type": "apartamento"
+        },
+        {
+          "name": "Lopesan Costa Meloneras Resort",
+          "price": 180,
+          "rating": 3.8,
+          "numBeds": 2,
+          "numRooms": 1,
+          "numBathrooms": 1,
+          "freeCancellation": true,
+          "image": "/assets/images/foto_5.jpg",
+          "description": "Este enorme complejo turístico ofrece una amplia gama de instalaciones de ocio y entretenimiento, incluyendo varias piscinas, spa, club infantil, pistas de tenis, restaurantes temáticos y un casino. Está ubicado en Meloneras, cerca de la playa y de varios campos de golf.",
+          "type": "hotel"
+        },
+        {
+          "name": "Hotel Riu Palace Oasis",
+          "price": 250,
+          "rating": 4.1,
+          "numBeds": 3,
+          "numRooms": 2,
+          "numBathrooms": 1,
+          "freeCancellation": true,
+          "image": "/assets/images/foto_6.jpg",
+          "description": "Situado en Maspalomas, este hotel de 4 estrellas ofrece una amplia gama de instalaciones de ocio, como varias piscinas, un spa y un gimnasio. Además, cuenta con una excelente ubicación cerca de la playa y del famoso faro de Maspalomas.",
+          "type": "villa"
+        }
+      ]
+      ,
+    "Tenerife": [
+        {
+            "name": "Bahía del Duque",
+            "price": 300,
+            "rating": 4.0,
+            "numBeds": 2,
+            "numRooms": 1,
+            "numBathrooms": 1,
+            "freeCancellation": false,
+            "image": "/assets/images/foto_4.jpg",
+            "description": "Este hotel de lujo de 5 estrellas en Costa Adeje se inspira en la arquitectura canaria tradicional. Cuenta con una amplia variedad de instalaciones, desde jardines y piscinas hasta restaurantes y bares de alta calidad, y ofrece acceso directo a la playa.",
+            "type": "hotel"
+        },
+        {
+            "name": "Hard Rock Hotel Tenerife",
+            "price": 250,
+            "rating": 4.3,
+            "numBeds": 3,
+            "numRooms": 2,
+            "numBathrooms": 1,
+            "freeCancellation": true,
+            "image": "/assets/images/foto_5.jpg",
+            "description": "Ubicado en el sur de Tenerife, este hotel temático de 5 estrellas es un paraíso para los amantes de la música. Dispone de amplias habitaciones, piscinas, bares y restaurantes, así como de una amplia oferta de actividades para todas las edades.",
+            "type": "villa"
+        },
+        {
+            "name": "Iberostar Grand Hotel El Mirador",
+            "price": 180,
+            "rating": 3.8,
+            "numBeds": 2,
+            "numRooms": 1,
+            "numBathrooms": 1,
+            "freeCancellation": true,
+            "image": "/assets/images/foto_2.jpg",
+            "description": "Este hotel solo para adultos se encuentra en el corazón de Costa Adeje y ofrece habitaciones amplias y elegantes con vistas al mar, así como una amplia gama de instalaciones, incluyendo una piscina climatizada, un spa y varios restaurantes de alta calidad.",
+            "type": "casa"
+        },
+        {
+            "name": "Gran Meliá Palacio de Isora",
+            "price": 280,
+            "rating": 4.5,
+            "numBeds": 4,
+            "numRooms": 2,
+            "numBathrooms": 2,
+            "freeCancellation": true,
+            "image": "/assets/images/foto_3.jpg",
+            "description": " Situado en la costa oeste de Tenerife, este hotel de lujo de 5 estrellas ofrece un ambiente sofisticado y relajado. Cuenta con amplias habitaciones con vistas panorámicas, varios restaurantes de alta cocina, un spa de lujo y una impresionante piscina de borde infinito.",
+            "type": "apartamento"
+        },
+        {
+            "name": "Hotel Botánico & The Oriental Spa Garden",
+            "price": 350,
+            "rating": 4.7,
+            "numBeds": 4,
+            "numRooms": 2,
+            "numBathrooms": 2,
+            "freeCancellation": false,
+            "image": "/assets/images/foto_4.jpg",
+            "description": "Este hotel de 5 estrellas en Puerto de la Cruz es un verdadero oasis de tranquilidad rodeado de jardines subtropicales. Ofrece habitaciones elegantes, un spa de lujo, una piscina climatizada y varios restaurantes que sirven platos internacionales y locales.",
+            "type": "villa"
+        }
+    ]
+    
+}

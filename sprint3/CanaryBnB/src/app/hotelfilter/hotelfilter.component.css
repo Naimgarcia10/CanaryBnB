@@ -1,0 +1,43 @@
+#rectangulo_filtros {
+    position: absolute;
+    top: 25rem;
+    left: 0;
+    width: 200px;
+    height: 53%;
+    background-color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    border-right: 1px solid #ccc;
+  }
+  
+  #rectangulo_filtros h1 {
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+  
+  #linea_horizontal,
+  #linea_horizontal2,
+  #linea_horizontal3,
+  #linea_horizontal4 {
+    border-bottom: 1px solid #ccc;
+    margin: 10px 0;
+  }
+  
+  .price_option label,
+  .alojamientos label {
+    font-size: 1.2rem;
+    margin-left: 10px;
+  }
+  
+  #filters_button {
+    display: block;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #0077cc;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  

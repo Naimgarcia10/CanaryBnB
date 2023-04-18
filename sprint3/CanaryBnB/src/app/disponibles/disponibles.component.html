@@ -1,0 +1,39 @@
+
+<div class ="container">
+  <label for="sort">Ordenar por:</label>
+  <select id="sort" (change)="onSortChange($event)">
+
+    <option value="defect">Por defecto</option>
+    <option value="price">Precio</option>
+    <option value="rating">Valoración</option>
+  </select>
+</div>
+
+<div class="container">
+  <div *ngIf="hotels.length > 0" class="hotel-list">
+    <h2>Hoteles en {{location}}:</h2>
+    <div *ngFor="let hotel of hotels" class="hotel-card">
+      <div class="hotel-card-img">
+        <img [src]="hotel.image" alt="Foto del hotel" />
+      </div>
+      <div class="hotel-card-info">
+        <h3>{{hotel.name}}</h3>
+        <p>Tipo: {{hotel.type}}</p>
+        <p>Camas: {{hotel.numBeds}}</p>
+        <p>Habitaciones: {{hotel.numRooms}}</p>
+        <p>Baños: {{hotel.numBathrooms}}</p>
+        <p>Cancelación gratuita: {{hotel.freeCancellation ? 'Sí' : 'No'}}</p>
+      </div>
+      <div class="hotel-card-rating">
+        <p>Rating: {{hotel.rating}}</p>
+        <p>Precio: {{hotel.price}}€</p>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="hotels.length === 0" class="no-results">
+    <h2>No se encontraron hoteles en {{location}}.</h2>
+  </div>
+</div>
+
+<app-hotelfilter></app-hotelfilter>
+
