@@ -1,140 +1,127 @@
 {
     "Gran Canaria": [
-        {
-          "name": "HOTEL COSTA CANARIA",
-          "price": 100,
-          "rating": 4.5,
-          "numBeds": 2,
-          "numRooms": 1,
-          "numBathrooms": 1,
-          "freeCancellation": true,
-          "image": "/assets/images/foto_1.jpg",
-          "description": "Descripción del hotel A",
-          "type": "hotel"
-        },
-        {
-          "name": "Hotel B",
-          "price": 150,
-          "rating": 4.2,
-          "numBeds": 3,
-          "numRooms": 1,
-          "numBathrooms": 1,
-          "freeCancellation": true,
-          "image": "/assets/images/foto_2.jpg",
-          "description": "Descripción del hotel B",
-          "type": "villa"
-        },
-        {
-          "name": "Hotel C",
-          "price": 200,
-          "rating": 3.9,
-          "numBeds": 2,
-          "numRooms": 1,
-          "numBathrooms": 1,
-          "freeCancellation": false,
-          "image": "/assets/images/foto_3.jpg",
-          "description": "Descripción del hotel C",
-          "type": "casa"
-        },
-        {
-          "name": "Hotel D",
-          "price": 120,
-          "rating": 4.0,
-          "numBeds": 1,
-          "numRooms": 1,
-          "numBathrooms": 1,
-          "freeCancellation": true,
-          "image": "/assets/images/foto_4.jpg",
-          "description": "Descripción del hotel D",
-          "type": "apartamento"
-        },
-        {
-          "name": "Hotel E",
-          "price": 180,
-          "rating": 3.8,
-          "numBeds": 2,
-          "numRooms": 1,
-          "numBathrooms": 1,
-          "freeCancellation": true,
-          "image": "/assets/images/foto_5.jpg",
-          "description": "Descripción del hotel E",
-          "type": "hotel"
-        },
-        {
-          "name": "Hotel F",
-          "price": 250,
-          "rating": 4.1,
-          "numBeds": 3,
-          "numRooms": 2,
-          "numBathrooms": 1,
-          "freeCancellation": true,
-          "image": "/assets/images/foto_6.jpg",
-          "description": "Descripción del hotel F",
-          "type": "villa"
-        }
+      {
+        "name": "Hotel Costa Canaria",
+        "price": 100,
+        "rating": 4.5,
+        "numBeds": 2,
+        "numRooms": 1,
+        "numBathrooms": 1,
+        "freeCancellation": true,
+        "image": "/assets/images/foto_1.jpg",
+        "description": "Ubicado en la playa de San Agustín, este hotel de 4 estrellas ofrece una experiencia de lujo con sus habitaciones elegantes y espaciosas, piscinas al aire libre, restaurantes de alta calidad y un spa relajante.",
+        "type": "hotel"
+    },
+    {
+        "name": "Bohemia Suites & Spa",
+        "price": 150,
+        "rating": 4.2,
+        "numBeds": 3,
+        "numRooms": 1,
+        "numBathrooms": 1,
+        "freeCancellation": true,
+        "image": "/assets/images/foto_2.jpg",
+        "description": "Situado en el corazón de Playa del Inglés, este hotel de diseño boutique es un verdadero refugio para los huéspedes adultos que buscan una experiencia exclusiva. Ofrece una terraza en la azotea con vistas impresionantes al mar, un restaurante de alta cocina y un spa de lujo.",
+        "type": "villa"
+    },
+    {
+        "name": "Hotel Cordial Mogán Playa",
+        "price": 200,
+        "rating": 3.9,
+        "numBeds": 2,
+        "numRooms": 1,
+        "numBathrooms": 1,
+        "freeCancellation": false,
+        "image": "/assets/images/foto_3.jpg",
+        "description": "Inspirado en una villa canaria, este hotel cuenta con una arquitectura tradicional y un ambiente tranquilo. Dispone de amplias habitaciones, varias piscinas rodeadas de exuberante vegetación y restaurantes de primera categoría.",
+        "type": "hotel"
+    },
+    {
+        "name": "Hotel Santa Catalina",
+        "price": 120,
+        "rating": 4.0,
+        "numBeds": 1,
+        "numRooms": 1,
+        "numBathrooms": 1,
+        "freeCancellation": true,
+        "image": "/assets/images/foto_4.jpg",
+        "description": "Este hotel histórico de 5 estrellas se encuentra en el centro de Las Palmas de Gran Canaria. Ofrece elegantes habitaciones, un exuberante jardín tropical, una piscina climatizada y un restaurante que sirve cocina local e internacional.",
+        "type": "apartamento"
+    },
+    {
+        "name": "Gloria Palace San Agustín Thalasso & Hotel",
+        "price": 180,
+        "rating": 3.8,
+        "numBeds": 2,
+        "numRooms": 1,
+        "numBathrooms": 1,
+        "freeCancellation": true,
+        "image": "/assets/images/foto_5.jpg",
+        "description":" Este hotel de 4 estrellas se encuentra en la playa de San Agustín y cuenta con un spa de talasoterapia, una amplia terraza con vistas al mar y una piscina climatizada al aire libre. Además, ofrece habitaciones modernas y un restaurante que sirve cocina local e internacional."
+    }
       ]
       ,
-    "Tenerife": [
-        {
-            "name": "Hotel G",
-            "price": 300,
-            "rating": 4.0,
-            "numBeds": 2,
-            "numRooms": 1,
-            "numBathrooms": 1,
-            "freeCancellation": false,
-            "image": "/assets/images/foto_4.jpg",
-            "description": "Descripción del hotel D",
-            "type": "hotel"
-        },
-        {
-            "name": "Hotel H",
-            "price": 250,
-            "rating": 4.3,
-            "numBeds": 3,
-            "numRooms": 2,
-            "numBathrooms": 1,
-            "freeCancellation": true,
-            "image": "/assets/images/foto_5.jpg",
-            "description": "Descripción del hotel E",
-            "type": "villa"
-        },
-        {
-            "name": "Hotel I",
-            "price": 180,
-            "rating": 3.8,
-            "numBeds": 2,
-            "numRooms": 1,
-            "numBathrooms": 1,
-            "freeCancellation": true,
-            "image": "/assets/images/foto_2.jpg",
-            "description": "Descripción del hotel F",
-            "type": "casa"
-        },
-        {
-            "name": "Hotel J",
-            "price": 280,
-            "rating": 4.5,
-            "numBeds": 4,
-            "numRooms": 2,
-            "numBathrooms": 2,
-            "freeCancellation": true,
-            "image": "/assets/images/foto_3.jpg",
-            "description": "Descripción del hotel G",
-            "type": "apartamento"
-        },
-        {
-            "name": "Hotel K",
-            "price": 350,
-            "rating": 4.7,
-            "numBeds": 4,
-            "numRooms": 2,
-            "numBathrooms": 2,
-            "freeCancellation": false,
-            "image": "/assets/images/foto_4.jpg",
-            "description": "Descripción del hotel H",
-            "type": "villa"
-        }
+    
+        "Tenerife": [
+            {
+                "name": "Hotel Gran Tenerife",
+                "price": 300,
+                "rating": 4.0,
+                "numBeds": 2,
+                "numRooms": 1,
+                "numBathrooms": 1,
+                "freeCancellation": false,
+                "image": "/assets/images/foto_4.jpg",
+                "description": "Situado en el sur de Tenerife, el Hotel Gran Tenerife es un paraíso para los amantes de la música. Dispone de amplias habitaciones, piscinas, bares y restaurantes, así como de una amplia oferta de actividades para todas las edades.",
+                "type": "hotel"
+            },
+            {
+                "name": "Villa del Mar",
+                "price": 250,
+                "rating": 4.3,
+                "numBeds": 3,
+                "numRooms": 2,
+                "numBathrooms": 1,
+                "freeCancellation": true,
+                "image": "/assets/images/foto_5.jpg",
+                "description": "Situado en la costa oeste de Tenerife, Villa del Mar es un hotel de lujo con impresionantes vistas al mar. Ofrece habitaciones elegantes, varias piscinas, un spa, restaurantes temáticos y una amplia oferta de actividades para toda la familia.",
+                "type": "villa"
+            },
+            {
+                "name": "Hotel Tenerife Dreams",
+                "price": 180,
+                "rating": 3.8,
+                "numBeds": 2,
+                "numRooms": 1,
+                "numBathrooms": 1,
+                "freeCancellation": true,
+                "image": "/assets/images/foto_2.jpg",
+                "description": "Situado en Costa Adeje, el Hotel Tenerife Dreams es un hotel de 5 estrellas con un ambiente tropical. Ofrece habitaciones elegantes con vistas al mar, una amplia variedad de piscinas, un spa de lujo y varios restaurantes que sirven platos internacionales y locales.",
+                "type": "casa"
+            },
+            {
+                "name": "Hotel Bahía de los Vientos",
+                "price": 280,
+                "rating": 4.5,
+                "numBeds": 4,
+                "numRooms": 2,
+                "numBathrooms": 2,
+                "freeCancellation": true,
+                "image": "/assets/images/foto_3.jpg",
+                "description": "Situado en Costa Adeje, el Hotel Bahía de los Vientos es un hotel de lujo con habitaciones y suites con vistas panorámicas al mar, una impresionante piscina de borde infinito, un spa de última generación y varios restaurantes que sirven cocina gourmet.",
+                "type": "apartamento"
+            },
+            {
+                "name": "Villa Coral",
+                "price": 350,
+                "rating": 4.7,
+                "numBeds": 4,
+                "numRooms": 2,
+                "numBathrooms": 2,
+                "freeCancellation": false,
+                "image": "/assets/images/foto_4.jpg",
+                "description": "Este hotel de diseño vanguardista está ubicado en Costa Adeje y cuenta con impresionantes vistas al mar. Ofrece habitaciones amplias y elegantes, varias piscinas, un spa, restaurantes temáticos y una amplia oferta de actividades para toda la familia."
+            }
     ]
     
 }
