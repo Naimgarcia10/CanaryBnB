@@ -15,6 +15,7 @@ import { HotelfilterComponent } from './hotelfilter/hotelfilter.component';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { FooterComponent } from './footer/footer.component';
+import { SpecifichotelComponent } from './specifichotel/specifichotel.component';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { FooterComponent } from './footer/footer.component';
     RegisterComponent,
     LoginComponent,
     FooterComponent,
+    SpecifichotelComponent,
    
     //DisponiblesComponent // Añade DisponiblesComponent aquí
   ],

@@ -1,0 +1,15 @@
+<div *ngIf="hotel" id="selected-hotel" class="selected-hotel-container">
+    <h2>{{hotel.name}}</h2>
+    <img [src]="hotel.image" [alt]="hotel.name" class="hotel-image" />
+    <div class="description-container">
+      <p>{{hotel.description}}</p>
+    </div>
+  </div>
+  <div *ngIf="!hotel">
+    <p>No se encontró información del hotel seleccionado.</p>
+  </div>
+  
+  <div class="button-container" [routerLink]="['/payment-gateway']">
+    <button id="button_signIn">¡RESERVA YA!</button>
+  </div>
+  
