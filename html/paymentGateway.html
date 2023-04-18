@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CanaryBnB</title>
+  <link rel="stylesheet" type="text/css" href="../styles/payment_gateaway.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="../scripts/forms.js"></script>
+</head>
+<body>
+  
+    <!-- cabecera -->
+    <header>
+        <a href="homePage_logged.html" class="logo">
+            <img src="../images/logo_blanco5.png" alt="logo" class="logo-img">
+        </a>
+      <p>FOTO</p>
+    </header>
+
+  <form id="paymentGateaway_form" method="dialog">
+    <h1 class="titulo">Pasarela de Pago</h1>
+    <div class="form_container">
+
+        <div class="Numero_Tarjeta">
+            <input type="text" name="card_number" id="card_number" class="form__field_tarjeta" placeholder=" ">
+            <label for="card_number" class="form__label">Número de tarjeta</label>
+            <span class="form__line"></span>
+        </div>
+        
+        <div class="contenedor">
+        <div class="form__group field">
+            <input type="text" name="expired_date" id="expired_date" class="form__field" placeholder=" ">
+            <label for="expired_date" class="form__label">Fecha de Caducidad</label>
+            <span class="form__line"></span>
+        </div>
+
+        <div class="form__group field">
+            <input type="text" name="cvv" id="cvv" class="form__field" placeholder=" ">
+            <label for="cvv" class="form__label">CVV</label>
+            <span class="form__line"></span>
+        </div>
+      </div>
+
+        <div class="Titular_Tarjeta">
+            <input type="text" name="card_owner" id="card_owner" class="form__field_tarjeta" placeholder=" ">
+            <label for="card_owner" class="form__label">Titular de la tarjeta</label>
+            <span class="form__line"></span>
+        </div>
+        <div class="bottom_form">
+        <button class="form_submit" onclick="validateForm('#paymentGateaway_form', ['.form__field_tarjeta','.form__field']);">Entrar</button>
+        </div>
+    </div>
+</form>
+</body>
+</html>

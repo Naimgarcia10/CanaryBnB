@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Login</title>
+
+<link rel = "stylesheet" type = "text/css" href = "../styles/personal_information.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+
+    <header>
+        <a href="homePage_logged.html" class="logo">
+            <img src="../images/logo_blanco5.png" alt="logo" class="logo-img">
+        </a>
+        <p>FOTO</p>
+        <div id="button_user">
+            <select onchange="redirect(this)">
+                <option value="Usuario">Mi perfil</option>
+                <option value="datos">Modificar datos personales</option>
+                <option value="historial">Historial de reservas</option>
+            </select>
+        </div>
+        
+    </header>
+
+    
+
+    
+
+    <!-- Cuerpo del Login -->   
+    
+    
+    <h1 class="title">DATOS PERSONALES</h1>
+    
+
+    <div class = "fields">
+        <div class="form__group field">
+            <input required="" placeholder="Name" class="form__field" type="input" >
+            <label class="form__label" for="name">NOMBRE</label>
+        </div>
+
+        
+        <div class="form__group field">
+            <input required="" placeholder="Password" class="form__field" type="password">
+            <label class="form__label" for="name">APELLIDOS</label>
+        </div>
+        
+        <div class="form__group field">
+            <input required="" placeholder="Password" class="form__field" type="password">
+            <label class="form__label" for="name">DIRECCIÓN DE CORREO</label>
+        </div>
+    </div>
+    
+    
+    <button id="button"> CONFIRMAR </button>
+    <script type="text/javascript" src="../scripts/personal_information.js"></script>
+</body>
+</html>

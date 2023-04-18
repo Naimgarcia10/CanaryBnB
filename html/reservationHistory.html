@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CanaryBnB</title>
+    <link rel="stylesheet" type="text/css" href="../styles/reservationHistory.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  
+    <!-- cabecera -->
+    <header>
+        <a href="homePage_logged.html" class="logo">
+            <img src="../images/logo_blanco5.png" alt="logo" class="logo-img">
+        </a>
+        <div id="button_user">
+            <select onchange="redirect(this)">
+                <option value="Usuario">Mi perfil</option>
+                <option value="datos">Modificar datos personales</option>
+                <option value="historial">Historial de reservas</option>
+            </select>
+        </div>
+        
+    </header>
+
+
+    <h1 class="title">Reservas</h1>
+
+    <ul id="reservations_history">
+
+        <li class="reservation">
+          <img class="hotel_foto" src="../images/foto_hotel.png" alt="Foto del hotel">
+          <p class="nReserva">Reserva 1</p>
+          <p class="fecha">Fecha de entrada(DD/MM/YY) - Fecha de salida(DD/MM/YY)</p>
+          <div class="second_row">
+            <p class="num_reserva">Numero de Reserva: [0-9]{6}</p>
+            <p class="pers">Pers: [0-9]{1,2}</p>
+          </div>
+        </li>
+      
+    </ul>
+
+
+    <button id="back_button">Volver</button>
+    <button id="new_reservation_button">Agregar reserva</button>
+
+    <script type="text/javascript" src="../scripts/reservationHistory.js"></script>
+</body>
+</html>

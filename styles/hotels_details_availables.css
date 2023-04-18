@@ -1,0 +1,251 @@
+.hotels_section {
+  max-width: 55.5rem;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.rectangulo_hotel {
+  width: 100%;
+  height: 10rem;
+  background-color: #D9D9D9;
+  display: flex;
+  margin-bottom: 1.5rem;
+}
+
+.foto_hotel {
+  height: 10rem;
+  width: 10rem;
+  margin-right: 1rem;
+  margin-left: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.foto_hotel img {
+  height: 6rem;
+}
+
+.hotels_details_left {
+  height: 10rem;
+  width: 36rem;
+  left: 10rem;
+  margin-right: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hotels_details_left label {
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+.hotels_details_right {
+  height: 10rem;
+  width: 10rem;
+  left: 46rem;
+  margin-right: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hotels_details_right label {
+  display: block;
+  margin-bottom: 1.3rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-left: 1rem;
+}
+
+#linea_vertical {
+  width: 0.5rem;
+  height: 10rem;
+  background-color: #797373;
+  left: 80rem;
+}
+
+#nombre_alojamiento {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+#disponibility_button {
+  height: 2rem;
+  width: 8rem;
+  background-color: #797373;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+#disponibility_button:active {
+  transform: scale(0.90);
+}
+
+#num_camas {
+  position: absolute;
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 991.98px) {
+  .hotels_section {
+    margin-left: 25rem;
+    margin-right: 5rem;
+  }
+}
+
+/* X-Small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+
+  .rectangulo_hotel {
+    height: 8rem;
+  }
+
+  .hotels_details_left {
+    height: 8rem;
+  }
+
+  .hotels_details_left label {
+    font-size: 0.7rem;
+  }
+
+  #nombre_alojamiento {
+    font-size: 1rem;
+  }
+
+  .hotels_details_right {
+    height: 8rem;
+  }
+
+  .hotels_details_right label {
+    font-size: 1rem;
+  }
+
+  #disponibility_button {
+    height: 1.5rem;
+    width: 6rem;
+    font-size: 0.6rem;
+  }
+
+  .foto_hotel {
+    height: 8rem;
+    margin-right: 0.75rem;
+    margin-left: 0.75rem;
+  }
+
+  .foto_hotel img {
+    height: 4.8rem;
+  }
+
+  #linea_vertical {
+    height: 8rem;
+  }
+
+}
+
+/* X-Small devices (portrait phones, less than 434.98px) */
+@media (max-width: 434.98px) {
+
+  .rectangulo_hotel {
+    height: 5.6rem;
+  }
+
+  .hotels_details_left {
+    height: 5.6rem;
+  }
+
+  .hotels_details_left label {
+    font-size: 0.5rem;
+  }
+
+  #nombre_alojamiento {
+    font-size: 0.7rem;
+  }
+
+  .hotels_details_right {
+    height: 5.6rem;
+  }
+
+  .hotels_details_right label {
+    font-size: 0.7rem;
+  }
+
+  #disponibility_button {
+    height: 1.05rem;
+    width: 4.2rem;
+    font-size: 0.42rem;
+  }
+
+  .foto_hotel {
+    height: 5.6rem;
+  }
+
+  .foto_hotel img {
+    height: 4.5rem;
+  }
+
+  #linea_vertical {
+    height: 5.6rem;
+  }
+
+}
+
+/* X-Small devices (portrait phones, less than 359.98px) */
+@media (max-width: 359.98px) {
+
+  .rectangulo_hotel {
+    height: 3.2rem;
+  }
+
+  .hotels_details_left {
+    height: 3.2rem;
+  }
+
+  .hotels_details_left label {
+    font-size: 0.4rem;
+    margin-bottom: 0.15rem;
+  }
+
+  #nombre_alojamiento {
+    font-size: 0.5rem;
+  }
+
+  .hotels_details_right {
+    height: 3.2rem;
+  }
+
+  .hotels_details_right label {
+    font-size: 0.5rem;
+    margin-bottom: 0.2rem;
+  }
+
+  #disponibility_button {
+    height: 0.6rem;
+    width: 2.4rem;
+    font-size: 0.24rem;
+    margin-top: 0.4rem;
+    margin-left: 0.8rem;
+  }
+
+  .foto_hotel {
+    height: 3.2rem;
+    margin-left: 0.2rem;
+    margin-right: 0.2rem;
+  }
+
+  .foto_hotel img {
+    height: 2.4rem;
+  }
+
+  #linea_vertical {
+    height: 3.2rem;
+  }
+
+}
