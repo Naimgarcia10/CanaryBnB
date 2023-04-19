@@ -57,7 +57,8 @@
         "numBathrooms": 1,
         "freeCancellation": true,
         "image": "/assets/images/foto_5.jpg",
-        "description":" Este hotel de 4 estrellas se encuentra en la playa de San Agustín y cuenta con un spa de talasoterapia, una amplia terraza con vistas al mar y una piscina climatizada al aire libre. Además, ofrece habitaciones modernas y un restaurante que sirve cocina local e internacional."
+        "description":" Este hotel de 4 estrellas se encuentra en la playa de San Agustín y cuenta con un spa de talasoterapia, una amplia terraza con vistas al mar y una piscina climatizada al aire libre. Además, ofrece habitaciones modernas y un restaurante que sirve cocina local e internacional.",
+        "type": "hotel"
     }
       ]
       ,
@@ -120,7 +121,8 @@
                 "numBathrooms": 2,
                 "freeCancellation": false,
                 "image": "/assets/images/foto_4.jpg",
-                "description": "Este hotel de diseño vanguardista está ubicado en Costa Adeje y cuenta con impresionantes vistas al mar. Ofrece habitaciones amplias y elegantes, varias piscinas, un spa, restaurantes temáticos y una amplia oferta de actividades para toda la familia."
+                "description": "Este hotel de diseño vanguardista está ubicado en Costa Adeje y cuenta con impresionantes vistas al mar. Ofrece habitaciones amplias y elegantes, varias piscinas, un spa, restaurantes temáticos y una amplia oferta de actividades para toda la familia.",
+                "type": "villa"
             }
     ]
     

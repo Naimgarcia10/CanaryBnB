@@ -36,11 +36,12 @@
   <h1 class="title">Alojamientos mejor valorados</h1>
   <!-- Reemplaza las imágenes estáticas con un contenedor donde se mostrarán las imágenes -->
   <div class="recomendations" id="topRatedHotels">
-    <div *ngFor="let hotel of topHoteles">
-      <h3>{{ hotel.nombre }}</h3>
-      <img [src]="hotel.image" alt="Imagen del hotel {{ hotel.nombre }}">
+    <!-- home.component.html -->
+    <div *ngFor="let hotel of topRatedHotels">
+      <p>{{ hotel.name }}</p>
+      <img [src]="hotel.image" alt="{{ hotel.name }}" />
     </div>
-  </div>
 
-  
+    
+  </div>
   
