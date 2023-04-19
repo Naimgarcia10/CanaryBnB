@@ -4,7 +4,8 @@
   <form [formGroup]="formLogin" (ngSubmit)="loginAction()">
     <div>
       <label for="email">Email</label>
-      <input type="text" class="form-control" formControlName="email">
+      <input type="text" class="form-control" formControlName="email"
+      [ngClass]="{ 'is-invalid': email.invalid && email.touched }">
     </div>
 
     <div class="alert-danger" [hidden]="email.valid || email.pristine">
