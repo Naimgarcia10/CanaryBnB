@@ -17,6 +17,7 @@ import { LoginComponent } from './login/login.component';
 import { FooterComponent } from './footer/footer.component';
 import { SpecifichotelComponent } from './specifichotel/specifichotel.component';
 import { PaymentGatewayComponent } from './payment-gateway/payment-gateway.component';
+import { ReservationHistorialComponent } from './reservation-historial/reservation-historial.component';
 
 
 @NgModule({
@@ -32,6 +33,7 @@ import { PaymentGatewayComponent } from './payment-gateway/payment-gateway.compo
     FooterComponent,
     SpecifichotelComponent,
     PaymentGatewayComponent,
+    ReservationHistorialComponent,
    
     //DisponiblesComponent // Añade DisponiblesComponent aquí
   ],

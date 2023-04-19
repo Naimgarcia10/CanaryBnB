@@ -117,11 +117,13 @@
       align-items: center;
       position: relative;
       bottom: 3rem;
+      
     }
 
     .recomendations img {
       height: 10rem;
       width: 16rem;
+      cursor: pointer;
     }
 
     .recomendations p {
