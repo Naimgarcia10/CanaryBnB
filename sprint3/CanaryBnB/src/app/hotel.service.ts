@@ -15,15 +15,18 @@ export class HotelService {
     return this.http.get<any>(this.hotelsDataUrl);
   }
 
-  getTopRatedHotels(): Observable<any[]> {
-    return this.getHotelsData().pipe(
-      map(data => {
-        const allHotels = [...data['Gran Canaria'], ...data['Tenerife']];
-        const sortedHotels = allHotels.sort((a, b) => b.rating - a.rating);
-        return sortedHotels.slice(0, 3);
-      })
-    );
-  }
+  // hotel.service.ts
+getTopRatedHotels(): Observable<any[]> {
+  return this.getHotelsData().pipe(
+    map(data => {
+      const allDestinations = Object.keys(data);
+      const allHotels = allDestinations.flatMap(destination => data[destination]);
+      const sortedHotels = allHotels.sort((a, b) => b.rating - a.rating);
+      return sortedHotels.slice(0, 3);
+    })
+  );
+}
+
 
 
 }
