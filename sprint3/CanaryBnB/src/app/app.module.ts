@@ -16,6 +16,7 @@ import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { FooterComponent } from './footer/footer.component';
 import { SpecifichotelComponent } from './specifichotel/specifichotel.component';
+import { PaymentGatewayComponent } from './payment-gateway/payment-gateway.component';
 
 
 @NgModule({
@@ -30,6 +31,7 @@ import { SpecifichotelComponent } from './specifichotel/specifichotel.component'
     LoginComponent,
     FooterComponent,
     SpecifichotelComponent,
+    PaymentGatewayComponent,
    
     //DisponiblesComponent // Añade DisponiblesComponent aquí
   ],

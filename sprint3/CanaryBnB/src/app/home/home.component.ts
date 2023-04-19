@@ -12,22 +12,29 @@ import { HotelService } from '../hotel.service';
 
 export class HomeComponent implements OnInit {
   location = '';
-  hoteles: any[] = [];
-  topHoteles: any[] = [];
+  hotels: any[] = [];
+  topRatedHotels: any[] = [];
 
-  constructor(private router: Router, private http: HttpClient, private hotelService: HotelService  ) { }
+  constructor(private router: Router, private http: HttpClient, private hotelService: HotelService) { }
 
-  ngOnInit() {
-    this.hotelService.getHotelsData().subscribe(data => {
-      this.hoteles = data;
-      this.obtenerTopHoteles();
+  ngOnInit(): void {
+    this.hotelService.getTopRatedHotels().subscribe(hotels => {
+      this.topRatedHotels = hotels;
     });
   }
 
-  obtenerTopHoteles() {
-    this.topHoteles = this.hoteles.sort((a, b) => b.valoracion - a.valoracion).slice(0, 3);
-  }
+  getTopRatedHotels(): any[] {
+    if (this.hotels && this.hotels.length > 0) {
+      const sortedHotels = this.hotels.sort((a: any, b: any) => b.rating - a.rating);
+      console.log("hoteles", sortedHotels);
+      return sortedHotels.slice(0, 3);
+    }
+    return [];
 
+    
+  }
+  
+  
   
 
 

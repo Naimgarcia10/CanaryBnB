@@ -109,17 +109,23 @@
       bottom: 2rem;
     }
   
-    .recomendations {
-      position: absolute;
+    .recomendations{
       display: flex;
+      gap: 5rem;
+      text-align: center;
       justify-content: center;
       align-items: center;
-      width: 100%;
-      padding: 1rem 0;
-      box-sizing: border-box;
-      gap: 5rem;
-      top: 30rem;
-      margin-top: 2rem;
+    }
+
+    .recomendations img {
+      height: 10rem;
+      width: 16rem;
+    }
+
+    .recomendations p {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #000;
     }
     
     .hotel_foto {
