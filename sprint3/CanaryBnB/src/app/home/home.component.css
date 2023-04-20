@@ -106,7 +106,7 @@
       text-align: center;
       margin-bottom: 2rem;
       position: relative;
-      bottom: 2rem;
+      bottom: 3rem;
     }
   
     .recomendations{
@@ -115,11 +115,15 @@
       text-align: center;
       justify-content: center;
       align-items: center;
+      position: relative;
+      bottom: 3rem;
+      
     }
 
     .recomendations img {
       height: 10rem;
       width: 16rem;
+      cursor: pointer;
     }
 
     .recomendations p {
