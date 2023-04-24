@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SpecifichotelComponent implements OnInit {
   hotel: any;
+  currentImageIndex: number = 0;
 
   constructor() { }
 
@@ -14,6 +15,22 @@ export class SpecifichotelComponent implements OnInit {
     const selectedHotel = localStorage.getItem('selectedHotel');
     if (selectedHotel) {
       this.hotel = JSON.parse(selectedHotel);
+    }
+  }
+
+  prevImage(): void {
+    if (this.currentImageIndex > 0) {
+      this.currentImageIndex--;
+    } else {
+      this.currentImageIndex = this.hotel.images.length - 1;
+    }
+  }
+
+  nextImage(): void {
+    if (this.currentImageIndex < this.hotel.images.length - 1) {
+      this.currentImageIndex++;
+    } else {
+      this.currentImageIndex = 0;
     }
   }
 }
