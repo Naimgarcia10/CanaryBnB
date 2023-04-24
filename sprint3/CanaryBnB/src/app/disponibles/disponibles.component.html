@@ -13,7 +13,7 @@
     <h2>Hoteles en {{location}}:</h2>
     <div [routerLink] = "['/specifichotel']" *ngFor="let hotel of hotels" class="hotel-card" (click)="selectHotel(hotel)">
       <div class="hotel-card-img">
-        <img [src]="hotel.image" alt="Foto del hotel" />
+        <img [src]="hotel.images[0]" alt="Foto del hotel" />
       </div>
       <div class="hotel-card-info">
         <h3>{{hotel.name}}</h3>

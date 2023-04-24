@@ -39,7 +39,7 @@
     <!-- home.component.html -->
     <div [routerLink] = "['/specifichotel']" *ngFor="let hotel of topRatedHotels" (click)="selectHotel(hotel)">
       <p>{{ hotel.name }}</p>
-      <img [src]="hotel.image" alt="{{ hotel.name }}" />
+      <img [src]="hotel.images[0]" alt="{{ hotel.name }}" />
     </div>
 
     
