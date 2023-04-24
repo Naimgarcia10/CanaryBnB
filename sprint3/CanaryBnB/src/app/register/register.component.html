@@ -1,7 +1,7 @@
 <h1 style="text-align: center;">Registro</h1>
 
 <div class="form-container">
-  <form [formGroup]="formLogin" (ngSubmit)="loginAction()">
+  <form [formGroup]="formRegister" (ngSubmit)="registerAction()">
     <div>
       <label for="email">Email</label>
       <input type="text" class="form-control" formControlName="email">
@@ -22,7 +22,16 @@
       <span *ngIf="password.hasError('minlength')">La contraseña debe tener al menos 6 caracteres</span>
     </div>
 
-    <button type="submit" class="btn btn-primary" [disabled]="formLogin.invalid">Iniciar sesión</button>
+    <div>
+      <label for="password2">Repetir Contraseña</label>
+      <input type="password" class="form-control" formControlName="password2">
+    </div>
+
+    <div class="alert-danger" [hidden]="password2.value==password.value">
+      <span>La contraseña debe coindidir</span>
+    </div>
+
+    <button type="submit" class="btn btn-primary" [disabled]="formRegister.invalid">Registrarse</button>
 
   </form>
 </div>
