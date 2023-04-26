@@ -1,0 +1,33 @@
+<div *ngIf="hotel" id="selected-hotel" class="selected-hotel-container specific-hotel">
+  <h2>{{hotel.name}}</h2>
+
+  <div class="image-container">
+    <img [src]="hotel.images[currentImageIndex]" [alt]="hotel.name" class="hotel-image" />
+    <button (click)="prevImage()" class="image-nav-btn prev-image-btn">&lt;</button>
+    <button (click)="nextImage()" class="image-nav-btn next-image-btn">&gt;</button>
+  </div>
+  <div class="description-container">
+    <p>{{hotel.description}}</p>
+  </div>
+  <div class="address-container">
+    <p><a [href]="hotel.address" target="_blank" class="address-link">Dirección</a></p>
+  </div>
+
+  <!-- Añadido: lista de servicios -->
+  <div class="services-container">
+    <h3>Servicios</h3>
+    <ul>
+      <li *ngFor="let service of hotel.services" class="service-item">{{service}}</li>
+
+    </ul>
+  </div>
+  <!-- Fin de la lista de servicios -->
+  
+</div>
+<div *ngIf="!hotel">
+  <p>No se encontró información del hotel seleccionado.</p>
+</div>
+
+<div class="button-container" [routerLink]="['/payment-gateway']">
+  <button id="button_signIn">¡RESERVA YA!</button>
+</div>

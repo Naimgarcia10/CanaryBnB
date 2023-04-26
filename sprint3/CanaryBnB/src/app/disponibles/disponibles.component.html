@@ -1,4 +1,3 @@
-
 <div class ="container">
   <label for="sort">Ordenar por:</label>
   <select id="sort" (change)="onSortChange($event)">
@@ -12,9 +11,9 @@
 <div class="container">
   <div *ngIf="hotels.length > 0" class="hotel-list">
     <h2>Hoteles en {{location}}:</h2>
-    <div *ngFor="let hotel of hotels" class="hotel-card">
+    <div [routerLink] = "['/specifichotel']" *ngFor="let hotel of hotels" class="hotel-card" (click)="selectHotel(hotel)">
       <div class="hotel-card-img">
-        <img [src]="hotel.image" alt="Foto del hotel" />
+        <img [src]="hotel.images[0]" alt="Foto del hotel" />
       </div>
       <div class="hotel-card-info">
         <h3>{{hotel.name}}</h3>
@@ -36,4 +35,3 @@
 </div>
 
 <app-hotelfilter></app-hotelfilter>
-

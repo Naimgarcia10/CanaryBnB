@@ -1,5 +1,6 @@
 import { Component,OnInit } from '@angular/core';
 import { FormBuilder, FormControl, Validators } from '@angular/forms';
+import { AuthService } from '../shared/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -8,7 +9,7 @@ import { FormBuilder, FormControl, Validators } from '@angular/forms';
 })
 export class LoginComponent implements OnInit{
 
-  constructor(private fb:FormBuilder){ }
+  constructor(private fb:FormBuilder, private auth: AuthService){ }
 
   ngOnInit() {
   }
@@ -27,7 +28,15 @@ export class LoginComponent implements OnInit{
   }
 
   loginAction(): void{
-    console.log(this.formLogin.value);
+    if (this.formLogin.valid) {
+      /* const email = this.formLogin.get('email')?.value; // agregamos el ? para manejar posible valor nulo */
+      const email: string = this.formLogin.get('email')!.value ?? ''; // agregamos el ! y ?? para manejar posible valor nulo
+      const password: string = this.formLogin.get('password')!.value ?? ''; // agregamos el ! y ?? para manejar posible valor nulo
+      console.log(this.formLogin.value);
+      this.auth.login(email, password);
+      this.formLogin.reset();
+    }
   }
+  
 
 }

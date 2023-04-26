@@ -75,4 +75,8 @@ export class DisponiblesComponent implements OnInit {
 
     this.hotels = hotelsFiltrados;
   }
+
+  selectHotel(hotel: any) {
+    localStorage.setItem('selectedHotel', JSON.stringify(hotel));
+  }
 }
