@@ -82,7 +82,8 @@
     
     button {
       color: white;
-      background-color: #00aaff;
+      /*background-color: #00aaff;*/
+      background-image: linear-gradient(to right,#0040ff, #00aaff);
       border: none;
       padding: 0.5rem 1rem;
       width: 8.3rem;
@@ -93,7 +94,7 @@
     }
 
     button:hover {
-      background-color: #0088ff;
+      background-image: linear-gradient(to right,#012db0, #039ce8);
     }
   
     input[type="number"]{
