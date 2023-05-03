@@ -15,9 +15,13 @@ export class HomeComponent implements OnInit {
     people: 1
   };
 
+  bestRatedHotels: Hotel[] = []; // Agrega esta línea
+
   constructor(private router: Router, private hotelService: HotelService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.getTopRatedHotels(); // Agrega esta línea
+  }
 
   submitForm() {
     if (!this.formData.destination) {
@@ -28,6 +32,13 @@ export class HomeComponent implements OnInit {
     this.hotelService.getHotelsByLocation(this.formData.destination).subscribe((hotels: Hotel[]) => {
       this.hotelService.setFoundHotels(hotels);
       this.router.navigate(['/disponibles']);
+    });
+  }
+
+  // Agrega esta función
+  getTopRatedHotels(): void {
+    this.hotelService.getTopRatedHotels().subscribe((hotels: Hotel[]) => {
+      this.bestRatedHotels = hotels;
     });
   }
 }

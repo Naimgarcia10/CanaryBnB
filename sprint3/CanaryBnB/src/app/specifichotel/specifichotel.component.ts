@@ -1,20 +1,21 @@
 import { Component, OnInit } from '@angular/core';
+import { HotelService, Hotel } from '../hotel.service';
 
 @Component({
-  selector: 'app-specific-hotel',
+  selector: 'app-specifichotel',
   templateUrl: './specifichotel.component.html',
   styleUrls: ['./specifichotel.component.css']
 })
 export class SpecifichotelComponent implements OnInit {
-  hotel: any;
+  hotel!: Hotel;
   currentImageIndex: number = 0;
 
-  constructor() { }
+  constructor(private hotelService: HotelService) {}
 
   ngOnInit(): void {
-    const selectedHotel = localStorage.getItem('selectedHotel');
+    const selectedHotel = this.hotelService.getSelectedHotel();
     if (selectedHotel) {
-      this.hotel = JSON.parse(selectedHotel);
+      this.hotel = selectedHotel;
     }
   }
 

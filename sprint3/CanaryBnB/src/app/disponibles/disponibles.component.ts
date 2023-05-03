@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { HotelService, Hotel } from '../hotel.service';
 
 @Component({
@@ -9,7 +10,7 @@ import { HotelService, Hotel } from '../hotel.service';
 export class DisponiblesComponent implements OnInit {
   foundHotels: Hotel[] = [];
 
-  constructor(private hotelService: HotelService) {}
+  constructor(private hotelService: HotelService, private router: Router) {}
 
   ngOnInit(): void {
     this.foundHotels = this.hotelService.getFoundHotels();
@@ -31,5 +32,10 @@ export class DisponiblesComponent implements OnInit {
         break;
     }
   }
+
+  selectHotel(hotel: Hotel): void {
+    this.hotelService.setSelectedHotel(hotel);
+    this.router.navigate(['/specifichotel']);
+  } 
   
 }
