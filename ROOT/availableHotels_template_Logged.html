@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="orderWays_combo_box_disponibles.css">
+        <link rel="stylesheet" type="text/css" href="big_header.css">
+        <link rel="stylesheet" type="text/css" href="filters_box_disponibles.css">
+        <link rel="stylesheet" type="text/css" href="hotels_details_disponibles.css">
+        <link rel="stylesheet" type="text/css" href="Log_Res.css">
+        <title>CanaryBnB</title>
+    </head>
+    <body>
+
+        <!-- cabecera -->
+        <div class="rectangulo_header">
+            <div class = "cuadrado_logo">
+                <p>LOGO</p>
+            </div>
+            <p>FOTO</p>
+        </div>
+
+        
+        <button id="button_log"> USUARIO </button> 
+
+      <!--cuerpo-->
+
+        <div id="orderWays_combo-box">
+            <select>
+              <option value="precio">Ordenar por: Precio</option>
+              <option value="valoracion">Ordenar por: Valoración</option>
+            </select>
+        </div>
+        
+        <div class="rectangulo_hotel">
+            <div class = "cuadrado_foto_hotel">
+                <p>FOTO</p>
+            </div>
+            <div id="linea_vertical"></div>
+            <p id="nombre_alojamiento">Nombre Alojamiento</p>
+            <p id="valoracion">Valoración</p>
+            <p id="precio">Precio</p>
+            <button id="disponibility_button"> Ver Disponibilidad </button>
+
+            <div class="hotels_details">
+                <label>Número de camas: num</label>
+                <label>Número de habitaciones: num</label>
+                <label>Número de baños: num</label>
+                <label>Cancelacion gratuita: si/no</label>
+            </div>
+        </div>
+    
+        <div class="rectangulo_hotel">
+            <div class = "cuadrado_foto_hotel">
+                <p>FOTO</p>
+            </div>
+            <div id="linea_vertical"></div>
+            <p id="nombre_alojamiento">Nombre Alojamiento</p>
+            <p id="valoracion">Valoración</p>
+            <p id="precio">Precio</p>
+            <button id="disponibility_button"> Ver Disponibilidad </button>
+
+            <div class="hotels_details">
+                <label>Número de camas: num</label>
+                <label>Número de habitaciones: num</label>
+                <label>Número de baños: num</label>
+                <label>Cancelacion gratuita: si/no</label>
+            </div>
+
+        </div>
+
+        <div class="rectangulo_hotel">
+            <div class = "cuadrado_foto_hotel">
+                <p>FOTO</p>
+            </div>
+            <div id="linea_vertical"></div>
+            <p id="nombre_alojamiento">Nombre Alojamiento</p>
+            <p id="valoracion">Valoración</p>
+            <p id="precio">Precio</p>
+            <button id="disponibility_button"> Ver Disponibilidad </button>
+
+            <div class="hotels_details">
+                <label>Número de camas: num</label>
+                <label>Número de habitaciones: num</label>
+                <label>Número de baños: num</label>
+                <label>Cancelacion gratuita: si/no</label>
+            </div>
+            
+        </div>
+
+        <div id="rectangulo_filtros">
+            <form>
+                <h1 id="filtrar_label">Filtrar por:</h1>
+                <div id="linea_horizontal"></div>
+                <h1 id="precio_label">Precio</h1>
+                <div class="price_option">
+                    <input type="radio" id="lower_option" name="price_option" value="lower"><label for="lower_option">Más bajo primero</label><br>
+                    <input type="radio" id="higher_option" name="price_option" value="higher"><label for="higher_option">Más alto primero</label>
+                </div>
+                <div id="linea_horizontal2"></div>
+                <h1 id="valoracion_label">Valoración</h1>
+                <!-- estrellas -->
+                <div class="estrellas">
+                    <label for="estrellas">★</label>
+                    <label for="estrellas">★</label>
+                    <label for="estrellas">★</label>
+                    <label for="estrellas">★</label>
+                    <label for="estrellas">★</label>
+                </div>
+                <div id="linea_horizontal3"></div>
+                <h1 id="alojamiento_label">Tipo de Alojamiento</h1>
+                <div class="alojamientos">
+                    <input type="checkbox" id="hoteles" name="alojamientos" value="hotel"><label for="hoteles">Hoteles</label><br>
+                    <input type="checkbox" id="apartamentos" name="alojamientos" value="apartamento"><label for="apartamentos">Apartamentos</label><br>
+                    <input type="checkbox" id="villas" name="alojamientos" value="villa"><label for="villas">Villas</label><br>
+                    <input type="checkbox" id="casas" name="alojamientos" value="casa"><label for="casas">Casas</label>
+                </div> 
+                <div id="linea_horizontal4"></div>
+                <button id="filters_button"> Aplicar Filtros </button>
+            </form>        
+
+        </div>
+    </body>
+<html>

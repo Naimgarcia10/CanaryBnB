@@ -1,0 +1,37 @@
+#button_log {
+    padding: 16px 33px;
+    background: #ffffff;
+    border: none;
+    font-family: inherit;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.4s;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    top: -49.3vh;
+    left: 45vh;
+  }
+  
+  #button_log:active {
+    transform: scale(0.90);
+  }
+
+  #button_reg {
+    padding: 16px 33px;
+    background: #ffffff;
+    border: none;
+    font-family: inherit;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.4s;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    top: -56.1vh;
+    left: 65vh;
+  }
+  
+  #button_reg:active {
+    transform: scale(0.90);
+  }

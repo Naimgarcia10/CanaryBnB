@@ -9,19 +9,31 @@ import { HotelfilterComponent } from './hotelfilter/hotelfilter.component';
 import { SpecifichotelComponent } from './specifichotel/specifichotel.component';
 import { PaymentGatewayComponent } from './payment-gateway/payment-gateway.component';
 import {ReservationHistorialComponent} from './reservation-historial/reservation-historial.component';
+import { ContactComponent } from './contact/contact.component';
+import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
+import { CookiesPolicyComponent } from './cookies-policy/cookies-policy.component'; 
+import { ContainerComponent } from './container/container.component';
 
 
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
+  
+  
   { path: 'disponibles', component: DisponiblesComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'login', component: LoginComponent },
   { path: 'hotelfilter', component: HotelfilterComponent },
-  { path: 'specifichotel', component: SpecifichotelComponent },
+  { path: 'specifichotel/:id', component: SpecifichotelComponent },
   { path: 'payment-gateway', component: PaymentGatewayComponent },
-  { path: 'reservation-historial', component: ReservationHistorialComponent }
+  { path: 'reservation-historial', component: ReservationHistorialComponent },
+  { path: 'contact', component: ContactComponent },
+  { path: 'privacy-policy', component: PrivacyPolicyComponent },
+  { path: 'cookies-policy', component: CookiesPolicyComponent }
+
 ];
+
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

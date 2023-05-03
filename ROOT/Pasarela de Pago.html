@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CanaryBnB</title>
+	<link rel="stylesheet" type="text/css" href="Fecha_CVV_TF.css">
+  <link rel="stylesheet" type="text/css" href="small_header.css">
+  <link rel="stylesheet" type="text/css" href="Numero_tarjeta_TF.css">
+  <link rel="stylesheet" type="text/css" href="Titular_Tarjeta.css">
+  <link rel="stylesheet" type="text/css" href="confirm_Button.css">
+</head>
+<body>
+  
+    <!-- cabecera -->
+    <div class="rectangulo">
+      <div class = "cuadrado">
+          <p>Logo</p>
+      </div>
+      <p>FOTO</p>
+      <button class="button_user"> USUARIO </button>
+    </div>
+
+    <h1 class="titulo">Pasarela de Pago</h1>
+  
+    <!--Numero de Terjeta-->
+    <div class=" Numero_Tarjeta">
+        <input required="" placeholder="Name" class="form__field_tarjeta" type="input" >
+        <label class="form__label" for="name">Numero de Tarjeta</label>
+    </div>
+  <!-- Fecha de Caducidad y CVV -->
+  <div class="contenedor">
+        <div class="form__group field">
+          <input required="" placeholder="Name" class="form__field" type="date" >
+          <label class="form__label" for="name">Fecha de Caducidad</label>
+        </div>
+
+        <div class="form__group field">
+          <input required="" placeholder="Name" class="form__field" type="text" >
+          <label class="form__label" for="name">CVV</label>
+        </div>
+  </div>  
+  <!-- Titular Tarjeta -->
+  <div class=" Titular_Tarjeta">
+      <input required="" placeholder="Name" class="form__field_titular" type="text" >
+      <label class="form__label" for="name">Titular de la Tarjeta</label>
+  </div>
+
+  <div class="Confirm_Button">
+    <button id="button"> CONFIRMAR </button>
+  </div>
+  
+
+</body>
+</html>

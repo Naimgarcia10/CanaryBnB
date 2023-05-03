@@ -1,0 +1,11 @@
+.Servicios {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 10vh;
+  gap: 5vh; /* Esto es un atajo para poner un margen entre los elementos */
+  width: 60vh;
+  margin: 0 auto;
+  margin-top: 41vh;
+}
+

@@ -1,12 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms'; // Asegúrate de importar FormsModule aquí
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { AngularFireModule } from '@angular/fire/compat';
-import { AngularFirestore } from '@angular/fire/compat/firestore';
-
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore'; // Importa AngularFirestoreModule
 
 /* componentes */
 import { AppComponent } from './app.component';
@@ -21,8 +20,13 @@ import { FooterComponent } from './footer/footer.component';
 import { SpecifichotelComponent } from './specifichotel/specifichotel.component';
 import { PaymentGatewayComponent } from './payment-gateway/payment-gateway.component';
 import { ReservationHistorialComponent } from './reservation-historial/reservation-historial.component';
+import { ContactComponent } from './contact/contact.component';
+import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
+import { CookiesPolicyComponent } from './cookies-policy/cookies-policy.component';
 
 
+import { ContainerComponent } from './container/container.component';
+import { SmallHeaderComponent } from './small-header/small-header.component';
 
 @NgModule({
   declarations: [
@@ -38,19 +42,24 @@ import { ReservationHistorialComponent } from './reservation-historial/reservati
     SpecifichotelComponent,
     PaymentGatewayComponent,
     ReservationHistorialComponent,
+    ContactComponent,
+    PrivacyPolicyComponent,
+    CookiesPolicyComponent,
    
     //DisponiblesComponent // Añade DisponiblesComponent aquí
+    ContainerComponent,
+    SmallHeaderComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule, // Añade FormsModule aquí
-    ReactiveFormsModule, // Añade ReactiveFormsModule aquí
-    HttpClientModule, // Añade HttpClientModule aquí
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestore
+    AngularFirestoreModule, // Añade AngularFirestoreModule aquí
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

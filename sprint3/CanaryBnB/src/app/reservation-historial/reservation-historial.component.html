@@ -1,1 +1,18 @@
+
+<app-small-header></app-small-header>
+
 <h1 class="title">Historial de Reservas</h1>
+
+<div *ngFor="let reservation of confirmedReservations">
+  <div class="reservation-card">
+    <img [src]="reservation.hotelImage" alt="Hotel Image" />
+    <h3>{{ reservation.hotelName }}</h3>
+    <p>Fecha de entrada: {{ reservation.checkInDate }}</p>
+    <p>Fecha de salida: {{ reservation.checkOutDate }}</p>
+    <p>Personas: {{ reservation.numberOfPeople }}</p>
+    <p>Número de reserva: {{ reservation.reservationNumber }}</p>
+  </div>
+</div>
+
+<app-footer></app-footer>
+
