@@ -12,20 +12,7 @@ export class DisponiblesComponent implements OnInit {
   constructor(private hotelService: HotelService) {}
 
   ngOnInit(): void {
-<<<<<<< HEAD
-    this.route.queryParams.subscribe(params => {
-      this.location = params['location'];
-      this.loadHotels();
-    });
-     /*
-    this.filterSubscription = this.hotelService.hotelFilter$.subscribe((filters: any) => {
-      this.filters = filters;
-      this.applyFiltersAndSorting();
-    });
-    */
-=======
     this.foundHotels = this.hotelService.getFoundHotels();
->>>>>>> 98c6c4d787eb01eabe158270666218476b7fe13a
   }
 
   onSortChange(sortOption: string) {
