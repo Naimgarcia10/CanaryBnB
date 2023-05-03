@@ -20,6 +20,7 @@ import { FooterComponent } from './footer/footer.component';
 import { SpecifichotelComponent } from './specifichotel/specifichotel.component';
 import { PaymentGatewayComponent } from './payment-gateway/payment-gateway.component';
 import { ReservationHistorialComponent } from './reservation-historial/reservation-historial.component';
+import { ContainerComponent } from './container/container.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { ReservationHistorialComponent } from './reservation-historial/reservati
     SpecifichotelComponent,
     PaymentGatewayComponent,
     ReservationHistorialComponent,
+    ContainerComponent,
   ],
   imports: [
     BrowserModule,

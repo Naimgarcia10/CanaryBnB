@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -7,7 +7,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./headerunlogged.component.css']
 })
 export class HeaderunloggedComponent {
-  constructor(private router: Router ) { }
+  @Output() logoClicked = new EventEmitter<void>();
+
+  constructor(private router: Router) { }
 
   goToRegister() {
     this.router.navigate(['/register']);
@@ -17,4 +19,7 @@ export class HeaderunloggedComponent {
     this.router.navigate(['/login']);
   }
 
+  onLogoClick() {
+    this.logoClicked.emit();
+  }
 }
