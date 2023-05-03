@@ -1,0 +1,98 @@
+.hotels_label{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 0.8rem;
+    margin-top: 0.8rem;
+    margin-left:10rem;
+}
+
+.rectangulo_hotel{
+    width: 55rem;
+    height: 10rem;
+    background-color: #D9D9D9;
+    margin:  auto;
+    display: flex;
+    align-items: center;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    margin-left: 25rem;
+    position: relative;
+}
+
+.cuadrado_foto_hotel{
+    width: 7rem;
+    height: 6rem;
+    background-color: #7F7676;
+    margin-top: 2rem;
+    margin-left: 1rem;
+}
+
+.cuadrado_foto_hotel p {
+    color: #000000;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 1.5em;
+  }
+
+  .hotels_details{
+    position: absolute;
+    top: 3.5rem;
+    left: 10rem;
+  }
+
+  .hotels_details label{
+    display: block;
+    margin-bottom: 0.3rem;
+  }
+
+#linea_vertical{
+    width: 0.5rem;
+    height: 10rem;
+    background-color: #797373;
+    position: absolute;
+    left: 55rem;
+}
+
+#nombre_alojamiento{
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #000;
+    position: absolute;
+    left: 10rem;
+    bottom: 6.5rem;
+}
+
+#valoracion{
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #000;
+    position: absolute;
+    right: 3rem;
+    bottom: 6.5rem;
+}
+
+#precio{
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #000;
+  position: absolute;
+  right: 4.8rem;
+  top: 3rem;
+}
+
+
+#disponibility_button{
+  position: relative;
+  top: 3rem;
+  left: 38rem;
+  height: 2rem;
+  background-color: #797373;
+  border:none;
+  color: #ffffff;
+}
+
+#disponibility_button:active {
+  transform: scale(0.90);
+}

@@ -1,0 +1,61 @@
+body{
+  margin: 0;
+}
+
+.rectangulo_header {
+    width: 100%;
+    height: 53vh;
+    background-color: #9B9393;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .rectangulo_header p {
+    color: #000000;
+    font-size: 6vh;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 1vh;
+    position: absolute;
+    top: 6vh;
+    left: 0;
+    right: 0;
+  
+  }
+
+  .cuadrado_logo {
+    width: 14vh;
+    height: 14vh;
+    background-color: #FFFFFF;
+    position: absolute;
+    top: 25px;
+    left: 28vh;
+  }
+
+  .cuadrado_logo p {
+    color: #000000;
+    font-size: 4vh;
+    font-weight: bold;
+    text-align: center;
+    margin-top: -1.3vh;
+  }
+  
+  .usuario_button {
+    width: 14vh;
+    height: 4vh;
+    background-color: #FFFFFF;
+    position: relative;
+    bottom: 8rem;
+    left: 30rem;
+    border: none;
+  }
+
+  .usuario_button p{
+    color: #000000;
+    font-size: 2vh;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 1vh;
+  }
