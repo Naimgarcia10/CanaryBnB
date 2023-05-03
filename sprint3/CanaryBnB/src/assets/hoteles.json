@@ -1,0 +1,135 @@
+{
+    "Gran Canaria": [
+      {
+        "name": "Hotel Costa Canaria",
+        "price": 100,
+        "rating": 4.5,
+        "numBeds": 2,
+        "numRooms": 1,
+        "numBathrooms": 1,
+        "freeCancellation": true,
+        "images": ["/assets/images/foto_1.jpg", "/assets/images/foto_12.jpg"],
+        "description": "Ubicado en la playa de San Agustín, este hotel de 4 estrellas ofrece una experiencia de lujo con sus habitaciones elegantes y espaciosas, piscinas al aire libre, restaurantes de alta calidad y un spa relajante.",
+        "type": "hotel",
+        "address":"https://www.google.com/maps/place/Bull+Hotel+Costa+Canaria+%26+Spa/@27.7712742,-15.5416636,17z/data=!3m1!4b1!4m9!3m8!1s0xc3f62649f4e9bd9:0x9e171b9ad8a58e18!5m2!4m1!1i2!8m2!3d27.7712742!4d-15.5416636!16s%2Fg%2F1tf_29z8",
+        "services": ["lavanderia", "wifi", "gimnasio", "piscina"]
+    },
+    {
+        "name": "Bohemia Suites & Spa",
+        "price": 150,
+        "rating": 4.2,
+        "numBeds": 3,
+        "numRooms": 1,
+        "numBathrooms": 1,
+        "freeCancellation": true,
+        "images": ["/assets/images/foto_2.jpg", "/assets/images/foto_13.jpg"],
+        "description": "Situado en el corazón de Playa del Inglés, este hotel de diseño boutique es un verdadero refugio para los huéspedes adultos que buscan una experiencia exclusiva. Ofrece una terraza en la azotea con vistas impresionantes al mar, un restaurante de alta cocina y un spa de lujo.",
+        "type": "villa",
+        "address":"https://www.google.com/maps/place/Bohemia+Suites+%26+Spa/@27.7563418,-15.5750108,17z/data=!3m1!4b1!4m9!3m8!1s0xc3f6293876fd597:0xc782831b15aac1bf!5m2!4m1!1i2!8m2!3d27.7563419!4d-15.5701452!16s%2Fg%2F1vtqxbpw",
+        "services": ["wifi", "restaurante", "piscina", "gimnasio", "spa", "parking", "servicio de habitaciones", "bar"]
+    },
+    {
+        "name": "Hotel Cordial Mogán Playa",
+        "price": 200,
+        "rating": 3.9,
+        "numBeds": 2,
+        "numRooms": 1,
+        "numBathrooms": 1,
+        "freeCancellation": false,
+        "images": ["/assets/images/foto_3.jpg", "/assets/images/foto_16.jpg"],
+        "description": "Inspirado en una villa canaria, este hotel cuenta con una arquitectura tradicional y un ambiente tranquilo. Dispone de amplias habitaciones, varias piscinas rodeadas de exuberante vegetación y restaurantes de primera categoría.",
+        "type": "hotel",
+        "address":"https://www.google.com/maps/place/Hotel+Cordial+Mog%C3%A1n+Playa/@27.8224634,-15.7625708,17z/data=!3m1!4b1!4m9!3m8!1s0xc408093caef1f6d:0x3ff5e30605e4ad73!5m2!4m1!1i2!8m2!3d27.8224634!4d-15.7599905!16s%2Fg%2F1thxxghf",
+        "services": ["wifi", "restaurante", "piscina", "gimnasio", "jacuzzi", "parking", "servicio de lavandería", "café"]
+    },
+    {
+        "name": "Hotel Santa Catalina",
+        "price": 120,
+        "rating": 4.0,
+        "numBeds": 1,
+        "numRooms": 1,
+        "numBathrooms": 1,
+        "freeCancellation": true,
+        "images": ["/assets/images/foto_4.jpg", "/assets/images/foto_17.jpg"],
+        "description": "Este hotel histórico de 5 estrellas se encuentra en el centro de Las Palmas de Gran Canaria. Ofrece elegantes habitaciones, un exuberante jardín tropical, una piscina climatizada y un restaurante que sirve cocina local e internacional.",
+        "type": "apartamento",
+        "address":"https://www.google.com/maps/place/Hotel+Santa+Catalina,+a+Royal+Hideaway+Hotel/@28.1211468,-15.4308377,17z/data=!3m2!4b1!5s0xc4095749226b42b:0x11154c42f5619395!4m9!3m8!1s0xc4095d539e3ca91:0x9a18db68c6b2b94e!5m2!4m1!1i2!8m2!3d28.1211468!4d-15.4282574!16s%2Fg%2F11h89dvcbn",
+        "services": ["wifi", "restaurante", "piscina climatizada", "gimnasio", "spa", "parking", "servicio de habitaciones", "terraza"]
+    },
+    {
+        "name": "Gloria Palace San Agustín Thalasso & Hotel",
+        "price": 180,
+        "rating": 3.8,
+        "numBeds": 2,
+        "numRooms": 1,
+        "numBathrooms": 1,
+        "freeCancellation": true,
+        "images": ["/assets/images/foto_7.jpg", "/assets/images/foto_18.jpg"],
+        "description":" Este hotel de 4 estrellas se encuentra en la playa de San Agustín y cuenta con un spa de talasoterapia, una amplia terraza con vistas al mar y una piscina climatizada al aire libre. Además, ofrece habitaciones modernas y un restaurante que sirve cocina local e internacional.",
+        "type": "hotel",
+        "address":"https://www.google.com/maps/place/Gloria+Palace+San+Agust%C3%ADn/@27.7721959,-15.5520093,17z/data=!3m1!4b1!4m9!3m8!1s0xd15e08b89c19f5f:0xc8281dfa6f2ee958!5m2!4m1!1i2!8m2!3d27.772196!4d-15.5471437!16s%2Fg%2F11bbrjc62z",
+        "services": ["wifi", "restaurante", "piscina", "gimnasio", "spa", "parking", "servicio de habitaciones", "biblioteca"]
+    }
+      ]
+      ,
+    
+        "Tenerife": [
+            {
+                "name": "Hotel Gran Tenerife",
+                "price": 300,
+                "rating": 4.0,
+                "numBeds": 2,
+                "numRooms": 1,
+                "numBathrooms": 1,
+                "freeCancellation": false,
+                "images": ["/assets/images/foto_8.jpg"],
+                "description": "Situado en el sur de Tenerife, el Hotel Gran Tenerife es un paraíso para los amantes de la música. Dispone de amplias habitaciones, piscinas, bares y restaurantes, así como de una amplia oferta de actividades para todas las edades.",
+                "type": "hotel",
+                "address":"https://www.google.com/maps/place/H10+Gran+Tinerfe/@28.072184,-16.7362786,17z/data=!3m1!4b1!4m9!3m8!1s0xc6a976705e996ff:0xd36d511e64caab71!5m2!4m1!1i2!8m2!3d28.0721841!4d-16.731413!16s%2Fg%2F1tfd870t",
+                "services": ["wifi", "restaurante", "piscina", "centro de negocios", "spa", "parking", "servicio de habitaciones", "bar"]
+            },
+            {
+                "name": "Villa del Mar",
+                "price": 250,
+                "rating": 4.3,
+                "numBeds": 3,
+                "numRooms": 2,
+                "numBathrooms": 1,
+                "freeCancellation": true,
+                "images": ["/assets/images/foto_9.jpg", "/assets/images/foto_15.jpg"],
+                "description": "Situado en la costa oeste de Tenerife, Villa del Mar es un hotel de lujo con impresionantes vistas al mar. Ofrece habitaciones elegantes, varias piscinas, un spa, restaurantes temáticos y una amplia oferta de actividades para toda la familia.",
+                "type": "villa",
+                "address":"https://www.google.com/maps/place/Residencial+La+Tagora/@28.0812514,-16.7238549,17z/data=!3m1!4b1!4m6!3m5!1s0xc6a99e188060a33:0x8908f5b9d33cdab2!8m2!3d28.0812514!4d-16.7212746!16s%2Fg%2F11cjpnc_zm",
+                "services": ["wifi", "restaurante", "piscina", "gimnasio", "zona de juegos infantil", "parking", "servicio de habitaciones", "jardín"]
+            },
+            {
+                "name": "Hotel Tenerife Dreams",
+                "price": 180,
+                "rating": 3.8,
+                "numBeds": 2,
+                "numRooms": 1,
+                "numBathrooms": 1,
+                "freeCancellation": true,
+                "images": ["/assets/images/foto_10.jpg"],
+                "description": "Situado en Costa Adeje, el Hotel Tenerife Dreams es un hotel de 5 estrellas con un ambiente tropical. Ofrece habitaciones elegantes con vistas al mar, una amplia variedad de piscinas, un spa de lujo y varios restaurantes que sirven platos internacionales y locales.",
+                "type": "casa",
+                "address":"https://www.google.com/maps/place/Tenerife+Dreams/@28.0819552,-16.7296176,17z/data=!3m1!4b1!4m6!3m5!1s0xc6a97b60a99cacf:0xeb366d762acb797b!8m2!3d28.0819552!4d-16.7270373!16s%2Fg%2F11r0f5r3w0",
+                "services": ["wifi", "restaurante", "piscina", "gimnasio", "spa", "parking", "servicio de habitaciones", "salas de reuniones"]
+            },
+            {
+                "name": "Quequén chico",
+                "price": 280,
+                "rating": 4.5,
+                "numBeds": 4,
+                "numRooms": 2,
+                "numBathrooms": 2,
+                "freeCancellation": true,
+                "images": ["/assets/images/foto_11.jpg", "/assets/images/foto_14.jpg"],
+                "description": "Situado en Costa Adeje, el Hotel Bahía de los Vientos es un hotel de lujo con habitaciones y suites con vistas panorámicas al mar, una impresionante piscina de borde infinito, un spa de última generación y varios restaurantes que sirven cocina gourmet.",
+                "type": "apartamento",
+                "address":"https://www.google.com/maps/place/Quequ%C3%A9n+Chico/@-38.5704581,-58.6761872,15.09z/data=!4m17!1m7!3m6!1s0x958f99d2200bd4a1:0x94674ef465690f29!2sBahia+De+Los+Vientos+Quequen!8m2!3d-38.5704422!4d-58.6663561!16s%2Fg%2F11csrypvwl!3m8!1s0x958f99c27e7ffdad:0x25b543794715332d!5m2!4m1!1i2!8m2!3d-38.5687015!4d-58.6662643!16s%2Fg%2F11b73k_sw6",
+                "services": ["wifi", "restaurante", "piscina", "gimnasio", "spa", "parking", "servicio de habitaciones", "zona de barbacoa"]
+            }
+    ]
+    
+}

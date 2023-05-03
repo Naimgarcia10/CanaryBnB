@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+<<<<<<< HEAD
 import { Observable, Subject, Subscription } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
@@ -18,11 +19,16 @@ export interface Hotel {
   services: string[];
   type: string;
 }
+=======
+import { HttpClient } from '@angular/common/http';
+import { Observable, map } from 'rxjs';
+>>>>>>> 61adc60021a03b26fa1cb6e955212dc088efffe5
 
 @Injectable({
   providedIn: 'root'
 })
 export class HotelService {
+<<<<<<< HEAD
   private foundHotels: Hotel[] = [];
   hotelFilter$: any; // Añade esta línea
   constructor(private firestore: AngularFirestore) { }
@@ -54,5 +60,29 @@ export class HotelService {
   getFoundHotels(): Hotel[] {
     return this.foundHotels;
   }
+=======
+  private hotelsDataUrl = 'assets/hoteles.json';
+  hotelFilter$: any;
+
+  constructor(private http: HttpClient) { }
+
+  getHotelsData(): Observable<any> {
+    return this.http.get<any>(this.hotelsDataUrl);
+  }
+
+  // hotel.service.ts
+getTopRatedHotels(): Observable<any[]> {
+  return this.getHotelsData().pipe(
+    map(data => {
+      const allDestinations = Object.keys(data);
+      const allHotels = allDestinations.flatMap(destination => data[destination]);
+      const sortedHotels = allHotels.sort((a, b) => b.rating - a.rating);
+      return sortedHotels.slice(0, 3);
+    })
+  );
+}
+
+
+>>>>>>> 61adc60021a03b26fa1cb6e955212dc088efffe5
 
 }

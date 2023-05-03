@@ -19,7 +19,10 @@
     "target": "ES2022",
     "module": "ES2022",
     "useDefineForClassFields": false,
+<<<<<<< HEAD
     "skipLibCheck": true,
+=======
+>>>>>>> 61adc60021a03b26fa1cb6e955212dc088efffe5
     "lib": [
       "ES2022",
       "dom"

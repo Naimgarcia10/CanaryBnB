@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :host {
   display: flex;
   flex-direction: column;
@@ -81,3 +82,74 @@ p {
   flex: 0 0 100px;
   text-align: right;
 }
+=======
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+  }
+  
+  .hotel-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .hotel-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 1rem 5rem;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 600px;
+    background-color: #dcdcdc;
+  }
+  
+  .hotel-card-img {
+    margin-right: 20px;
+    width: 200px;
+  }
+  
+  .hotel-card-img img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .hotel-card-info {
+    flex: 1;
+  }
+  
+  .hotel-card-rating {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  
+  .hotel-card-rating p {
+    margin: 5px 0;
+  }
+  
+  .no-results {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 1.5rem;
+  }
+  
+/*SELECT ORDENAR*/
+  .container_select {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  label {
+    margin-right: 10px;
+  }
+  
+>>>>>>> 61adc60021a03b26fa1cb6e955212dc088efffe5

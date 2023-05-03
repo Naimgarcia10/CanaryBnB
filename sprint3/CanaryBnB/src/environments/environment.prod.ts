@@ -1,4 +1,5 @@
 export const environment = {
+<<<<<<< HEAD
   production: false,
   firebase: {
     apiKey: "AIzaSyCH_ecZzdkC0HJXy5yvMizPhGPIiXtoh6s",
@@ -11,3 +12,7 @@ export const environment = {
     measurementId: "G-9HF66496TN"
   },
 };
+=======
+
+};
+>>>>>>> 61adc60021a03b26fa1cb6e955212dc088efffe5
