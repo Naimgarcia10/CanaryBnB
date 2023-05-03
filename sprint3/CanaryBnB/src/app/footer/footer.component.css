@@ -3,6 +3,9 @@ footer {
     background-color: #00aaff;
     padding: 20px;
     color:white;
+    margin-top: 5rem;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 1);
+    width: 100%;
   }
   
   footer h5 {

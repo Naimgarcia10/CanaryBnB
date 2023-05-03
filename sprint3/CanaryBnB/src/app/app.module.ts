@@ -26,6 +26,7 @@ import { CookiesPolicyComponent } from './cookies-policy/cookies-policy.componen
 
 
 import { ContainerComponent } from './container/container.component';
+import { SmallHeaderComponent } from './small-header/small-header.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +48,7 @@ import { ContainerComponent } from './container/container.component';
    
     //DisponiblesComponent // Añade DisponiblesComponent aquí
     ContainerComponent,
+    SmallHeaderComponent,
   ],
   imports: [
     BrowserModule,
