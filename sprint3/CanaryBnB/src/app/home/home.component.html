@@ -1,37 +1,35 @@
 
-  <form onsubmit="event.preventDefault(); searchHotels();">
-    <div class="search-bar">
-      <div class="search-item-destination">
-        <label for="destination">Destino</label>
-        <input [(ngModel)]="location" type="text" id="destination" name="destination" placeholder="Ingrese su destino">
-      </div>
-
-      <hr id="line_1">
-
-      <div class="search-item-checkin">
-        <label for="checkin">Fecha de entrada</label>
-        <input type="date" [(ngModel)]="fechaEntrada" id="checkin" name="checkin">
-      </div>
-
-      <div class="search-item-checkout">
-        <label for="checkout">Fecha de salida</label>
-        <input type="date" [(ngModel)]="fechaSalida" id="checkout" name="checkout">
-      </div>
-
-      <div class="search-item-persons">
-        <label for="people">Personas</label>
-        <input type="number" [(ngModel)]="personas" min="1" id="people" name="people" placeholder="Personas">
-      </div>
-
-      <hr id="line_2">
-      <hr id="line_3">
-      <hr id="line_4">
-
-      <button (click)="search()" type="submit" id="searchBtn">Buscar</button>
-
-
+<form onsubmit="event.preventDefault(); searchHotels()">
+  <div class="search-bar">
+    <div class="search-item-destination">
+      <label for="destination">Destino</label>
+      <input [(ngModel)]="location" type="text" id="destination" name="destination" placeholder="Ingrese su destino">
     </div>
-  </form>
+
+    <hr id="line_1">
+
+    <div class="search-item-checkin">
+      <label for="checkin">Fecha de entrada</label>
+      <input type="date" [(ngModel)]="fechaEntrada" id="checkin" name="checkin">
+    </div>
+
+    <div class="search-item-checkout">
+      <label for="checkout">Fecha de salida</label>
+      <input type="date" [(ngModel)]="fechaSalida" id="checkout" name="checkout">
+    </div>
+
+    <div class="search-item-persons">
+      <label for="people">Personas</label>
+      <input type="number" [(ngModel)]="personas" min="1" id="people" name="people" placeholder="Personas">
+    </div>
+
+    <hr id="line_2">
+    <hr id="line_3">
+    <hr id="line_4">
+
+    <button (click)="search(fechaEntrada, fechaSalida, personas)" type="submit" id="searchBtn">Buscar</button>
+  </div>
+</form>
 
   <h1 class="title">Alojamientos mejor valorados</h1>
   <!-- Reemplaza las imágenes estáticas con un contenedor donde se mostrarán las imágenes -->
@@ -41,7 +39,7 @@
       <p>{{ hotel.name }}</p>
       <img [src]="hotel.images[0]" alt="{{ hotel.name }}" />
     </div>
-
-    
   </div>
+  
+  <app-footer></app-footer>
   

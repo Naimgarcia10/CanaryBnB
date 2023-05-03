@@ -22,12 +22,12 @@ export class DisponiblesComponent implements OnInit {
       this.location = params['location'];
       this.loadHotels();
     });
-
+     /*
     this.filterSubscription = this.hotelService.hotelFilter$.subscribe((filters: any) => {
       this.filters = filters;
       this.applyFiltersAndSorting();
     });
-
+    */
   }
 
   ngOnDestroy() {

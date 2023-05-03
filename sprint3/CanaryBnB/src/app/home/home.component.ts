@@ -2,6 +2,8 @@ import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { HotelService } from '../hotel.service';
+import { Reservation } from '../reservation.model';
+import { ReservationService } from '../reservation.service';
 
 
 @Component({
@@ -14,13 +16,13 @@ export class HomeComponent implements OnInit {
   location = '';
   hotels: any[] = [];
   topRatedHotels: any[] = [];
-  public fechaEntrada: string = '';
-  public fechaSalida: string = '';
+  public fechaEntrada: Date = new Date();
+  public fechaSalida: Date = new Date();
   public personas: number = 2;
 
 
 
-  constructor(private router: Router, private http: HttpClient, private hotelService: HotelService) { }
+  constructor(private router: Router, private http: HttpClient, private hotelService: HotelService, private reservationService: ReservationService) { }
 
   ngOnInit(): void {
     this.hotelService.getTopRatedHotels().subscribe(hotels => {
@@ -41,10 +43,7 @@ export class HomeComponent implements OnInit {
     localStorage.setItem('selectedHotel', JSON.stringify(hotel));
   }
   
-  
-
-
-  search(): void {
+  search(checkInDate: Date, checkOutDate: Date, numberOfPeople: number): void {
     if (!this.fechaEntrada || !this.fechaSalida) {
       alert('Por favor, complete los campos de fecha de entrada y salida.');
       return;

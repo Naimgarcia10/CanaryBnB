@@ -1,0 +1,21 @@
+<div class="container">
+    <h2>Contacto</h2>
+    <form (submit)="onSubmit()">
+      <div>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" [(ngModel)]="nombre" name="nombre" required>
+      </div>
+      <div>
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" [(ngModel)]="email" name="email" required>
+      </div>
+      <div>
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" [(ngModel)]="mensaje" name="mensaje" required></textarea>
+      </div>
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+
+  <app-footer></app-footer>
+  
