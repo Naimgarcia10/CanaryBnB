@@ -3,6 +3,26 @@
 <div class="form-container">
   <form [formGroup]="formRegister" (ngSubmit)="registerAction()">
     <div>
+      <label for="fullname">Nombre y Apellidos</label>
+      <input type="text" class="form-control" formControlName="fullname">
+    </div>
+
+    <div class="alert-danger" [hidden]="fullname.valid || fullname.pristine">
+      <span *ngIf="fullname.hasError('required')">Este campo es obligatorio</span>
+      <span *ngIf="fullname.hasError('minlength')">Este campo debe tener al menos 3 caracteres</span>
+    </div>
+
+    <div>
+      <label for="birthdate">Fecha de Nacimiento</label>
+      <input type="date" class="form-control" formControlName="birthdate">
+    </div>
+
+    <div class="alert-danger" [hidden]="birthdate.valid || birthdate.pristine">
+      <span *ngIf="birthdate.hasError('required')">Este campo es obligatorio</span>
+      <span *ngIf="birthdate.hasError('minlength')">Este campo debe tener al menos 3 caracteres</span>
+    </div>
+
+    <div>
       <label for="email">Email</label>
       <input type="text" class="form-control" formControlName="email">
     </div>

@@ -14,10 +14,20 @@ export class RegisterComponent {
   }
 
   formRegister = this.fb.group({
+    'fullname': ['', [Validators.required, Validators.minLength(6)]],
+    'birthdate': ['', [Validators.required, Validators.minLength(6)]],
     'email': ['', [Validators.required, Validators.email]],
     'password': ['', [Validators.required, Validators.minLength(6)]],
     'password2': ['', [Validators.required, Validators.minLength(6)]]
   });
+
+  get fullname(){
+    return this.formRegister.get('fullname') as FormControl;
+  }
+
+  get birthdate(){
+    return this.formRegister.get('birthdate') as FormControl;
+  }
 
   get email(){
     return this.formRegister.get('email') as FormControl;
@@ -35,6 +45,8 @@ export class RegisterComponent {
     if (this.formRegister.valid) {
       const email: string = this.formRegister.get('email')!.value ?? ''; // agregamos el ! y ?? para manejar posible valor nulo
       const password: string = this.formRegister.get('password')!.value ?? ''; // agregamos el ! y ?? para manejar posible valor nulo
+      const fullname: string = this.formRegister.get('fullname')!.value ?? ''; // agregamos el ! y ?? para manejar posible valor nulo
+      const birthdate: string = this.formRegister.get('birthdate')!.value ?? ''; // agregamos el ! y ?? para manejar posible valor nulo
       console.log(this.formRegister.value);
       this.auth.register(email, password);
       this.formRegister.reset();

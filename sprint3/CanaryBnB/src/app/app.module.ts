@@ -5,6 +5,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms'; // Asegúrate
 import { HttpClientModule } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFirestore } from '@angular/fire/compat/firestore';
 
 
 /* componentes */
@@ -47,6 +48,7 @@ import { ReservationHistorialComponent } from './reservation-historial/reservati
     ReactiveFormsModule, // Añade ReactiveFormsModule aquí
     HttpClientModule, // Añade HttpClientModule aquí
     AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestore
   ],
   providers: [],
   bootstrap: [AppComponent]
