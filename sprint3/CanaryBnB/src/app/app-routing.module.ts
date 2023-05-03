@@ -12,11 +12,14 @@ import {ReservationHistorialComponent} from './reservation-historial/reservation
 import { ContactComponent } from './contact/contact.component';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 import { CookiesPolicyComponent } from './cookies-policy/cookies-policy.component'; 
+import { ContainerComponent } from './container/container.component';
 
 
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
+  
+  
   { path: 'disponibles', component: DisponiblesComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'login', component: LoginComponent },
@@ -29,6 +32,8 @@ const routes: Routes = [
   { path: 'cookies-policy', component: CookiesPolicyComponent }
 
 ];
+
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

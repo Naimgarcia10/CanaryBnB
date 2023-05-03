@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms'; // Asegúrate de importar FormsModule aquí
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { AngularFireModule } from '@angular/fire/compat';
-
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore'; // Importa AngularFirestoreModule
 
 /* componentes */
 import { AppComponent } from './app.component';
@@ -25,6 +25,7 @@ import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.componen
 import { CookiesPolicyComponent } from './cookies-policy/cookies-policy.component';
 
 
+import { ContainerComponent } from './container/container.component';
 
 @NgModule({
   declarations: [
@@ -45,16 +46,18 @@ import { CookiesPolicyComponent } from './cookies-policy/cookies-policy.componen
     CookiesPolicyComponent,
    
     //DisponiblesComponent // Añade DisponiblesComponent aquí
+    ContainerComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule, // Añade FormsModule aquí
-    ReactiveFormsModule, // Añade ReactiveFormsModule aquí
-    HttpClientModule, // Añade HttpClientModule aquí
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
     AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule, // Añade AngularFirestoreModule aquí
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
