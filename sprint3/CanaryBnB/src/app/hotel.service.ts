@@ -4,6 +4,7 @@ import { map } from 'rxjs/operators';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 
 export interface Hotel {
+  id?: string;
   address: string;
   description: string;
   destination: string;
@@ -23,6 +24,7 @@ export interface Hotel {
   providedIn: 'root'
 })
 export class HotelService {
+  private selectedHotel: Hotel | null = null;
   private foundHotels: Hotel[] = [];
   hotelFilter$: any; // Añade esta línea
   constructor(private firestore: AngularFirestore) { }
@@ -44,7 +46,16 @@ export class HotelService {
   getHotelsByLocation(location: string): Observable<Hotel[]> {
     return this.firestore
       .collection<Hotel>('Hoteles', ref => ref.where('destination', '==', location))
-      .valueChanges({ idField: 'id' });
+      .snapshotChanges()
+      .pipe(
+        map(actions =>
+          actions.map(a => {
+            const data = a.payload.doc.data() as Hotel;
+            const id = a.payload.doc.id;
+            return { id, ...data };
+          })
+        )
+      );
   }
 
   setFoundHotels(hotels: Hotel[]): void {
@@ -54,5 +65,23 @@ export class HotelService {
   getFoundHotels(): Hotel[] {
     return this.foundHotels;
   }
+
+  getHotelById(id: string): Observable<Hotel | undefined> {
+    return this.firestore
+      .collection<Hotel>('Hoteles')
+      .doc(id)
+      .valueChanges()
+      .pipe(map((data: any) => (data ? { id, ...data } as Hotel : undefined)));
+  }
+
+  setSelectedHotel(hotel: Hotel): void {
+    this.selectedHotel = hotel;
+  }
+  
+  getSelectedHotel(): Hotel | null {
+    return this.selectedHotel;
+  }
+  
+  
 
 }

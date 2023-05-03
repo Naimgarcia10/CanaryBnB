@@ -12,21 +12,23 @@
 
 <div class = "container">  
   <ul>
-    <li *ngFor="let hotel of foundHotels" class="hotel-item">
-      <div class="hotel-image-container">
-        <img [src]="hotel.images[0]" alt="{{ hotel.name }}" class="hotel-image">
-      </div>
-      <div class="hotel-details">
-        <h3>{{ hotel.name }}</h3>
-        <p>{{ hotel.numBeds }} camas</p>
-        <p>{{ hotel.numRooms }} habitaciones</p>
-        <p>{{ hotel.numBathrooms }} baños</p>
-        <p>Cancelación gratuita: {{ hotel.freeCancellation ? 'Sí' : 'No' }}</p>
-      </div>
-      <div class="hotel-price-rating">
-        <p>Valoración: {{ hotel.rating }}/5</p>
-        <p>Precio: {{ hotel.price }}€</p>
-      </div>
+    <li *ngFor="let hotel of foundHotels" class="hotel-item" (click)="selectHotel(hotel)">
+      <a [routerLink]="['/specifichotel', hotel.id]">
+        <div class="hotel-image-container">
+          <img [src]="hotel.images[0]" alt="{{ hotel.name }}" class="hotel-image">
+        </div>
+        <div class="hotel-details">
+          <h3>{{ hotel.name }}</h3>
+          <p>{{ hotel.numBeds }} camas</p>
+          <p>{{ hotel.numRooms }} habitaciones</p>
+          <p>{{ hotel.numBathrooms }} baños</p>
+          <p>Cancelación gratuita: {{ hotel.freeCancellation ? 'Sí' : 'No' }}</p>
+        </div>
+        <div class="hotel-price-rating">
+          <p>Valoración: {{ hotel.rating }}/5</p>
+          <p>Precio: {{ hotel.price }}€</p>
+        </div>
+      </a>
     </li>
   </ul>
 </div>

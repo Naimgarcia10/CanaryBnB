@@ -21,7 +21,7 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'login', component: LoginComponent },
   { path: 'hotelfilter', component: HotelfilterComponent },
-  { path: 'specifichotel', component: SpecifichotelComponent },
+  { path: 'specifichotel/:id', component: SpecifichotelComponent },
   { path: 'payment-gateway', component: PaymentGatewayComponent },
   { path: 'reservation-historial', component: ReservationHistorialComponent }
 ];
