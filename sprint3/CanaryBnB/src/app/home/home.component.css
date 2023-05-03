@@ -49,3 +49,41 @@ button {
 button:hover {
   background-color: #45a049;
 }
+
+.hotels-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.hotels-container h2 {
+  margin-bottom: 20px;
+}
+
+.hotels {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.hotels img {
+  width: 250px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.hotel-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.hotel-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}

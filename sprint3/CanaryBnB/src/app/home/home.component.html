@@ -25,3 +25,15 @@
     </form>
   </div>
 </div>
+
+<div class="hotels-container">
+  <h2>Hoteles mejor valorados</h2>
+  <div class="hotels">
+    <ng-container *ngFor="let hotel of bestRatedHotels">
+      <div class="hotel-card">
+        <div class="hotel-name">{{ hotel.name }}</div>
+        <img [src]="hotel.images[0]" [alt]="hotel.name" />
+      </div>
+    </ng-container>
+  </div>
+</div>
