@@ -57,4 +57,10 @@ export class HomeComponent implements OnInit {
       this.bestRatedHotels = hotels;
     });
   }
+
+  selectBestRatedHotel(index: number): void {
+    const selectedHotel = this.bestRatedHotels[index];
+    this.hotelService.setSelectedHotel(selectedHotel);
+    this.router.navigate(['/specifichotel']);
+  }
 }

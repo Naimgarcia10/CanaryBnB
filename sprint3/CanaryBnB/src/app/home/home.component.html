@@ -32,8 +32,8 @@
 <div class="hotels-container">
   <h2>Hoteles mejor valorados</h2>
   <div class="hotels">
-    <ng-container *ngFor="let hotel of bestRatedHotels">
-      <div class="hotel-card">
+    <ng-container *ngFor="let hotel of bestRatedHotels; let i = index">
+      <div class="hotel-card" (click)="selectBestRatedHotel(i)">
         <div class="hotel-name">{{ hotel.name }}</div>
         <img [src]="hotel.images[0]" [alt]="hotel.name" />
       </div>
