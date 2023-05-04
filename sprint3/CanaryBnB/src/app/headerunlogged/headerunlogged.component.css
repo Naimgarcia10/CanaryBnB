@@ -7,65 +7,67 @@ header {
   justify-content: center;
 }
 
-  
-  
-  header p {
-    display: flex;
-    align-items: center;
-    font-size: 3rem;
-    position: absolute;
-  }
-  
-  .logo {
-    position: absolute;
-    left: 3rem;
-    top: 3rem;
-  }
-  
-  .logo-img {
-    height: 5rem;
-  } 
-  
-  
-  /* sign in sign up buttons */
-  #button_signIn {
-    font-size: 0.8rem;
-    width: 6rem;
-    height: 2.5rem;
-    cursor: pointer;
-    background: #ffffff;
-    border: none;
-    transition: 0.4s;
-    margin: 0 auto;
-    position: absolute;
-    top: 3rem;
-    right: 8.5rem;
-    border-radius: 1rem;
-  }
-  
-  
-  #button_signIn:active {
-    transform: scale(0.90);
-  }
-  
-  #button_signUp {
-    font-size: 0.8rem;
-    width: 6rem;
-    height: 2.5rem;
-    cursor: pointer;
-    background: #ffffff;
-    border: none;
-    transition: 0.4s;
-    margin: 0 auto;
-    position: absolute;
-    top: 3rem;
-    right: 1.5rem;
-    border-radius: 1rem;
-  }
-  
-  #button_signUp:active {
-    transform: scale(0.90);
-  }
-  
-  
-  
+header p {
+  display: flex;
+  align-items: center;
+  font-size: 3rem;
+  position: absolute;
+}
+
+.logo {
+  position: absolute;
+  left: 3rem;
+  top: 3rem;
+}
+
+.logo-img {
+  height: 5rem;
+}
+
+/* user full name */
+.user-full-name {
+  position: absolute;
+  top: 3rem;
+  right: 8.5rem;
+  font-size: 1.2rem;
+  color: #ffffff;
+}
+
+/* sign in sign up buttons */
+#button_signIn {
+  font-size: 0.8rem;
+  width: 6rem;
+  height: 2.5rem;
+  cursor: pointer;
+  background: #ffffff;
+  border: none;
+  transition: 0.4s;
+  margin: 0 auto;
+  position: absolute;
+  top: 3rem;
+  right: 8.5rem;
+  border-radius: 1rem;
+}
+
+#button_signIn:active {
+  transform: scale(0.90);
+}
+
+#button_signUp {
+  font-size: 0.8rem;
+  width: 6rem;
+  height: 2.5rem;
+  cursor: pointer;
+  background: #ffffff;
+  border: none;
+  transition: 0.4s;
+  margin: 0 auto;
+  position: absolute;
+  top: 3rem;
+  right: 1.5rem;
+  border-radius: 1rem;
+}
+
+#button_signUp:active {
+  transform: scale(0.90);
+}
