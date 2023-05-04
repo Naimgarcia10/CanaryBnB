@@ -28,7 +28,7 @@ export class HomeComponent implements OnInit {
       alert('Por favor, ingrese un destino válido.');
       return;
     }
-
+/*
     if (!this.formData.checkin || !this.formData.checkout) {
       alert('Por favor, complete los campos de fecha de entrada y fecha de salida.');
       return;
@@ -38,6 +38,7 @@ export class HomeComponent implements OnInit {
       alert('La fecha de entrada no puede ser posterior a la fecha de salida.');
       return;
     }
+    */
 
     if (this.formData.people <= 0) {
       alert('Por favor, ingrese un número de personas válido.');
