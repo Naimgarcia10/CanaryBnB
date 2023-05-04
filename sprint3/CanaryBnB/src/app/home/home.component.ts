@@ -21,6 +21,7 @@ export class HomeComponent implements OnInit {
   
   bestRatedHotels: Hotel[] = []; // Agrega esta línea
   reservationId: string = '' ; // Agrega esta línea
+  userEmail = localStorage.getItem('user_email') || '';
 
   constructor(private router: Router, private hotelService: HotelService, private reservationService: ReservationService) {}
   
@@ -35,10 +36,9 @@ export class HomeComponent implements OnInit {
       checkout: this.formData.checkout,
       people: this.formData.people
     };
-  
-    this.reservationService.updateReservation(this.reservationId, reservationData).then(() => {
-      // Navega a la página "specificHotel" y pasa el ID de la reserva
-      console.log('Datos del Home actualizados', reservationData);
+
+    this.reservationService.createEmptyReservation(this.userEmail, this.formData.checkin, this.formData.checkout, this.formData.people).then((reservationId) => {
+      localStorage.setItem('reservation_id', reservationId); // Guarda el ID de la reserva en el almacenamiento local
     });
   }
 

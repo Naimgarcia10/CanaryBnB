@@ -7,11 +7,14 @@ import { AngularFirestore } from '@angular/fire/compat/firestore';
 export class ReservationService {
   constructor(private firestore: AngularFirestore) { }
 
-  createEmptyReservation(userEmail: string) {
+  createEmptyReservation(userEmail: string, checkin: string, checkout: string, people: number) {
     const reservationId = this.firestore.createId(); // Genera un ID único para la reserva
     const reservationData = {
       user_email: userEmail,
-      reservation_id: reservationId
+      reservation_id: reservationId,
+      checkin: checkin,
+      checkout: checkout,
+      people: people
     };
   
     // Retorna el ID de la reserva junto con la promesa

@@ -41,11 +41,7 @@ export class LoginComponent implements OnInit{
       this.formLogin.reset();
 
       /*Crear reserva con email e id unico*/
-      this.reservationService.createEmptyReservation(this.user.email).then((reservationId) => {
-        localStorage.setItem('reservation_id', reservationId); // Guarda el ID de la reserva en el almacenamiento local
         localStorage.setItem('user_email', this.user.email); // Guarda el correo electrónico del usuario en el almacenamiento local
-        // Navega a la página "home"
-      });
     }
   }
 
