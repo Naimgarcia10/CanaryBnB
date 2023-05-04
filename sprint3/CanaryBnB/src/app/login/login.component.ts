@@ -2,6 +2,7 @@ import { Component,OnInit } from '@angular/core';
 import { FormBuilder, FormControl, Validators } from '@angular/forms';
 import { AuthService } from '../shared/auth.service';
 import { UserModel } from '../models/user_model';
+import { ReservationService } from '../reservation.service';
 
 @Component({
   selector: 'app-login',
@@ -10,7 +11,7 @@ import { UserModel } from '../models/user_model';
 })
 export class LoginComponent implements OnInit{
 
-  constructor(private fb:FormBuilder, private auth: AuthService){ }
+  constructor(private fb:FormBuilder, private auth: AuthService, private reservationService: ReservationService){ }
 
   user: UserModel = new UserModel();
 
@@ -38,8 +39,14 @@ export class LoginComponent implements OnInit{
       console.log(this.formLogin.value);
       this.auth.login(this.user);
       this.formLogin.reset();
+
+      /*Crear reserva con email e id unico*/
+      this.reservationService.createEmptyReservation(this.user.email).then((reservationId) => {
+        localStorage.setItem('reservation_id', reservationId); // Guarda el ID de la reserva en el almacenamiento local
+        localStorage.setItem('user_email', this.user.email); // Guarda el correo electrónico del usuario en el almacenamiento local
+        // Navega a la página "home"
+      });
     }
   }
-  
 
 }

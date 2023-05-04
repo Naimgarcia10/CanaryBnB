@@ -1,18 +1,23 @@
 
 <app-small-header></app-small-header>
 
-<h1 class="title">Historial de Reservas</h1>
+<h1 id="title">Historial de reservas</h1>
 
-<div *ngFor="let reservation of confirmedReservations">
-  <div class="reservation-card">
-    <img [src]="reservation.hotelImage" alt="Hotel Image" />
-    <h3>{{ reservation.hotelName }}</h3>
-    <p>Fecha de entrada: {{ reservation.checkInDate }}</p>
-    <p>Fecha de salida: {{ reservation.checkOutDate }}</p>
-    <p>Personas: {{ reservation.numberOfPeople }}</p>
-    <p>Número de reserva: {{ reservation.reservationNumber }}</p>
+<div *ngFor="let reservation of reservations" class="reservation-card">
+  <div class="hotel-info">
+    <h3 id="hotel_name">{{ reservation.data.hotel_name }}</h3>
+    <img [src]="reservation.data.hotel_image" alt="Imagen del hotel" />
+  </div>
+  <div class="reservation-details">
+    <p><strong>Reserva:</strong> {{ reservation.data.reservation_id }}</p>
+    <p><strong>Check-in:</strong> {{ reservation.data.checkin }}</p>
+    <p><strong>Check-out:</strong> {{ reservation.data.checkout }}</p>
+    <p><strong>Personas:</strong> {{ reservation.data.people }}</p>
+    <p><strong>Email:</strong> {{ reservation.data.user_email }}</p>
   </div>
 </div>
+
+  
 
 <app-footer></app-footer>
 

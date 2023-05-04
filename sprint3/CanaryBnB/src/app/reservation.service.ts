@@ -1,44 +1,43 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
-import { Reservation } from '../app/reservation.model';
+import { AngularFirestore } from '@angular/fire/compat/firestore';
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'root'
 })
 export class ReservationService {
-  private currentReservationSubject = new BehaviorSubject<Reservation | null>(null);
-  currentReservation$ = this.currentReservationSubject.asObservable();
+  constructor(private firestore: AngularFirestore) { }
 
-  private confirmedReservationsSubject = new BehaviorSubject<Reservation[]>([]);
-  confirmedReservations$ = this.confirmedReservationsSubject.asObservable();
-
-  constructor() {
-    const storedReservation = this.getCurrentReservationFromLocalStorage();
-    if (storedReservation) {
-    this.currentReservationSubject.next(storedReservation);
-  }
-
-  }
-
-  updateCurrentReservation(reservation: Reservation) {
-    this.currentReservationSubject.next(reservation);
-    localStorage.setItem('currentReservation', JSON.stringify(reservation));
+  createEmptyReservation(userEmail: string) {
+    const reservationId = this.firestore.createId(); // Genera un ID único para la reserva
+    const reservationData = {
+      user_email: userEmail,
+      reservation_id: reservationId
+    };
+  
+    // Retorna el ID de la reserva junto con la promesa
+    return this.firestore.collection('reservas').doc(reservationId).set(reservationData).then(() => reservationId);
   }
   
 
-  addConfirmedReservation(reservation: Reservation) {
-    const currentReservations = this.confirmedReservationsSubject.getValue();
-    currentReservations.push(reservation);
-    this.confirmedReservationsSubject.next(currentReservations);
-  }
-
-  getConfirmedReservations(): Reservation[] {
-    return this.confirmedReservationsSubject.getValue();
-  }
-
-  getCurrentReservationFromLocalStorage(): Reservation {
-    const storedReservation = localStorage.getItem('currentReservation');
-    return storedReservation ? JSON.parse(storedReservation) : null;
+  addReservation(data: any) {
+    return this.firestore.collection('reservas').add(data);
   }
   
+  getReservationById(reservationId: string) {
+    return this.firestore.collection('reservas').doc(reservationId).get();
+  }
+  
+  updateReservation(reservationId: string, data: any) {
+    return this.firestore.collection('reservas').doc(reservationId).update(data);
+  }
+
+  getUserReservations(userEmail: string) {
+    console.log('Email del usuario', userEmail);
+    return this.firestore.collection('reservas', ref => ref.where('user_email', '==', userEmail)).snapshotChanges();
+    
+  }
+  
+  
+
+
 }

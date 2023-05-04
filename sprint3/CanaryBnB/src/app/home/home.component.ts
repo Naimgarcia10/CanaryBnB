@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { HotelService, Hotel } from '../hotel.service';
+import { ReservationService } from '../reservation.service';
 
 @Component({
   selector: 'app-home',
@@ -8,6 +9,8 @@ import { HotelService, Hotel } from '../hotel.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  
+  
   formData = {
     destination: '',
     checkin: '',
@@ -15,12 +18,28 @@ export class HomeComponent implements OnInit {
     people: 1
   };
 
+  
   bestRatedHotels: Hotel[] = []; // Agrega esta línea
+  reservationId: string = '' ; // Agrega esta línea
 
-  constructor(private router: Router, private hotelService: HotelService) {}
-
+  constructor(private router: Router, private hotelService: HotelService, private reservationService: ReservationService) {}
+  
   ngOnInit(): void {
     this.getTopRatedHotels(); // Agrega esta línea
+    this.reservationId = localStorage.getItem('reservation_id') || ''; // Recupera el ID de la reserva desde el almacenamiento local
+  }
+
+  updateHomeData() {
+    const reservationData = {
+      checkin: this.formData.checkin,
+      checkout: this.formData.checkout,
+      people: this.formData.people
+    };
+  
+    this.reservationService.updateReservation(this.reservationId, reservationData).then(() => {
+      // Navega a la página "specificHotel" y pasa el ID de la reserva
+      console.log('Datos del Home actualizados', reservationData);
+    });
   }
 
   submitForm() {
@@ -28,7 +47,7 @@ export class HomeComponent implements OnInit {
       alert('Por favor, ingrese un destino válido.');
       return;
     }
-/*
+
     if (!this.formData.checkin || !this.formData.checkout) {
       alert('Por favor, complete los campos de fecha de entrada y fecha de salida.');
       return;
@@ -38,7 +57,7 @@ export class HomeComponent implements OnInit {
       alert('La fecha de entrada no puede ser posterior a la fecha de salida.');
       return;
     }
-    */
+    
 
     if (this.formData.people <= 0) {
       alert('Por favor, ingrese un número de personas válido.');

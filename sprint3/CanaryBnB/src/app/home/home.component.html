@@ -24,7 +24,7 @@
         <input type="number" id="people" name="people" [(ngModel)]="formData.people" min="1" required>
       </div>
 
-      <button type="submit">Buscar</button>
+      <button (click)="updateHomeData()" type="submit">Buscar</button>
     </form>
   </div>
 </div>
