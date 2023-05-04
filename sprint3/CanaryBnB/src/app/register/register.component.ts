@@ -2,6 +2,7 @@ import { Component,OnInit } from '@angular/core';
 import { FormBuilder, FormControl, Validators } from '@angular/forms';
 import { AuthService } from '../shared/auth.service';
 import { UserModel } from '../models/user_model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -9,7 +10,7 @@ import { UserModel } from '../models/user_model';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent {
-  constructor(private fb:FormBuilder, private auth: AuthService){ }
+  constructor(private fb:FormBuilder, private auth: AuthService, private router: Router){ }
 
   user: UserModel = new UserModel();
 
@@ -58,7 +59,9 @@ export class RegisterComponent {
       this.user.profilePic = this.formRegister.get('profilePic')!.value ?? '../assets/images/profilePic_dummy.png'; // agregamos el ! y ?? para manejar posible valor nulo
       console.log(this.formRegister.value);
       this.auth.register(this.user);
+      
       this.formRegister.reset();
+      this.router.navigate(['/']);
     }
   }
 }
