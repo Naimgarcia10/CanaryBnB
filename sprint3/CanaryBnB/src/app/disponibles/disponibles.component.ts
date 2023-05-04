@@ -33,9 +33,10 @@ export class DisponiblesComponent implements OnInit {
     }
   }
 
-  selectHotel(hotel: Hotel): void {
-    this.hotelService.setSelectedHotel(hotel);
-    this.router.navigate(['/specifichotel']);
-  } 
-  
+  selectHotel(index: number): void {
+    const selectedHotel = this.foundHotels[index];
+    this.hotelService.setSelectedHotel(selectedHotel);
+    this.router.navigate(['/specifichotel']); // Agrega esta línea
+  }
+
 }

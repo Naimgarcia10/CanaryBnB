@@ -67,6 +67,8 @@ p {
   height: 150px;
   object-fit: cover;
   width: 100%;
+ border : 1px solid rgb(111, 111, 111);
+
 }
 
 .hotel-details {
@@ -74,6 +76,12 @@ p {
 }
 
 .hotel-price-rating {
-  flex: 0 0 100px;
+  display: flex;
+  flex-direction: column;
   text-align: right;
+}
+
+.hotel-item{
+  background-color: #e1edf8;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
 }

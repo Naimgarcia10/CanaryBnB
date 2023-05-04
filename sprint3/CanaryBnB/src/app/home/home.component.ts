@@ -28,6 +28,22 @@ export class HomeComponent implements OnInit {
       alert('Por favor, ingrese un destino válido.');
       return;
     }
+/*
+    if (!this.formData.checkin || !this.formData.checkout) {
+      alert('Por favor, complete los campos de fecha de entrada y fecha de salida.');
+      return;
+    }
+
+    if (new Date(this.formData.checkin) > new Date(this.formData.checkout)) {
+      alert('La fecha de entrada no puede ser posterior a la fecha de salida.');
+      return;
+    }
+    */
+
+    if (this.formData.people <= 0) {
+      alert('Por favor, ingrese un número de personas válido.');
+      return;
+    }
 
     this.hotelService.getHotelsByLocation(this.formData.destination).subscribe((hotels: Hotel[]) => {
       this.hotelService.setFoundHotels(hotels);
@@ -40,5 +56,11 @@ export class HomeComponent implements OnInit {
     this.hotelService.getTopRatedHotels().subscribe((hotels: Hotel[]) => {
       this.bestRatedHotels = hotels;
     });
+  }
+
+  selectBestRatedHotel(index: number): void {
+    const selectedHotel = this.bestRatedHotels[index];
+    this.hotelService.setSelectedHotel(selectedHotel);
+    this.router.navigate(['/specifichotel']);
   }
 }

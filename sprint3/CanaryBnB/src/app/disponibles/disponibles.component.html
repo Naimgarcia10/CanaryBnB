@@ -1,4 +1,3 @@
-
 <app-small-header></app-small-header>
 
 <div class="sort-container">
@@ -12,10 +11,9 @@
 </div>
 <!-- La lista de hoteles -->
 
-
-<div class = "container">  
+<div class="container">  
   <ul>
-    <li *ngFor="let hotel of foundHotels" class="hotel-item">
+    <li *ngFor="let hotel of foundHotels; let i = index" class="hotel-item" (click)="selectHotel(i)">
       <div class="hotel-image-container">
         <img [src]="hotel.images[0]" alt="{{ hotel.name }}" class="hotel-image">
       </div>
