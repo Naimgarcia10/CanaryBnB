@@ -53,6 +53,10 @@
       <span>La contraseña debe coindidir</span>
     </div>
 
+    <div>
+      <input type="file" accept=".png, .jpg, .jpeg" formControlName="profilePic">
+    </div>
+
     <button type="submit" class="btn btn-primary" [disabled]="formRegister.invalid">Registrarse</button>
 
   </form>
