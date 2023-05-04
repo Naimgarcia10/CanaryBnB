@@ -12,12 +12,24 @@ export class SpecifichotelComponent implements OnInit {
 
   hotel: Hotel | null = null;
   currentImageIndex: number = 0;
-  reservationId: string= ''; // Agrega esta línea
+
+  reservationId: string= '';
+  checkIn: string= ''; 
+  checkOut: string= '';
+  people: string= ''; 
+  userEmail:string ='';
 
   constructor(private hotelService: HotelService, private router: Router, private reservationService: ReservationService) {} // Inyecta Router aquí
 
   ngOnInit(): void {
+
     this.reservationId = localStorage.getItem('reservation_id') || ''; // Recupera el ID de la reserva desde el almacenamiento local
+    this.userEmail= localStorage.getItem('user_email') || '';
+    this.checkIn= localStorage.getItem('checkin') || '';
+    this.checkOut= localStorage.getItem('checkout') || '';
+    this.people= localStorage.getItem('people') || '';
+
+
     const selectedHotel = this.hotelService.getSelectedHotel();
     if (selectedHotel) {
       this.hotel = selectedHotel;
@@ -27,14 +39,9 @@ export class SpecifichotelComponent implements OnInit {
   }
 
   updateSpecificHotelData() {
-  const reservationData = {
-    hotel_name: this.hotel?.name,
-    hotel_image: this.hotel?.images[0],
-  };
 
-  this.reservationService.updateReservation(this.reservationId, reservationData).then(() => {
-    // Navega a la página siguiente o muestra un mensaje de éxito
-    console.log('Datos en specificHotel actualizados', reservationData);
+  this.reservationService.createEmptyReservation(this.userEmail, this.checkIn, this.checkOut, this.people, this.hotel?.name || '', this.hotel?.images[0] || '').then((reservationId) => {
+    localStorage.setItem('reservation_id', reservationId); // Guarda el ID de la reserva en el almacenamiento local
   });
 }
 

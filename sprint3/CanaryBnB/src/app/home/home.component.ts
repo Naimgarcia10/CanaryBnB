@@ -21,25 +21,18 @@ export class HomeComponent implements OnInit {
   
   bestRatedHotels: Hotel[] = []; // Agrega esta línea
   reservationId: string = '' ; // Agrega esta línea
-  userEmail = localStorage.getItem('user_email') || '';
 
   constructor(private router: Router, private hotelService: HotelService, private reservationService: ReservationService) {}
   
   ngOnInit(): void {
     this.getTopRatedHotels(); // Agrega esta línea
-    this.reservationId = localStorage.getItem('reservation_id') || ''; // Recupera el ID de la reserva desde el almacenamiento local
   }
 
-  updateHomeData() {
-    const reservationData = {
-      checkin: this.formData.checkin,
-      checkout: this.formData.checkout,
-      people: this.formData.people
-    };
+  saveHomeData() {
+    localStorage.setItem('checkin', this.formData.checkin);
+    localStorage.setItem('checkout', this.formData.checkout);
+    localStorage.setItem('people', this.formData.people.toString());
 
-    this.reservationService.createEmptyReservation(this.userEmail, this.formData.checkin, this.formData.checkout, this.formData.people).then((reservationId) => {
-      localStorage.setItem('reservation_id', reservationId); // Guarda el ID de la reserva en el almacenamiento local
-    });
   }
 
   submitForm() {
