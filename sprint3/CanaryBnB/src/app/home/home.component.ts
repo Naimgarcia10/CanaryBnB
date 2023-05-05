@@ -71,6 +71,23 @@ export class HomeComponent implements OnInit {
   }
 
   selectBestRatedHotel(index: number): void {
+
+    if (!this.formData.checkin || !this.formData.checkout) {
+      alert('Por favor, complete los campos de fecha de entrada y fecha de salida.');
+      return;
+    }
+
+    if (new Date(this.formData.checkin) > new Date(this.formData.checkout)) {
+      alert('La fecha de entrada no puede ser posterior a la fecha de salida.');
+      return;
+    }
+    
+    if (this.formData.people <= 0) {
+      alert('Por favor, ingrese un número de personas válido.');
+      return;
+    }
+
+
     const selectedHotel = this.bestRatedHotels[index];
     this.hotelService.setSelectedHotel(selectedHotel);
     this.router.navigate(['/specifichotel']);
