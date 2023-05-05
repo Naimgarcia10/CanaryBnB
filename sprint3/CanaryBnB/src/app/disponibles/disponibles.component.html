@@ -13,7 +13,7 @@
 
 <div class="container">  
   <ul>
-    <li *ngFor="let hotel of foundHotels; let i = index" class="hotel-item" (click)="selectHotel(i)">
+    <li *ngFor="let hotel of filteredHotels; let i = index" class="hotel-item" (click)="selectHotel(i)">
       <div class="hotel-image-container">
         <img [src]="hotel.images[0]" alt="{{ hotel.name }}" class="hotel-image">
       </div>
@@ -31,5 +31,24 @@
     </li>
   </ul>
 </div>
+
+
+<div class="filter-container">
+  <h4>Filtrar por tipo:</h4>
+  <label>
+    <input type="checkbox" [(ngModel)]="filterVilla"> Villa
+  </label>
+  <label>
+    <input type="checkbox" [(ngModel)]="filterHotel"> Hotel
+  </label>
+  <label>
+    <input type="checkbox" [(ngModel)]="filterApartamento"> Apartamento
+  </label>
+  <label>
+    <input type="checkbox" [(ngModel)]="filterCasa"> Casa
+  </label>
+  <button (click)="applyFilters()">Aplicar filtros</button>
+</div>
+
 
 <app-footer></app-footer>

@@ -60,9 +60,16 @@ export class HotelService {
 
   setFoundHotels(hotels: Hotel[]): void {
     this.foundHotels = hotels;
+    localStorage.setItem('foundHotels', JSON.stringify(hotels)); // Añade esta línea
   }
 
   getFoundHotels(): Hotel[] {
+    if (this.foundHotels.length === 0) {
+      const storedHotels = localStorage.getItem('foundHotels');
+      if (storedHotels) {
+        this.foundHotels = JSON.parse(storedHotels) as Hotel[];
+      }
+    }
     return this.foundHotels;
   }
 

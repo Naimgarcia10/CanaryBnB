@@ -9,12 +9,35 @@ import { HotelService, Hotel } from '../hotel.service';
 })
 export class DisponiblesComponent implements OnInit {
   foundHotels: Hotel[] = [];
+  filteredHotels: Hotel[] = []; // Añade esta variable
+
+  filterVilla = false;
+  filterHotel = false;
+  filterCasa = false;
+  filterApartamento = false;
 
   constructor(private hotelService: HotelService, private router: Router) {}
 
   ngOnInit(): void {
     this.foundHotels = this.hotelService.getFoundHotels();
+    this.filteredHotels = this.foundHotels; // Añade esta línea
   }
+
+  applyFilters(): void {
+    if (!this.filterVilla && !this.filterHotel && !this.filterCasa && !this.filterApartamento) {
+      // Si no hay filtros seleccionados, muestra todos los hoteles
+      this.filteredHotels = this.foundHotels;
+    } else {
+      this.filteredHotels = this.foundHotels.filter((hotel: Hotel) => {
+        if (this.filterVilla && hotel.type === 'villa') return true;
+        if (this.filterHotel && hotel.type === 'hotel') return true;
+        if (this.filterApartamento && hotel.type === 'apartamento') return true;
+        if (this.filterCasa && hotel.type === 'casa') return true;
+        return false;
+      });
+    }
+  }
+  
 
   onSortChange(sortOption: string) {
     switch (sortOption) {
