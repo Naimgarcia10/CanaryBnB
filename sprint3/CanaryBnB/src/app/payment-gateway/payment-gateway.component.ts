@@ -18,7 +18,25 @@ export class PaymentGatewayComponent implements OnInit {
     cvv: ''
   };
  
+  reservationId: string= '';
+  checkIn: string= ''; 
+  checkOut: string= '';
+  people: string= ''; 
+  userEmail:string ='';
+  hotelName: string= '';
+  hotelImages: string[] = [];
+
   ngOnInit(): void {
+    this.reservationId = localStorage.getItem('reservation_id') || ''; // Recupera el ID de la reserva desde el almacenamiento local
+    this.userEmail= localStorage.getItem('user_email') || '';
+    this.checkIn= localStorage.getItem('checkin') || '';
+    this.checkOut= localStorage.getItem('checkout') || '';
+    this.people= localStorage.getItem('people') || '';
+    this.hotelName = localStorage.getItem('hotel_name') || '';
+    this.hotelImages = JSON.parse(localStorage.getItem('hotel_images') || '[]');
+
+    
+
   }
 
   procesarPago() {
@@ -27,7 +45,13 @@ export class PaymentGatewayComponent implements OnInit {
   }
 
   goToHome() {
-    this.router.navigate(['/']); // Asume que tienes una ruta configurada para "reservationHistorial"
+
+    this.reservationService.createEmptyReservation(this.userEmail, this.checkIn, this.checkOut, this.people, this.hotelName || '', this.hotelImages[0] || '').then((reservationId) => {
+      localStorage.setItem('reservation_id', reservationId); // Guarda el ID de la reserva en el almacenamiento local
+    });
+
+
+    this.router.navigate(['/']); 
   }
 
 

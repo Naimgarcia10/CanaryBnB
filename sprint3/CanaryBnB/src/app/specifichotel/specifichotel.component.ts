@@ -13,22 +13,12 @@ export class SpecifichotelComponent implements OnInit {
   hotel: Hotel | null = null;
   currentImageIndex: number = 0;
 
-  reservationId: string= '';
-  checkIn: string= ''; 
-  checkOut: string= '';
-  people: string= ''; 
-  userEmail:string ='';
+  userEmail: string | null = localStorage.getItem('user_email');
+ 
 
   constructor(private hotelService: HotelService, private router: Router, private reservationService: ReservationService) {} // Inyecta Router aquí
 
   ngOnInit(): void {
-
-    this.reservationId = localStorage.getItem('reservation_id') || ''; // Recupera el ID de la reserva desde el almacenamiento local
-    this.userEmail= localStorage.getItem('user_email') || '';
-    this.checkIn= localStorage.getItem('checkin') || '';
-    this.checkOut= localStorage.getItem('checkout') || '';
-    this.people= localStorage.getItem('people') || '';
-
 
     const selectedHotel = this.hotelService.getSelectedHotel();
     if (selectedHotel) {
@@ -39,12 +29,20 @@ export class SpecifichotelComponent implements OnInit {
   }
 
   updateSpecificHotelData() {
+    localStorage.setItem('hotel_name', this.hotel?.name || '');
+    localStorage.setItem('hotel_images', JSON.stringify(this.hotel?.images || []));
 
-  this.reservationService.createEmptyReservation(this.userEmail, this.checkIn, this.checkOut, this.people, this.hotel?.name || '', this.hotel?.images[0] || '').then((reservationId) => {
-    localStorage.setItem('reservation_id', reservationId); // Guarda el ID de la reserva en el almacenamiento local
-  });
 }
 
+irAPasarelaDePago(){
+
+  if (!this.userEmail || this.userEmail === '' || this.userEmail=== 'undefined' || this.userEmail=== 'null' ) {
+    alert('No se puede realizar una reserva sin haber iniciado sesión previamente, por favor inicie sesión.');
+    return;
+  }
+
+  this.router.navigate(['/payment-gateway']);
+}
 
 
 

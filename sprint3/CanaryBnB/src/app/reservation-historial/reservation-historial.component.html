@@ -1,6 +1,8 @@
 
+<div class="page-container">
 <app-small-header></app-small-header>
 
+<main>
 <h1 id="title">Historial de reservas</h1>
 
 <div *ngFor="let reservation of reservations" class="reservation-card">
@@ -13,11 +15,10 @@
     <p><strong>Check-in:</strong> {{ reservation.data.checkin }}</p>
     <p><strong>Check-out:</strong> {{ reservation.data.checkout }}</p>
     <p><strong>Personas:</strong> {{ reservation.data.people }}</p>
-    <p><strong>Email:</strong> {{ reservation.data.user_email }}</p>
   </div>
 </div>
-
-  
+</main>
 
 <app-footer></app-footer>
 
+</div>
