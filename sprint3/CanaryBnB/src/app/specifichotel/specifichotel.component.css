@@ -94,6 +94,20 @@
     display: flex;
     justify-content: center;
     margin-bottom: 2rem;
+    
+  }
+
+  #button_signIn{
+    background: linear-gradient(to right, #0000f8, #00aeff);
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    color: white;
+  }
+
+  #button_signIn:hover{
+    background: linear-gradient(to right, #0000a9,  #0099e0);
+
   }
   
   .description-container {
@@ -132,7 +146,9 @@
     padding: 5px 10px;
     margin-bottom: 5px;
     border-radius: 5px;
-    background-color: #ffffff;
+
+    color: white;
+    background: linear-gradient(100deg, #0173ed 0%, #0157b3 100%);
   }
   
   
