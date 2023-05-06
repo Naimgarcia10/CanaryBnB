@@ -31,18 +31,17 @@ export class LoginComponent implements OnInit{
     return this.formLogin.get('password') as FormControl;
   }
 
-  loginAction(): void{
+  loginAction(): void {
+    console.log('Logging in...'); // Agrega esta línea
     if (this.formLogin.valid) {
-      /* const email = this.formLogin.get('email')?.value; // agregamos el ? para manejar posible valor nulo */
-      this.user.email = this.formLogin.get('email')!.value ?? ''; // agregamos el ! y ?? para manejar posible valor nulo
-      this.user.password = this.formLogin.get('password')!.value ?? ''; // agregamos el ! y ?? para manejar posible valor nulo
+      this.user.email = this.formLogin.get('email')!.value ?? '';
+      this.user.password = this.formLogin.get('password')!.value ?? '';
       console.log(this.formLogin.value);
       this.auth.login(this.user);
       this.formLogin.reset();
-
-      /*Crear reserva con email e id unico*/
-        localStorage.setItem('user_email', this.user.email); // Guarda el correo electrónico del usuario en el almacenamiento local
+      localStorage.setItem('user_email', this.user.email);
     }
   }
+  
 
 }
