@@ -15,6 +15,20 @@ export class FireStorageMngService {
 
   constructor(private db: AngularFireDatabase, private storage: AngularFireStorage) { }
 
+  /* pushFileToStorage(fileUpload: FileUpload): Observable<string> {
+    const filePath = `${this.basePath}/${fileUpload.file.name}`;
+    const storageRef = this.storage.ref(filePath);
+    const uploadTask = this.storage.upload(filePath, fileUpload.file);
+    uploadTask.snapshotChanges().pipe(finalize(() => {
+      storageRef.getDownloadURL().subscribe(downloadURL => {
+        fileUpload.url = downloadURL;
+        fileUpload.name = fileUpload.file.name;
+        this.db.list(this.basePath).push(fileUpload);
+      });
+    })).subscribe();
+    return storageRef.getDownloadURL();
+  } */
+
   pushFileToStorage(fileUpload: FileUpload): Observable<string> {
     const filePath = `${this.basePath}/${fileUpload.file.name}`;
     const storageRef = this.storage.ref(filePath);
