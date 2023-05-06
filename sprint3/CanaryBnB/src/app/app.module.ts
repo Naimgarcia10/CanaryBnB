@@ -28,6 +28,7 @@ import { CookiesPolicyComponent } from './cookies-policy/cookies-policy.componen
 
 import { ContainerComponent } from './container/container.component';
 import { SmallHeaderComponent } from './small-header/small-header.component';
+import { EditProfileComponent } from './edit-profile/edit-profile.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +51,7 @@ import { SmallHeaderComponent } from './small-header/small-header.component';
     //DisponiblesComponent // Añade DisponiblesComponent aquí
     ContainerComponent,
     SmallHeaderComponent,
+    EditProfileComponent,
   ],
   imports: [
     BrowserModule,

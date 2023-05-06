@@ -1,0 +1,53 @@
+<app-small-header></app-small-header>
+
+<h1 style="text-align: center;">Datos Personales</h1>
+
+<div class="form-container">
+  <form [formGroup]="formEditProfile" (ngSubmit)="editProfielAction()">
+    <div>
+      <label for="fullname">Nombre y Apellidos</label>
+      <input type="text" class="form-control" formControlName="fullname">
+    </div>
+
+    <div class="alert-danger" [hidden]="fullname.valid || fullname.pristine">
+      <span *ngIf="fullname.hasError('required')">Este campo es obligatorio</span>
+      <span *ngIf="fullname.hasError('minlength')">Este campo debe tener al menos 3 caracteres</span>
+    </div>
+
+    <div>
+      <label for="birthdate">Fecha de Nacimiento</label>
+      <input type="date" class="form-control" formControlName="birthdate">
+    </div>
+
+    <div class="alert-danger" [hidden]="birthdate.valid || birthdate.pristine">
+      <span *ngIf="birthdate.hasError('required')">Este campo es obligatorio</span>
+      <span *ngIf="birthdate.hasError('minlength')">Este campo debe tener al menos 3 caracteres</span>
+    </div>
+
+    <div>
+      <label for="password">Contraseña</label>
+      <input type="password" class="form-control" formControlName="password">
+    </div>
+
+    <div class="alert-danger" [hidden]="password.valid || password.pristine">
+      <span *ngIf="password.hasError('required')">La contraseña es obligatoria</span>
+      <span *ngIf="password.hasError('minlength')">La contraseña debe tener al menos 6 caracteres</span>
+    </div>
+
+    <div>
+      <label for="password2">Repetir Contraseña</label>
+      <input type="password" class="form-control" formControlName="password2">
+    </div>
+
+    <div class="alert-danger" [hidden]="password2.value==password.value">
+      <span>La contraseña debe coindidir</span>
+    </div>
+
+    <div>
+      <input type="file" accept=".png, .jpg, .jpeg" formControlName="profilePic" (change)="onUpload($event)">
+    </div>
+
+    <button type="submit" class="btn btn-primary" [disabled]="formEditProfile.invalid">Confirmar</button>
+
+  </form>
+</div>

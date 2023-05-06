@@ -60,6 +60,8 @@ export class AuthService {
         this.router.navigate(['/register']);
       });
   }
+
+
   logout(): Promise<void> {
     console.log('Starting logout process...');
     return this.fireAuth.signOut().then(() => {
@@ -72,5 +74,31 @@ export class AuthService {
       this.router.navigate(['/login']);
     });
   }
-  
+
+  ///modificar perfil
+  updateProfile(userEmail: string, newData: Object) {
+    const usersRef = this.firebase.collection('users');
+    usersRef.ref.where('email', '==', userEmail).get().then((querySnapshot) => {
+      querySnapshot.forEach((doc) => {
+        usersRef.doc(doc.id).update(newData);
+      });
+    });
+  }
+
+  changePassword(email: string, newPassword: string) {
+
+    this.fireAuth.currentUser.then((user) => {
+      if (user) {
+        user.updatePassword(newPassword).then(() => {
+          // Contraseña cambiada exitosamente
+          console.log('Contraseña cambiada exitosamente');
+        })
+          .catch((error) => {
+            // Error durante el proceso de cambio de contraseña
+            console.error('Error al cambiar la contraseña:', error);
+          });
+      }
+    });
+
+  }
 }

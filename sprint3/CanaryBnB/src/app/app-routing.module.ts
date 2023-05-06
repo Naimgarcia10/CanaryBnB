@@ -13,6 +13,7 @@ import { ContactComponent } from './contact/contact.component';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 import { CookiesPolicyComponent } from './cookies-policy/cookies-policy.component'; 
 import { ContainerComponent } from './container/container.component';
+import { EditProfileComponent } from './edit-profile/edit-profile.component';
 
 
 
@@ -29,7 +30,8 @@ const routes: Routes = [
   { path: 'reservation-historial', component: ReservationHistorialComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'privacy-policy', component: PrivacyPolicyComponent },
-  { path: 'cookies-policy', component: CookiesPolicyComponent }
+  { path: 'cookies-policy', component: CookiesPolicyComponent },
+  { path: 'edit-profile', component: EditProfileComponent }
 
 ];
 
