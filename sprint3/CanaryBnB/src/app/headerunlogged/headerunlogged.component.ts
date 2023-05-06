@@ -1,7 +1,9 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, ChangeDetectorRef } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../shared/auth.service';
 import { UserModel } from '../models/user_model';
+import { tap } from 'rxjs/operators';
+
 
 @Component({
   selector: 'app-headerunlogged',
@@ -13,13 +15,18 @@ export class HeaderunloggedComponent implements OnInit {
   userFullName: string | null = null;
   userProfilePic: string | null = null;
 
-  constructor(private router: Router, private authService: AuthService) { }
+  constructor(private router: Router, private authService: AuthService, private changeDetector: ChangeDetectorRef) { }
+
 
   ngOnInit() {
-    this.authService.currentUser$.subscribe((user: UserModel | null) => {
-      this.userProfilePic = user?.profilePic || null;
-      this.userFullName = user?.fullname || null;
-    });
+    this.authService.currentUser$
+      .pipe(
+        tap((user: UserModel | null) => {
+          this.userProfilePic = user?.profilePic || null;
+          this.userFullName = user?.fullname || null;
+        })
+      )
+      .subscribe();
   }
 
   goToRegister() {
@@ -35,6 +42,13 @@ export class HeaderunloggedComponent implements OnInit {
   }
 
   logout() {
-    this.authService.logout();
+    console.log('Calling logout from header component...');
+    this.authService.logout().then(() => {
+      console.log('Logout successful');
+      this.userFullName = null;
+      this.userProfilePic = null;
+      this.changeDetector.detectChanges();
+    });
   }
+  
 }

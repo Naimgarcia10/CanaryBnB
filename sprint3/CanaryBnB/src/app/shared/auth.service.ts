@@ -60,16 +60,17 @@ export class AuthService {
         this.router.navigate(['/register']);
       });
   }
-
-  //logout
-  logout() {
-    this.fireAuth.signOut().then(() => {
+  logout(): Promise<void> {
+    console.log('Starting logout process...');
+    return this.fireAuth.signOut().then(() => {
+      console.log('Sign out from Firebase successful');
       localStorage.removeItem('token');
+      this.currentUserSubject.next(null);
       this.router.navigate(['/login']);
     }, err => {
-      alert(err.message);
+      console.error('Error during sign out:', err.message);
       this.router.navigate(['/login']);
     });
   }
-
+  
 }
