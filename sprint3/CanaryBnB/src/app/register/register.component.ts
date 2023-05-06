@@ -71,7 +71,6 @@ export class RegisterComponent {
       }
       this.auth.register(this.user);
       this.formRegister.reset();
-      this.router.navigate(['/']);
     }
   }
 

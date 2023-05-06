@@ -4,26 +4,26 @@
       <img src="assets/images/logo_blanco5.png" alt="logo" class="logo-img">
     </a>
   </div>
-
-  <ng-container *ngIf="userFullName; else notLoggedIn">
-    <span class="user-full-name">{{ userFullName }}</span>
-    <img class="user-profile-pic" src="{{userProfilePic}}">
-    <a (click)="logout()">
-      <button id="button_signOut"> SIGN OUT </button>
-    </a>
-  </ng-container>
   
-
-  <ng-template #notLoggedIn>
-    <a [routerLink]="['/login']">
-      <button id="button_signIn"> SIGN IN </button>
-    </a>
-    <a [routerLink]="['/register']">
-      <button id="button_signUp"> SIGN UP </button>
-    </a>
-  </ng-template>
-
-  <!--Provisional. Borrar cuando este hecho el header con usuario-->
+  <div class="right-container">
+    <div class="user-container">
+      <span class="user-full-name" *ngIf="userFullName">{{ userFullName }}</span>
+      <img class="user-profile-pic" *ngIf="userProfilePic" [src]="userProfilePic">
+      <a (click)="logout()" *ngIf="userFullName && userProfilePic">
+        <button id="button_signOut"> SIGN OUT </button>
+      </a>
+    </div>
+    
+    <div class="button-container">
+      <a [routerLink]="['/login']" *ngIf="!userFullName">
+        <button id="button_signIn"> SIGN IN </button>
+      </a>
+      <a [routerLink]="['/register']" *ngIf="!userFullName">
+        <button id="button_signUp"> SIGN UP </button>
+      </a>
+    </div>
+  </div>
+  
   <a [routerLink]="['/reservation-historial']">
     <button id="provisional">Historial de Reservas</button>
   </a>
