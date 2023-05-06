@@ -6,6 +6,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore'; // Importa AngularFirestoreModule
+import { AngularFireStorageModule } from '@angular/fire/compat/storage'; // Importa AngularFireStorageModule
 
 /* componentes */
 import { AppComponent } from './app.component';
@@ -58,6 +59,7 @@ import { SmallHeaderComponent } from './small-header/small-header.component';
     HttpClientModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule, // Añade AngularFirestoreModule aquí
+    AngularFireStorageModule
   ],
   providers: [],
   bootstrap: [AppComponent],

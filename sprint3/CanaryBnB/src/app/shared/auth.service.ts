@@ -34,17 +34,6 @@ export class AuthService {
     });
   }
 
-/*    //register
-  register(user: UserModel) {
-    this.fireAuth.createUserWithEmailAndPassword(user.email, user.password).then(() => {
-      alert('User created successfully');
-      this.router.navigate(['/login']);
-    }, err => {
-      alert(err.message);
-      this.router.navigate(['/register']);
-    });
-  } */ 
-
   register(user: UserModel) {
     this.fireAuth.createUserWithEmailAndPassword(user.email, user.password)
       .then((userCredential) => {
