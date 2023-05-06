@@ -1,7 +1,7 @@
 .container {
   display: flex;
   justify-content: center;
-  width: 70%;
+  width: 65rem;
   height: 6rem;
   align-items: center;
   position: relative;
@@ -74,8 +74,8 @@ button:hover {
 }
 
 .hotels img {
-  width: 250px;
-  height: 150px;
+  width: 17rem;
+  height: 10rem;
   object-fit: cover;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
@@ -89,8 +89,6 @@ button:hover {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
 }
 
-
-
 .hotel-card {
   display: flex;
   flex-direction: column;
@@ -103,3 +101,170 @@ button:hover {
   font-weight: bold;
   margin-bottom: 10px;
 }
+
+
+@media (max-width: 992px) {
+
+  #destination{
+    width: 8rem;
+    left: 1rem;
+  }
+
+  #people{
+    width: 3rem;
+  }
+
+  #checkin{
+    width: 8rem;
+  }
+
+  #checkout{
+    width: 8rem;
+  }
+
+  button{
+    position: relative;
+    right: 1rem;
+  }
+
+  .hotels img {
+    width: 14rem;
+    height: 7rem;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  }
+
+}
+
+@media (max-width: 769px) {
+  .container {
+    width: 100%;
+    margin-top: 2rem;
+  }
+
+  /* Cambios en el formulario para tablet (768px) */
+  form {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .form-group {
+    flex-basis: 100%;
+  }
+
+  /* Configura el tamaño de los campos del formulario en las primeras dos filas */
+  .form-group:nth-child(3),
+  .form-group:nth-child(2),
+  .form-group:nth-child(4) {
+    flex-basis: calc(50% - 10px);
+  }
+
+  /* Coloca el campo de personas en la primera fila */
+  .form-group:nth-child(1) {
+    flex-basis: calc(50% - 10px);
+    order: -1;
+  }
+
+  /* Asegúrate de que el botón esté en una nueva fila y centrado */
+  button {
+    display: block;
+    margin: 1rem auto;
+  }
+  
+  #destination, #people, #checkin, #checkout{
+    width: 11rem;
+  }
+
+
+  .hotels img {
+    width: 11rem;
+    height: 5rem;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  }
+
+  #recomendations_title{
+    position: relative;
+    bottom: 1rem;
+  }
+
+  .hotels-container{
+    bottom: 9rem;
+  }
+
+}
+
+@media (max-width: 601px) {
+
+  #destination, #people, #checkin, #checkout{
+    width: 8rem;
+  }
+
+  .form-container{
+    width: 20rem;
+  }
+
+}
+
+@media (max-width: 575px) {
+
+  .hotels{
+    flex-direction: column;
+  }
+
+  .hotels img{
+    width: 17rem;
+    height: 10rem;
+  }
+
+}
+
+
+
+@media (max-width: 365px) {
+  .container {
+    width: 100%;
+  }
+
+  .hotels {
+    flex-direction: column;
+  }
+
+  /* Cambios en el formulario para teléfonos (365px) */
+  form {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .form-group {
+    flex-basis: 100%;
+    margin-bottom: 10px;
+  }
+
+  /* Restablece las reglas de order a su valor predeterminado */
+  .form-group:nth-child(1),
+  .form-group:nth-child(4) {
+    order: 0;
+  }
+
+  /* Asegúrate de que el botón esté en una nueva fila y centrado */
+  button {
+    display: block;
+    margin: 1rem auto;
+  }
+
+  .container{
+    scale: 0.6;
+  }
+
+  .hotels img {
+    width: 14rem;
+    height: 7rem;
+
+  }
+}
+
+
+

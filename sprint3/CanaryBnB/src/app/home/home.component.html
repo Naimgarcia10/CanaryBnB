@@ -30,7 +30,7 @@
 </div>
 
 <div class="hotels-container">
-  <h2>Hoteles mejor valorados</h2>
+  <h2 id="recomendations_title">Hoteles mejor valorados</h2>
   <div class="hotels">
     <ng-container *ngFor="let hotel of bestRatedHotels; let i = index">
       <div class="hotel-card" (click)="selectBestRatedHotel(i); saveHomeData()">
