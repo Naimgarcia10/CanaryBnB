@@ -46,12 +46,28 @@ header p {
 }
 
 .user-profile-pic {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   object-fit: cover;
-  margin-right: 10px;
+  margin-right: 5px;
 }
+
+select {
+  background: rgba(0, 0, 0, 0.3); /* Fondo oscuro y semi-transparente */
+  border: none;
+  font-size: 16px; /* Tamaño de texto más grande */
+  color: #ffffff;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 5px 10px; /* Espacio interior para hacer el fondo más grande */
+}
+
+select:hover {
+  background: rgba(0, 0, 0, 0.5); /* Fondo más oscuro cuando se pasa el mouse por encima */
+  cursor: pointer;
+}
+
 
 #button_signOut {
   display: inline-block;

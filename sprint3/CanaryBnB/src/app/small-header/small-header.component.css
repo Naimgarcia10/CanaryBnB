@@ -7,65 +7,114 @@ header {
     justify-content: center;
   }
   
-    
-    
-    header p {
-      display: flex;
-      align-items: center;
-      font-size: 3rem;
-      position: absolute;
-    }
-    
-    .logo {
-      position: absolute;
-      left: 3rem;
-      top: 3rem;
-    }
-    
-    .logo-img {
-      height: 5rem;
-    } 
-    
-    
-    /* sign in sign up buttons */
-    #button_signIn {
-      font-size: 0.8rem;
-      width: 6rem;
-      height: 2.5rem;
-      cursor: pointer;
-      background: #ffffff;
-      border: none;
-      transition: 0.4s;
-      margin: 0 auto;
-      position: absolute;
-      top: 3rem;
-      right: 8.5rem;
-      border-radius: 1rem;
-    }
-    
-    
-    #button_signIn:active {
-      transform: scale(0.90);
-    }
-    
-    #button_signUp {
-      font-size: 0.8rem;
-      width: 6rem;
-      height: 2.5rem;
-      cursor: pointer;
-      background: #ffffff;
-      border: none;
-      transition: 0.4s;
-      margin: 0 auto;
-      position: absolute;
-      top: 3rem;
-      right: 1.5rem;
-      border-radius: 1rem;
-    }
-    
-    #button_signUp:active {
-      transform: scale(0.90);
-    }
-    
-    
-    
+header p {
+  display: flex;
+  align-items: center;
+  font-size: 3rem;
+  position: absolute;
+}
+
+.logo {
+  position: absolute;
+  left: 3rem;
+  top: 3rem;
+}
+
+.logo-img {
+  height: 5rem;
+}
+
+.right-container {
+  position: absolute;
+  top: 3rem;
+  right: 1.5rem;
+  display: flex;
+}
+
+.button-container {
+  display: flex;
+}
+
+.user-container {
+  display: flex;
+  align-items: center;
+  margin-right: 1.5rem;
+}
+
+.user-full-name {
+  margin-right: 10px;
+}
+
+.user-profile-pic {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 5px;
+}
+
+select {
+  background: rgba(0, 0, 0, 0.3); /* Fondo oscuro y semi-transparente */
+  border: none;
+  font-size: 16px; /* Tamaño de texto más grande */
+  color: #ffffff;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 5px 10px; /* Espacio interior para hacer el fondo más grande */
+}
+
+select:hover {
+  background: rgba(0, 0, 0, 0.5); /* Fondo más oscuro cuando se pasa el mouse por encima */
+  cursor: pointer;
+}
+
+
+#button_signOut {
+  display: inline-block;
+  font-size: 0.8rem;
+  width: 6rem;
+  height: 2.5rem;
+  cursor: pointer;
+  background: #ffffff;
+  border: none;
+  transition: 0.4s;
+  margin: 0 1rem;
+  border-radius: 1rem;
+}
+
+#button_signOut:active {
+  transform: scale(0.90);
+}
+
+/* sign in sign up buttons */
+#button_signIn {
+  font-size: 0.8rem;
+  width: 6rem;
+  height: 2.5rem;
+  cursor: pointer;
+  background: #ffffff;
+  border: none;
+  transition: 0.4s;
+  margin: 0 auto;
+  border-radius: 1rem;
+}
+
+#button_signIn:active {
+  transform: scale(0.90);
+}
+
+#button_signUp {
+  font-size: 0.8rem;
+  width: 6rem;
+  height: 2.5rem;
+  cursor: pointer;
+  background: #ffffff;
+  border: none;
+  transition: 0.4s;
+  margin: 0 auto;
+  border-radius: 1rem;
+}
+
+#button_signUp:active {
+  transform: scale(0.90);
+}
