@@ -7,6 +7,7 @@
 
   <ng-container *ngIf="userFullName; else notLoggedIn">
     <span class="user-full-name">{{ userFullName }}</span>
+    <img class="user-profile-pic" src="{{userProfilePic}}">
     <a (click)="logout()">
       <button id="button_signOut"> SIGN OUT </button>
     </a>

@@ -11,11 +11,13 @@ import { UserModel } from '../models/user_model';
 export class HeaderunloggedComponent implements OnInit {
   @Output() logoClicked = new EventEmitter<void>();
   userFullName: string | null = null;
+  userProfilePic: string | null = null;
 
   constructor(private router: Router, private authService: AuthService) { }
 
   ngOnInit() {
     this.authService.currentUser$.subscribe((user: UserModel | null) => {
+      this.userProfilePic = user?.profilePic || null;
       this.userFullName = user?.fullname || null;
     });
   }
