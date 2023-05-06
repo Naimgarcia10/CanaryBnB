@@ -18,7 +18,7 @@ export class HeaderunloggedComponent implements OnInit {
   ngOnInit() {
     this.authService.currentUser$.subscribe((user: UserModel | null) => {
       this.userProfilePic = user?.profilePic || null;
-      this.userFullName = user?.fullname || null;
+      this.userFullName = user?.fullname.split(" ")[0] || null;
     });
   }
 
