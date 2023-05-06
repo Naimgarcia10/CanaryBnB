@@ -53,23 +53,6 @@ export class EditProfileComponent {
     return this.formEditProfile.get('profilePic') as FormControl;
   }
 
-  /* registerAction(): void{
-    if (this.formEditProfile.valid) {
-      this.user.email = this.formEditProfile.get('email')!.value ?? ''; // agregamos el ! y ?? para manejar posible valor nulo
-      this.user.password = this.formEditProfile.get('password')!.value ?? ''; // agregamos el ! y ?? para manejar posible valor nulo
-      this.user.fullname = this.formEditProfile.get('fullname')!.value ?? ''; // agregamos el ! y ?? para manejar posible valor nulo
-      this.user.birthdate = this.formEditProfile.get('birthdate')!.value ?? ''; // agregamos el ! y ?? para manejar posible valor nulo
-      this.user.profilePic = this.formEditProfile.get('profilePic')!.value ?? '';
-      if(this.user.profilePic == ''){
-        this.user.profilePic = 'https://firebasestorage.googleapis.com/v0/b/canarybnb-db.appspot.com/o/profilePics%2FprofilePic_dummy.png?alt=media&token=dedbe568-4a76-43ba-9f3f-0becca46f25c'; 
-      }else{
-        this.user.profilePic = this.urlImage;
-      }
-      this.auth.register(this.user);
-      this.formEditProfile.reset();
-    }
-  } */
-
   editProfielAction() {
     const form = this.formEditProfile; 
     const newData: { [key: string]: any } = {};
@@ -82,17 +65,12 @@ export class EditProfileComponent {
       }
     }
 
-    console.log(newData);
-
     const user_email = localStorage.getItem('user_email') ?? '';
 
     if ('password' in newData) {
       this.auth.changePassword(user_email, newData['password']);
       delete newData['password'];
     }
-
-    
-    
 
     this.auth.updateProfile(user_email, newData);
 
