@@ -1,20 +1,27 @@
 <header>
-    <div class="logo">
-      <a [routerLink]="['/']">
-        <img src="assets/images/logo_blanco5.png" alt="logo" class="logo-img">
+  <div class="logo">
+    <a [routerLink]="['/']">
+      <img src="assets/images/logo_blanco5.png" alt="logo" class="logo-img">
+    </a>
+  </div>
+  
+  <div class="right-container">
+    <div class="user-container" *ngIf="userFullName">
+      <img *ngIf="userProfilePic" class="user-profile-pic" [src]="userProfilePic" alt="Profile Picture">
+      <select (change)="onSelectChange($event)">
+        <option value="" disabled selected hidden *ngIf="userFullName">{{ userFullName }}</option>
+        <option value="reservation-history" *ngIf="userFullName">Historial de Reservas</option>
+        <option value="edit-profile" *ngIf="userFullName">Editar Perfil</option>
+      </select>
+    </div>
+    
+    <div class="button-container">
+      <a [routerLink]="['/login']" *ngIf="!userFullName">
+        <button id="button_signIn"> SIGN IN </button>
+      </a>
+      <a [routerLink]="['/register']" *ngIf="!userFullName">
+        <button id="button_signUp"> SIGN UP </button>
       </a>
     </div>
-  
-    <a [routerLink]="['/login']">
-      <button id="button_signIn"> SIGN IN </button>
-    </a>
-    <a [routerLink]="['/register']">
-      <button id="button_signUp"> SIGN UP </button>
-    </a>
-    
-    <!--Provisional. Borrar cuando este hecho el header con usuario-->
-    <a [routerLink]="['/reservation-historial']">
-      <button id="provisional">Historial de Reservas</button>
-    </a>
-  </header>
-  
+  </div>
+</header>

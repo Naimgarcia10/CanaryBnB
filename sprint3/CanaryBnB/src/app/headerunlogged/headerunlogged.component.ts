@@ -4,7 +4,6 @@ import { AuthService } from '../shared/auth.service';
 import { UserModel } from '../models/user_model';
 import { tap } from 'rxjs/operators';
 
-
 @Component({
   selector: 'app-headerunlogged',
   templateUrl: './headerunlogged.component.html',
@@ -16,7 +15,6 @@ export class HeaderunloggedComponent implements OnInit {
   userProfilePic: string | null = null;
 
   constructor(private router: Router, private authService: AuthService, private changeDetector: ChangeDetectorRef) { }
-
 
   ngOnInit() {
     this.authService.currentUser$.subscribe((user: UserModel | null) => {
@@ -47,4 +45,14 @@ export class HeaderunloggedComponent implements OnInit {
     });
   }
   
+  onSelectChange(event: Event) {
+    const target = event.target as HTMLSelectElement;
+    const selectedValue = target.value;
+
+    if (selectedValue === 'reservation-history') {
+      this.router.navigate(['/reservation-historial']);
+    } else if (selectedValue === 'edit-profile') {
+      this.router.navigate(['/edit-profile']);
+    }
+  }
 }
