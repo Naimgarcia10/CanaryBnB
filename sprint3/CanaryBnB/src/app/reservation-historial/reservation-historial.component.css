@@ -44,12 +44,13 @@ main {
   
   .reservation-details {
     flex: 3;
-    margin-left: 15rem;
-    margin-top: 6rem;
+    margin: auto auto;
+    margin-left: 2rem;
+    margin-top: 3rem;
   }
   
   img {
-    max-width: 100%;
+    width: 15rem;
     height: 10rem;
     border-radius: 5px;
     margin-bottom: 0.5rem;
@@ -60,12 +61,49 @@ main {
   @media (max-width: 768px) {
     .reservation-card {
       flex-direction: column;
+      width: 50%;
     }
   
     .hotel-info {
       text-align: center;
       margin-right: 0;
       margin-bottom: 1rem;
+      margin: 0 auto;
+    }
+
+    .reservation-details{
+      margin: 0 auto;
     }
   }
+
+  @media (max-width: 551px) {
+    .reservation-card {
+      scale: 0.9;
+    }
+
+    img{
+      height: 8rem;
+      width: 13rem;
+    }
+
+    .reservation-details{
+      scale: 0.9;
+    }
+
+  }
   
+  @media (max-width: 471px) {
+    .reservation-card {
+      scale: 0.9;
+    }
+
+    img{
+      height: 8rem;
+      width: 13rem;
+    }
+
+    .reservation-details{
+      scale: 0.9;
+    }
+
+  }

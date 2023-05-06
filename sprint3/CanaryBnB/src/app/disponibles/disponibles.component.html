@@ -2,6 +2,8 @@
 
 <app-small-header></app-small-header>
 
+<main>
+
 <div class="sort-container">
   <label for="sort">Ordenar por:</label>
   <select id="sort" #sortSelect (change)="onSortChange(sortSelect.value)">
@@ -52,7 +54,7 @@
   <button (click)="applyFilters()">Aplicar filtros</button>
 </div>
 
-
+</main>
 <app-footer></app-footer>
 
 </div>

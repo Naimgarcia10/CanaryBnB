@@ -13,6 +13,11 @@ main {
   flex-grow: 1;
 }
 
+/* Agrega el siguiente código CSS para el footer */
+app-footer {
+  flex-shrink: 0;
+}
+
 .sort-container {
   display: flex;
   align-items: center;
@@ -100,9 +105,10 @@ p {
 }
 
 .filter-container {
-  margin-top: 13.3rem;
   position: fixed;
-  left: 0;
+  top: 1rem; /* Define la posición desde la parte superior */
+  left: 1rem; /* Define la posición desde la parte izquierda */
+  margin-top: 12.5rem;
   width: 20rem;
   background-color: #f5f5f5;
   padding: 2rem;
@@ -110,6 +116,7 @@ p {
   height: 20rem;
   border: 1px solid #000000;
 }
+
 
 .filter-container h4 {
   margin-bottom: 1rem;
@@ -138,5 +145,5 @@ p {
 }
 
 .container {
-  margin-left: 20rem;
+  margin-left: 23rem;
 }
