@@ -62,7 +62,7 @@ export class AuthService {
   }
 
 
-  logout(): Promise<void> {
+  /* logout(): Promise<void> {
     console.log('Starting logout process...');
     return this.fireAuth.signOut().then(() => {
       console.log('Sign out from Firebase successful');
@@ -73,6 +73,13 @@ export class AuthService {
       console.error('Error during sign out:', err.message);
       this.router.navigate(['/login']);
     });
+  } */
+
+  logout() {
+    console.log('Sign out from Firebase successful');
+    localStorage.setItem('token', 'false');
+    localStorage.removeItem('user_email');
+    this.currentUserSubject.next(null);
   }
 
   ///modificar perfil

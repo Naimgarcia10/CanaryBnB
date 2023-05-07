@@ -33,16 +33,6 @@ export class SmallHeaderComponent implements OnInit {
   onLogoClick() {
     this.logoClicked.emit();
   }
-
-  logout() {
-    console.log('Calling logout from header component...');
-    this.authService.logout().then(() => {
-      console.log('Logout successful');
-      this.userFullName = null;
-      this.userProfilePic = null;
-      this.changeDetector.detectChanges();
-    });
-  }
   
   onSelectChange(event: Event) {
     const target = event.target as HTMLSelectElement;
@@ -52,6 +42,9 @@ export class SmallHeaderComponent implements OnInit {
       this.router.navigate(['/reservation-historial']);
     } else if (selectedValue === 'edit-profile') {
       this.router.navigate(['/edit-profile']);
+    }if (selectedValue === 'logOut') {
+      this.authService.logout();
+      this.userFullName = '';
     }
   }
 }
