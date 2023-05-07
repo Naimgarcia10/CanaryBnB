@@ -120,108 +120,20 @@ select:hover {
 }
 
 
-@media (max-width: 1024px) {
-  header p {
-    font-size: 2.4rem;
-  }
-
-  .logo-img {
-    height: 4rem;
-  }
-
-  .user-profile-pic {
-    width: 25px;
-    height: 25px;
-  }
-
-  #button_signOut,
-  #button_signIn,
-  #button_signUp {
-    font-size: 0.7rem;
+@media (max-width: 500px) {
+  #button_signIn {
     width: 5rem;
-    height: 2rem;
-  }
-}
-
-@media (max-width: 768px) {
-  header p {
-    font-size: 1.8rem;
+    height: 1.7rem;
   }
 
-  .logo-img {
-    height: 3rem;
-  }
-
-  .user-profile-pic {
-    width: 20px;
-    height: 20px;
-  }
-
-  #button_signOut,
-  #button_signIn,
   #button_signUp {
-    font-size: 0.6rem;
-    width: 4rem;
-    height: 1.8rem;
-  }
-}
-
-@media (max-width: 480px) {
-  header {
-    height: 20rem;
+    width: 5rem;
+    height: 1.7rem;
   }
 
-  header p {
-    font-size: 1.6rem;
-  }
-
-  .logo {
-    left: 1.5rem;
-    top: 1.5rem;
-  }
-
-  .right-container {
-    top: 1.5rem;
-    right: 1rem;
-  }
-
-  .logo-img {
-    height: 2.5rem;
-  }
-
-  .user-profile-pic {
-    width: 15px;
-    height: 15px;
-  }
-
-  #button_signOut,
-  #button_signIn,
-  #button_signUp {
-    font-size: 0.5rem;
-    width: 3.5rem;
-    height: 1.6rem;
-  }
-}
-
-@media (max-width: 280px) {
-  header p {
-    font-size: 1.2rem;
-  }
-
-  .logo-img {
-    height: 2rem;
-  }
-
-  .user-profile-pic {
-    width: 10px;
-    height: 10px;
-  }
-
-  #button_signOut,
-  #button_signIn,
-  #button_signUp {
-    font-size: 0.4rem;
-    width: 2.8rem;
-    height: 1.4rem;
+  select{
+    padding: 0.2rem 0.2rem;
+    margin: 0.5rem;
+    font-size: 12px; /* Tamaño de texto más grande */
   }
 }

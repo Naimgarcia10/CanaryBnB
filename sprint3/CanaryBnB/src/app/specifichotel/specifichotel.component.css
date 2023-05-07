@@ -73,10 +73,6 @@
     box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2), inset 0px -2px 5px rgba(255, 255, 255, 0.15); /* Modificado para aumentar la sombra al pasar el cursor */
   }
   
-  
-  
-  
-  
   .selected-hotel-container {
     display: flex;
     flex-direction: column;

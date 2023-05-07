@@ -65,6 +65,8 @@ export class AuthService {
     localStorage.setItem('token', 'false');
     localStorage.removeItem('user_email');
     this.currentUserSubject.next(null);
+    this.router.navigate(['/']);
+    localStorage.clear();
   }
 
   ///modificar perfil
