@@ -118,3 +118,22 @@ select:hover {
 #button_signUp:active {
   transform: scale(0.90);
 }
+
+
+@media (max-width: 500px) {
+  #button_signIn {
+    width: 5rem;
+    height: 1.7rem;
+  }
+
+  #button_signUp {
+    width: 5rem;
+    height: 1.7rem;
+  }
+
+  select{
+    padding: 0.2rem 0.2rem;
+    margin: 0.5rem;
+    font-size: 12px; /* Tamaño de texto más grande */
+  }
+}

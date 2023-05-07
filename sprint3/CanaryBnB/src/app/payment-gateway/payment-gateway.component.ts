@@ -52,6 +52,8 @@ export class PaymentGatewayComponent implements OnInit {
 
 
     this.router.navigate(['/']); 
+
+    alert('Reserva realizada con éxito, ¡Muchas gracias por confiar en nosotros!');
   }
 
 

@@ -54,7 +54,7 @@
     </div>
 
     <div>
-      <input type="file" accept=".png, .jpg, .jpeg" formControlName="profilePic" (change)="onUpload($event)">
+      <input type="file" accept=".png, .jpg, .jpeg" formControlName="profilePic" (change)="onUpload($event)" id="formFile">
     </div>
 
     <button type="submit" class="btn btn-primary" [disabled]="formRegister.invalid">Registrarse</button>

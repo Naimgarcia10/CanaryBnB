@@ -1,29 +1,61 @@
-.form-container{
+.form-container {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 form {
-    background-color: aqua;
+    background-image: linear-gradient(to bottom, #00aeff, #a4b3bc);
+    padding: 3rem;
+    margin: 1.2rem;
     width: 25rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+    border-radius: 0.5rem;
 }
 
 form div {
     margin-bottom: 1rem;
 }
 
-.form-control{
+.form-control {
     width: 12rem;
 }
 
-.alert-danger{
+.alert-danger {
     background-color: red;
-    height: 2rem;
+    padding: 0.3rem;
     border-radius: 0.5rem;
     color: white;
-    font-size: 1rem;
+    font-size: 0.8rem;
+}
+
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 400px) {
+    form {
+        padding: 1rem;
+        width: 16rem;
+    }
+
+    form div {
+        margin-bottom: 0.6rem;
+    }
+
+    .form-control {
+        width: 10rem;
+    }
+    
+    #formFile {
+        width: 15rem;
+    }
+
+    .alert-danger {
+        background-color: red;
+        padding: 0.3rem;
+        border-radius: 0.5rem;
+        color: white;
+        font-size: 0.6rem;
+    }
 }

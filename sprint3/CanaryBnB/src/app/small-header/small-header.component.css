@@ -1,11 +1,14 @@
 header {
-    display: flex;
-    height: 10rem;
-    background-image: url('../../assets/images/foto_5.jpg');
-    background-size: cover;
-    background-position: center;
-    justify-content: center;
-  }
+  display: flex;
+  height: 7rem;
+  background-image: url('../../assets/images/foto_5.jpg');
+  background-size: cover;
+  background-position: center;
+  justify-content: center;
+  width: 100%;
+  box-sizing: border-box; /* Agrega esta línea */
+}
+
   
 header p {
   display: flex;
@@ -117,4 +120,22 @@ select:hover {
 
 #button_signUp:active {
   transform: scale(0.90);
+}
+
+@media (max-width: 500px) {
+  #button_signIn {
+    width: 5rem;
+    height: 1.7rem;
+  }
+
+  #button_signUp {
+    width: 5rem;
+    height: 1.7rem;
+  }
+
+  select{
+    padding: 0.2rem 0.2rem;
+    margin: 0.5rem;
+    font-size: 12px; /* Tamaño de texto más grande */
+  }
 }
