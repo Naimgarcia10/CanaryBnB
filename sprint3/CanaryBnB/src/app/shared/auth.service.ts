@@ -22,7 +22,7 @@ export class AuthService {
         this.firebase.collection('users').doc<UserModel>(uid).valueChanges().subscribe(userData => {
           this.currentUserSubject.next(userData ?? null);
           localStorage.setItem('token', 'true');
-          this.router.navigate(['']);
+          this.router.navigate(['/']);
         }, err => {
           alert(err.message);
           this.router.navigate(['/login']);
@@ -47,8 +47,8 @@ export class AuthService {
         };
         userRef.set(userData)
           .then(() => {
-            alert('User created successfully');
             this.router.navigate(['/login']);
+            alert('User created successfully');
           })
           .catch((error) => {
             console.error("Error adding user document: ", error);
