@@ -12,7 +12,6 @@ import {ReservationHistorialComponent} from './reservation-historial/reservation
 import { ContactComponent } from './contact/contact.component';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 import { CookiesPolicyComponent } from './cookies-policy/cookies-policy.component'; 
-import { ContainerComponent } from './container/container.component';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
 
 

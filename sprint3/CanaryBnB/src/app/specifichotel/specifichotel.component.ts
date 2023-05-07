@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router'; // Añade esto
-import { HotelService, Hotel } from '../hotel.service';
-import { ReservationService } from '../reservation.service';
+import { HotelService, Hotel } from '../shared/hotel.service';
+import { ReservationService } from '../shared/reservation.service';
 
 @Component({
   selector: 'app-specifichotel',

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { HotelService, Hotel } from '../hotel.service';
+import { HotelService, Hotel } from '../shared/hotel.service';
 
 @Component({
   selector: 'app-disponibles',

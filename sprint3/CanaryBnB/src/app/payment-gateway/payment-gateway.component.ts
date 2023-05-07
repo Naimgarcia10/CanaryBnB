@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ReservationService } from '../reservation.service';
+import { ReservationService } from '../shared/reservation.service';
 import { Router } from '@angular/router';
 import { NgForm } from '@angular/forms';
 

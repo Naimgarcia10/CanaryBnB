@@ -10,7 +10,6 @@ import { AngularFireStorageModule } from '@angular/fire/compat/storage'; // Impo
 
 /* componentes */
 import { AppComponent } from './app.component';
-import { HeaderloggedComponent } from './headerlogged/headerlogged.component';
 import { HeaderunloggedComponent } from './headerunlogged/headerunlogged.component';
 import { HomeComponent } from './home/home.component';
 import { DisponiblesComponent } from './disponibles/disponibles.component';
@@ -25,15 +24,12 @@ import { ContactComponent } from './contact/contact.component';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 import { CookiesPolicyComponent } from './cookies-policy/cookies-policy.component';
 
-
-import { ContainerComponent } from './container/container.component';
 import { SmallHeaderComponent } from './small-header/small-header.component';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderloggedComponent,
     HeaderunloggedComponent,
     HomeComponent,
     DisponiblesComponent,
@@ -49,7 +45,6 @@ import { EditProfileComponent } from './edit-profile/edit-profile.component';
     CookiesPolicyComponent,
    
     //DisponiblesComponent // Añade DisponiblesComponent aquí
-    ContainerComponent,
     SmallHeaderComponent,
     EditProfileComponent,
   ],

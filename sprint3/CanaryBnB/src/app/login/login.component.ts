@@ -2,7 +2,7 @@ import { Component,OnInit } from '@angular/core';
 import { FormBuilder, FormControl, Validators } from '@angular/forms';
 import { AuthService } from '../shared/auth.service';
 import { UserModel } from '../models/user_model';
-import { ReservationService } from '../reservation.service';
+import { ReservationService } from '../shared/reservation.service';
 
 @Component({
   selector: 'app-login',
