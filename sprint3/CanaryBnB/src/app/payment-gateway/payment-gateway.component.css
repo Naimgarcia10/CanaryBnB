@@ -77,3 +77,21 @@ body, html {
   #cvv{
     width: 5rem;
   }
+
+  @media (max-width: 400px) {
+
+    .form-row {
+      flex-direction: column;
+
+    }
+
+    #fechaCaducidad {
+      width: 12rem;
+      margin-left: 0;
+    }
+
+    #cvv{
+      width: 12rem;
+    }
+
+  }
