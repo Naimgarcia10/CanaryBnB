@@ -43,6 +43,7 @@
   .address-container {
     display: flex;
     justify-content: center;
+    margin-top: 10rem;
   }
   
   .address-link {
@@ -62,6 +63,7 @@
     border-radius: 15px; /* Modificado para tener bordes más redondeados */
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1), inset 0px -2px 5px rgba(255, 255, 255, 0.15); /* Agregado para agregar una sombra suave y un resplandor interno */
     transition: all 0.3s ease; /* Agregado para animar el cambio de sombra al pasar el cursor */
+    
   }
   
   .address-link:hover {
@@ -151,5 +153,210 @@
     color: white;
     background: linear-gradient(100deg, #0173ed 0%, #0157b3 100%);
   }
+
+  @media (min-width: 280px) {
+    .selected-hotel {
+      width: 100%;
+    }
   
+    .image-container {
+      width: 90%;
+      height: 20rem;
+    }
   
+    .info-container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .description-container {
+      width: 90%;
+      margin-top: 1rem;
+    }
+  
+    .address-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      position: relative;
+      top: 6rem; /* Agregado para mover el contenedor de dirección hacia abajo */
+    }
+  
+    .address-link {
+      left: 0;
+      bottom: 0;
+    }
+  
+    .services-container {
+      width: 100%;
+      margin-top: 6rem; /* Agregado para mover el contenedor de servicios hacia abajo */
+    }
+  }
+  
+  @media (min-width: 480px) {
+    .selected-hotel {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .image-container {
+      width: 24rem;
+      height: 18rem;
+    }
+  
+    .description-container {
+      width: 90%;
+      margin-top: 1rem;
+    }
+  
+    .address-container {
+      margin-top: 1rem; /* Agregado margen superior para separar de la descripción */
+      justify-content: center;
+    }
+  
+    .address-link {
+      position: static; /* Cambiado a static para sacar del flujo de posicionamiento absoluto */
+      left: 0; /* Cambiado a 0 para centrar debajo de la descripción */
+      bottom: 0;
+    }
+  
+    .services-container {
+      margin-top: 6rem; /* Agregado margen superior para separar de la dirección */
+    }
+  }
+  @media (min-width: 768px) and (max-width: 819px) {
+    .selected-hotel {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .image-container {
+      width: 60%;
+      height: 20rem;
+    }
+  
+    .description-container {
+      width: 80%;
+      margin-top: 1rem;
+    }
+  
+    .address-container {
+      margin-top: 1rem;
+      justify-content: center;
+    }
+  
+    .address-link {
+      left: 0;
+      bottom: 0;
+    }
+  
+    .services-container {
+      margin-top: 7rem;
+    }
+  }
+  
+  @media (min-width: 820px) and (max-width: 1023px) {
+    .selected-hotel {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .image-container {
+      width: 60%;
+      height: 20rem;
+    }
+  
+    .description-container {
+      width: 80%;
+      margin-top: 1rem;
+    }
+  
+    .address-container {
+      margin-top: 1rem;
+      justify-content: center;
+    }
+  
+    .address-link {
+      left: 0;
+      bottom: 0;
+    }
+  
+    .services-container {
+      margin-top: 7rem;
+    }
+  }
+  
+  @media (min-width: 1023px) and (max-width: 1199px) {
+    .selected-hotel {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  
+    .image-container {
+      width: 28rem;
+      height: 20rem;
+    }
+  
+    .description-container {
+      width: 35rem;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  
+    .address-container {
+      position: absolute;
+      top: 8rem;
+      left: 0;
+      justify-content: flex-start;
+    }
+  
+    .address-link {
+      margin-top: 22rem;
+      margin-left: 6rem;
+    }
+  
+    h2 {
+      margin-top: 0;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .selected-hotel {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  
+    .image-container {
+      width: 33rem;
+      height: 24rem;
+    }
+  
+    .description-container {
+      width: 40rem;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  
+    .address-container {
+      position: absolute;
+      top: 8rem;
+      left: 0;
+      justify-content: flex-start;
+    }
+  
+    .address-link {
+      margin-top: 22rem;
+      margin-left: 6rem;
+    }
+  
+    h2 {
+      margin-top: 0;
+    }
+  }

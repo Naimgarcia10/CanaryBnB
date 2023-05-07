@@ -47,8 +47,9 @@ app-footer {
 
 
 .container {
-  max-width: 800px;
+  max-width: 100%; /* Cambia esto a 100% */
   margin: 0 auto;
+  box-sizing: border-box; /* Agrega esta línea */
 }
 
 
@@ -146,4 +147,93 @@ p {
 
 .container {
   margin-left: 23rem;
+}
+
+/* ... Estilos existentes ... */
+
+@media (min-width: 1201px) {
+  .container {
+    max-width: 90%; /* Ajusta el ancho máximo del contenedor al 90% del ancho de la pantalla */
+    margin-left: auto; /* Centrar el contenedor horizontalmente */
+    margin-right: auto;
+  }
+
+  .filter-container {
+    position: static;
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+}
+
+
+@media (max-width: 1024px) {
+  .container {
+    max-width: 100%; /* Cambia esto a 100% */
+    margin: 0 auto;
+    box-sizing: border-box; /* Agrega esta línea */
+  }
+
+  .filter-container {
+    position: static;
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .filter-container {
+    position: static;
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .container {
+    margin-left: 0;
+  }
+}
+
+/* Dispositivos con pantalla de ancho menor o igual a 480px (móviles) */
+@media (max-width: 480px) {
+  .hotel-image-container {
+    flex: 0 0 100px;
+  }
+
+  .hotel-image {
+    height: 100px;
+  }
+
+  .sort-container select {
+    font-size: 14px;
+    padding: 3px 6px;
+  }
+}
+
+@media (max-width: 280px) {
+  .hotel-image-container {
+    flex: 0 0 70px;
+  }
+
+  .hotel-image {
+    height: 70px;
+  }
+
+  .sort-container select {
+    font-size: 12px;
+    padding: 2px 4px;
+  }
+
+  .hotel-details {
+    font-size: 12px;
+  }
+
+  /* Nuevos estilos para la valoración y el precio */
+  .hotel-item {
+    flex-wrap: wrap;
+  }
+
+  .hotel-price-rating {
+    order: -1; /* Esto posicionará la valoración y el precio antes de la imagen y los detalles del hotel */
+    width: 100%; /* Esto permitirá que la valoración y el precio ocupen todo el ancho disponible */
+    margin-bottom: 10px; /* Espacio debajo de la valoración y el precio */
+  }
 }
