@@ -1,25 +1,22 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-
-import { HomeComponent } from './home/home.component';
-import { DisponiblesComponent } from './disponibles/disponibles.component';
-import { RegisterComponent } from './register/register.component';
-import { LoginComponent } from './login/login.component';
-import { HotelfilterComponent } from './hotelfilter/hotelfilter.component';
-import { SpecifichotelComponent } from './specifichotel/specifichotel.component';
-import { PaymentGatewayComponent } from './payment-gateway/payment-gateway.component';
-import {ReservationHistorialComponent} from './reservation-historial/reservation-historial.component';
-import { ContactComponent } from './contact/contact.component';
-import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
-import { CookiesPolicyComponent } from './cookies-policy/cookies-policy.component'; 
-import { EditProfileComponent } from './edit-profile/edit-profile.component';
+import { HomeComponent } from './components/home/home.component'; // Añade HomeComponent
+import { DisponiblesComponent } from './components/disponibles/disponibles.component';
+import { RegisterComponent } from './components/register/register.component';
+import { LoginComponent } from './components/login/login.component';
+import { HotelfilterComponent } from './components/hotelfilter/hotelfilter.component';
+import { SpecifichotelComponent } from './components/specifichotel/specifichotel.component';
+import { PaymentGatewayComponent } from './components/payment-gateway/payment-gateway.component';
+import {ReservationHistorialComponent} from './components/reservation-historial/reservation-historial.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { PrivacyPolicyComponent } from './components/privacy-policy/privacy-policy.component';
+import { CookiesPolicyComponent } from './components/cookies-policy/cookies-policy.component';
+import { EditProfileComponent } from './components/edit-profile/edit-profile.component';
 
 
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  
-  
   { path: 'disponibles', component: DisponiblesComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'login', component: LoginComponent },
