@@ -25,12 +25,9 @@ function nonEmptyFields(inputsClass) {
 
 /* validar campos */
 const expresiones = {
-    name: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
+    username: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
     password: /^.{4,12}$/, // 4 a 12 digitos.
     correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/, // Validar correo
-    cvv: /^[0-9]{3}$/,
-    card_number: /^[0-9]{16}$/, // 16 digitos
-    expired_date: /^[0-9]{2}\/[0-9]{4}$/ // 2 digitos para el mes y 4 para el año
 }
 
 function fieldsValidation(formId, inputsClass) {
