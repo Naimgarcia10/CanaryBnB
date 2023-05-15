@@ -1,11 +1,11 @@
 import {NgModule} from '@angular/core';
-//import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 import {RouteReuseStrategy} from '@angular/router';
 
 import {IonicModule, IonicRouteStrategy} from '@ionic/angular';
 
 import {AppComponent} from './app.component';
+import { HomeComponent } from './pages/home/home.component';  // importa tu componente Home aquí
 
 import { StatusBar } from "@ionic-native/status-bar/ngx";
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
@@ -19,24 +19,19 @@ import { IonicStorageModule } from '@ionic/storage';
 
 import {environment} from '../environments/environment';
 
-
 import {AngularFireModule} from '@angular/fire';
 import {AngularFireAuthModule} from '@angular/fire/auth';
 import {AngularFirestoreModule} from '@angular/fire/firestore';
 import {AngularFireStorageModule} from '@angular/fire/storage';
 
-/*
-import {AngularFireModule} from "@angular/fire/compat";
-import {AngularFireAuthModule} from "@angular/fire/compat/auth";
-import {AngularFirestoreModule} from "@angular/fire/compat/firestore";
-import {AngularFireStorageModule} from '@angular/fire/compat/storage';
-*/
-
 import {AppRoutingModule} from './app-routing.module';
 
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [
+    AppComponent,
+    HomeComponent  // declara tu componente Home aquí
+  ],
   imports: [
     BrowserModule,
     IonicModule.forRoot({
@@ -62,11 +57,7 @@ import {AppRoutingModule} from './app-routing.module';
     SQLitePorter
   ],
 
-  //schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  /* exports: [
-
-  ], */
   bootstrap: [AppComponent]
 })
-export class AppModule {
+export class AppModule {
 }
