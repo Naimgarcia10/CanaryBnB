@@ -7,6 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  destination: string;
+  checkInDate: string;
+  checkOutDate: string;
+  people: number;
+
+  confirmSearch() {
+    console.log(this.destination, this.checkInDate, this.checkOutDate, this.people);
+  }
+
   constructor() { }
 
   ngOnInit() {}
