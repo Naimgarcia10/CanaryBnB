@@ -47,6 +47,7 @@ import {AppRoutingModule} from './app-routing.module';
     AngularFireAuthModule,
     AngularFirestoreModule,
     AngularFireStorageModule,
+    IonicModule,
 
   ],
   providers: [
@@ -59,5 +60,5 @@ import {AppRoutingModule} from './app-routing.module';
 
   bootstrap: [AppComponent]
 })
-export class AppModule {
+export class AppModule{
 }
