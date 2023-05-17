@@ -1,1 +1,7 @@
-<p class="my-text">Texto de ejemplo</p>
+<p class="my-text">Texto de ejemplo 2</p>
+
+<div *ngFor="let hotel of topHotels">
+    <h2>{{ hotel.name }}</h2>
+    <img *ngIf="hotel.images && hotel.images.length > 0" [src]="hotel.images[0]" alt="Image of {{hotel.name}}">
+  </div>
+  

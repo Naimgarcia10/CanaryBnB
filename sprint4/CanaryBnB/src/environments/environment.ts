@@ -1,13 +1,15 @@
 export const environment = {
   production: false,
   firebase: {
-    apiKey: "AIzaSyDMg3i_HPHF6ZGVLYFgupLT4Y5jipK-1Tg",
-    authDomain: "favoritos-plantas-animales.firebaseapp.com",
-    projectId: "favoritos-plantas-animales",
-    storageBucket: "favoritos-plantas-animales.appspot.com",
-    messagingSenderId: "820281706374",
-    appId: "1:820281706374:web:71eb036401773259e50e07"
-  }
+    apiKey: "AIzaSyCH_ecZzdkC0HJXy5yvMizPhGPIiXtoh6s",
+    authDomain: "canarybnb-db.firebaseapp.com",
+    databaseURL: "https://canarybnb-db-default-rtdb.europe-west1.firebasedatabase.app",
+    projectId: "canarybnb-db",
+    storageBucket: "canarybnb-db.appspot.com",
+    messagingSenderId: "652734429752",
+    appId: "1:652734429752:web:3e0e16825a8d7a631844cd",
+    measurementId: "G-9HF66496TN"
+  },
 };
 
 /*
@@ -18,3 +20,7 @@ export const environment = {
  * on performance if an error is thrown.
  */
 // import 'zone.js/dist/zone-error';  // Included with Angular CLI.
+
+
+
+
